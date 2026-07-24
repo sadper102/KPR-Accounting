@@ -14,19 +14,19 @@ export default function Pricing() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <ScrollReveal direction="down">
-            <span className="text-[#0D2240] font-extrabold text-xs uppercase tracking-widest bg-white px-4 py-1.5 rounded-full border border-slate-300 shadow-sm">
+            <span className="text-[#0A1628] font-extrabold text-xs uppercase tracking-widest bg-white px-4 py-1.5 rounded-full border border-slate-300 shadow-sm inline-block">
               PRICING PACKAGES — อัตราค่าบริการ
             </span>
           </ScrollReveal>
           
           <ScrollReveal direction="up" delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0D2240] mt-4 mb-6">
-              แพ็กเกจราคาโปร่งใส <span className="text-[#9A7B39] font-serif">ไม่มีค่าใช้จ่ายแอบแฝง</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0A1628] mt-4 mb-6">
+              แพ็กเกจราคาโปร่งใส <span className="text-[#94670A]">ไม่มีค่าใช้จ่ายแอบแฝง</span>
             </h2>
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={0.2}>
-            <p className="text-slate-900 text-base sm:text-lg font-medium">
+            <p className="text-[#1E293B] text-base sm:text-lg font-medium">
               เลือกแพ็กเกจที่เหมาะสมกับขนาดและขอบเขตธุรกิจของคุณ ตกลงค่างานชัดเจนล่วงหน้าก่อนเริ่มงาน
             </p>
           </ScrollReveal>
@@ -39,39 +39,39 @@ export default function Pricing() {
               <div
                 className={`executive-card rounded-2xl p-8 flex flex-col justify-between h-full relative ${
                   pkg.popular
-                    ? "border-2 border-[#0D2240] shadow-xl bg-white scale-105 z-10"
+                    ? "border-2 border-[#0A1628] shadow-2xl bg-white scale-105 z-10"
                     : "bg-white border border-slate-300 shadow-md"
                 }`}
               >
                 {pkg.popular && (
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#0D2240] text-white text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-md">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#0A1628] text-white text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-md whitespace-nowrap">
                     แพ็กเกจยอดนิยม
                   </div>
                 )}
 
                 <div>
-                  <h3 className="text-xl font-extrabold text-[#0D2240] mb-2 font-serif">
+                  <h3 className="text-xl font-extrabold text-[#0A1628] mb-2">
                     {pkg.name}
                   </h3>
-                  <p className="text-slate-800 text-xs sm:text-sm mb-6 min-h-[36px] font-medium">
+                  <p className="text-[#1E293B] text-xs sm:text-sm mb-6 min-h-[40px] font-bold leading-relaxed">
                     {pkg.description}
                   </p>
 
                   {/* Price */}
                   <div className="mb-6 pb-6 border-b border-slate-200">
-                    <span className="text-4xl font-black text-[#0D2240] font-serif">
+                    <span className="text-4xl font-black text-[#0A1628]">
                       {pkg.price}
                     </span>
-                    <span className="text-slate-900 text-xs sm:text-sm ml-2 font-bold">
+                    <span className="text-[#0A1628] text-xs sm:text-sm ml-2 font-bold">
                       {pkg.period}
                     </span>
                   </div>
 
                   {/* Features list */}
-                  <ul className="space-y-3 mb-8 text-xs sm:text-sm text-slate-900 font-medium">
+                  <ul className="space-y-3 mb-8 text-xs sm:text-sm text-[#0A1628] font-bold">
                     {pkg.features.map((feat, fIdx) => (
                       <li key={fIdx} className="flex items-start gap-2.5">
-                        <div className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center shrink-0 mt-0.5 font-bold">
+                        <div className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-900 flex items-center justify-center shrink-0 mt-0.5 font-bold">
                           <Check className="w-3 h-3 stroke-[3]" />
                         </div>
                         <span>{feat}</span>

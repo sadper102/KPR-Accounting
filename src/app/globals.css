@@ -2,17 +2,16 @@
 
 @layer base {
   :root {
-    --bg-main: #F8FAFC;
-    --bg-card: #FFFFFF;
-    --navy-primary: #0D2240;
-    --navy-dark: #050E1A;
-    --navy-light: #16325B;
-    --gold-primary: #9A7B39;
-    --gold-dark: #785E25;
-    --gold-light: #C5A059;
-    --text-primary: #091322;
-    --text-secondary: #1E293B;
-    --border-color: #CBD5E1;
+    --bg-main: #FFFFFF;
+    --bg-alt: #F1F5F9;
+    --navy-dark: #0A1628;
+    --navy-primary: #0F2A4A;
+    --gold-dark: #855B09;
+    --gold-primary: #94670A;
+    --gold-light: #F5C767;
+    --text-dark: #0A1628;
+    --text-body: #1E293B;
+    --border-main: #CBD5E1;
   }
 
   html {
@@ -22,28 +21,32 @@
 
   body {
     background-color: var(--bg-main);
-    color: var(--text-primary);
+    color: var(--text-body);
     font-family: var(--font-prompt), 'Prompt', 'Inter', sans-serif;
     overflow-x: hidden;
+    line-height: 1.6;
   }
 
-  h1, h2, h3, h4, .font-serif {
-    font-family: 'Playfair Display', var(--font-prompt), 'Prompt', serif;
+  h1, h2, h3, h4 {
+    font-family: var(--font-prompt), 'Prompt', sans-serif;
+    color: var(--text-dark);
+    word-break: break-word;
+    overflow-wrap: break-word;
   }
 }
 
-/* Executive Clean Solid Card System */
+/* High Contrast Solid Cards */
 .executive-card {
-  background: #FFFFFF;
+  background-color: #FFFFFF;
   border: 1px solid #CBD5E1;
-  box-shadow: 0 4px 12px rgba(13, 34, 64, 0.06);
-  transition: all 0.25s ease-in-out;
+  box-shadow: 0 4px 12px rgba(10, 22, 40, 0.05);
+  transition: all 0.2s ease-in-out;
 }
 
 .executive-card:hover {
-  border-color: #0D2240;
-  box-shadow: 0 12px 28px rgba(13, 34, 64, 0.12);
-  transform: translateY(-3px);
+  border-color: #0A1628;
+  box-shadow: 0 10px 24px rgba(10, 22, 40, 0.1);
+  transform: translateY(-2px);
 }
 
 .executive-card-accent {
@@ -58,36 +61,14 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg, #0D2240 0%, #C5A059 100%);
+  background: #0A1628;
 }
 
 /* Executive Clean Header Nav */
 .executive-nav {
-  background: rgba(255, 255, 255, 0.98);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background-color: #FFFFFF;
   border-bottom: 1px solid #CBD5E1;
-}
-
-/* High Contrast Text Gradients */
-.text-navy-gradient {
-  color: #0D2240;
-}
-
-.text-gold-gradient {
-  color: #9A7B39;
-  background: linear-gradient(135deg, #785E25 0%, #9A7B39 50%, #B38B38 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-/* Background Gradients */
-.bg-navy-gradient {
-  background: linear-gradient(135deg, #0D2240 0%, #16325B 100%);
-}
-
-.bg-gold-gradient {
-  background: linear-gradient(135deg, #D4AF37 0%, #C5A059 50%, #9A7B39 100%);
+  box-shadow: 0 2px 8px rgba(10, 22, 40, 0.05);
 }
 
 /* Custom Scrollbar */
@@ -102,5 +83,5 @@
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0D2240;
+  background: #0A1628;
 }

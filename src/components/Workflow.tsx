@@ -12,19 +12,19 @@ export default function Workflow() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <ScrollReveal direction="down">
-            <span className="text-[#0D2240] font-extrabold text-xs uppercase tracking-widest bg-slate-100 px-4 py-1.5 rounded-full border border-slate-300 shadow-sm">
+            <span className="text-[#0A1628] font-extrabold text-xs uppercase tracking-widest bg-slate-100 px-4 py-1.5 rounded-full border border-slate-300 shadow-sm inline-block">
               WORKFLOW — ขั้นตอนการทำงาน
             </span>
           </ScrollReveal>
           
           <ScrollReveal direction="up" delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0D2240] mt-4 mb-6">
-              กระบวนการทำงานที่เป็นระบบ <span className="text-[#9A7B39] font-serif">3 ขั้นตอน</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0A1628] mt-4 mb-6">
+              กระบวนการทำงานที่เป็นระบบ <span className="text-[#94670A]">3 ขั้นตอน</span>
             </h2>
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={0.2}>
-            <p className="text-slate-900 text-base sm:text-lg font-medium">
+            <p className="text-[#1E293B] text-base sm:text-lg font-medium">
               ชัดเจน โปร่งใส ตรวจสอบได้ในทุกขั้นตอน เพื่อให้ท่านมั่นใจในความถูกต้องทางการเงินและกฎหมาย
             </p>
           </ScrollReveal>
@@ -37,15 +37,15 @@ export default function Workflow() {
               <div className="executive-card rounded-2xl p-8 bg-white border border-slate-300 shadow-md h-full relative">
                 
                 {/* Step number badge */}
-                <div className="w-12 h-12 rounded-xl bg-[#0D2240] text-white font-extrabold text-lg font-serif flex items-center justify-center mb-6 shadow-md">
+                <div className="w-12 h-12 rounded-xl bg-[#0A1628] text-white font-extrabold text-lg flex items-center justify-center mb-6 shadow-md">
                   {wf.step}
                 </div>
 
-                <h3 className="text-xl font-extrabold text-[#0D2240] mb-3 font-serif">
+                <h3 className="text-xl font-extrabold text-[#0A1628] mb-3 font-serif">
                   {wf.title}
                 </h3>
                 
-                <p className="text-slate-900 text-sm leading-relaxed font-normal">
+                <p className="text-[#1E293B] text-sm leading-relaxed font-bold">
                   {wf.desc}
                 </p>
 

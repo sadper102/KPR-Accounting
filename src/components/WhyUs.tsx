@@ -29,20 +29,19 @@ export default function WhyUs() {
           {/* Left Column: Headline & Features */}
           <div className="lg:col-span-7">
             <ScrollReveal direction="down">
-              <span className="text-[#0D2240] font-extrabold text-xs uppercase tracking-widest bg-white px-4 py-1.5 rounded-full border border-slate-300 shadow-sm">
+              <span className="text-[#0A1628] font-extrabold text-xs uppercase tracking-widest bg-white px-4 py-1.5 rounded-full border border-slate-300 shadow-sm inline-block">
                 WHY CHOOSE US — ทำไมต้องเลือกเรา
               </span>
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={0.1}>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0D2240] mt-4 mb-6">
-                ทำไมองค์กรชั้นนำถึงเจาะจงเลือก <br />
-                <span className="text-[#9A7B39] font-serif">KPR ACCOUNTING</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0A1628] mt-4 mb-6">
+                ทำไมองค์กรชั้นนำถึงเจาะจงเลือก <span className="text-[#94670A]">KPR ACCOUNTING</span>
               </h2>
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={0.2}>
-              <p className="text-slate-900 text-base sm:text-lg mb-10 font-medium">
+              <p className="text-[#1E293B] text-base sm:text-lg mb-10 font-medium">
                 เราเข้าใจถึงความสำคัญของความถูกต้องทางการเงินและความคุ้มครองทางกฎหมายในทุกก้าวของธุรกิจคุณ
               </p>
             </ScrollReveal>
@@ -53,14 +52,14 @@ export default function WhyUs() {
                 return (
                   <ScrollReveal key={idx} direction="up" delay={0.1 * idx + 0.2}>
                     <div className="executive-card p-5 rounded-2xl bg-white border border-slate-300 shadow-md flex items-start gap-4">
-                      <div className="w-10 h-10 rounded-xl bg-slate-100 border border-slate-300 flex items-center justify-center text-[#0D2240] shrink-0 mt-0.5">
-                        <IconComponent className="w-5 h-5 text-[#9A7B39]" />
+                      <div className="w-10 h-10 rounded-xl bg-slate-100 border border-slate-300 flex items-center justify-center text-[#0A1628] shrink-0 mt-0.5">
+                        <IconComponent className="w-5 h-5 text-[#94670A]" />
                       </div>
                       <div>
-                        <h3 className="text-base font-extrabold text-[#0D2240] mb-1 font-serif">
+                        <h3 className="text-base font-extrabold text-[#0A1628] mb-1 font-serif">
                           {item.title}
                         </h3>
-                        <p className="text-slate-900 text-xs sm:text-sm leading-relaxed font-normal">
+                        <p className="text-[#1E293B] text-xs sm:text-sm leading-relaxed font-bold">
                           {item.description}
                         </p>
                       </div>
@@ -74,7 +73,7 @@ export default function WhyUs() {
           {/* Right Column: Executive Commitment Card */}
           <div className="lg:col-span-5">
             <ScrollReveal direction="left" delay={0.3}>
-              <div className="executive-card rounded-3xl p-8 bg-[#0D2240] text-white border border-slate-800 shadow-xl relative overflow-hidden">
+              <div className="executive-card rounded-3xl p-8 bg-[#0A1628] text-white border border-slate-800 shadow-2xl relative overflow-hidden">
                 
                 <h3 className="text-2xl font-extrabold mb-6 font-serif border-b border-slate-700/80 pb-4 text-white">
                   คำมั่นสัญญาทางวิชาชีพจากเรา
@@ -82,42 +81,42 @@ export default function WhyUs() {
 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-gold-gradient text-slate-950 font-bold flex items-center justify-center shrink-0">
+                    <div className="w-8 h-8 rounded-full bg-amber-400 text-slate-950 font-bold flex items-center justify-center shrink-0">
                       1
                     </div>
                     <div>
-                      <h4 className="text-white font-bold text-base mb-1">ตรงเวลา 100% ปราศจากค่าปรับ</h4>
-                      <p className="text-slate-200 text-xs font-normal">ยื่นภาษีและปิดงบการเงินตรงตามกำหนดเวลาทางราชการแน่นอน</p>
+                      <h4 className="text-white font-extrabold text-base mb-1">ตรงเวลา 100% ปราศจากค่าปรับ</h4>
+                      <p className="text-slate-200 text-xs font-bold">ยื่นภาษีและปิดงบการเงินตรงตามกำหนดเวลาทางราชการแน่นอน</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-gold-gradient text-slate-950 font-bold flex items-center justify-center shrink-0">
+                    <div className="w-8 h-8 rounded-full bg-amber-400 text-slate-950 font-bold flex items-center justify-center shrink-0">
                       2
                     </div>
                     <div>
-                      <h4 className="text-white font-bold text-base mb-1">สื่อสารตรงไปตรงมา</h4>
-                      <p className="text-slate-200 text-xs font-normal">แจ้งรายละเอียดและค่างานชัดเจน ปราศจากค่าใช้จ่ายแอบแฝง</p>
+                      <h4 className="text-white font-extrabold text-base mb-1">สื่อสารตรงไปตรงมา</h4>
+                      <p className="text-slate-200 text-xs font-bold">แจ้งรายละเอียดและค่างานชัดเจน ปราศจากค่าใช้จ่ายแอบแฝง</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-gold-gradient text-slate-950 font-bold flex items-center justify-center shrink-0">
+                    <div className="w-8 h-8 rounded-full bg-amber-400 text-slate-950 font-bold flex items-center justify-center shrink-0">
                       3
                     </div>
                     <div>
-                      <h4 className="text-white font-bold text-base mb-1">พร้อมเคียงข้างเมื่อโดนตรวจสอบ</h4>
-                      <p className="text-slate-200 text-xs font-normal">ทีมงาน CPA และทนายความพร้อมเข้าพบเจ้าหน้าที่สรรพากรแทนท่าน</p>
+                      <h4 className="text-white font-extrabold text-base mb-1">พร้อมเคียงข้างเมื่อโดนตรวจสอบ</h4>
+                      <p className="text-slate-200 text-xs font-bold">ทีมงาน CPA และทนายความพร้อมเข้าพบเจ้าหน้าที่สรรพากรแทนท่าน</p>
                     </div>
                   </div>
                 </div>
 
                 {/* License details */}
                 <div className="mt-8 pt-6 border-t border-slate-700/80">
-                  <div className="text-amber-300 text-xs font-bold">
+                  <div className="text-amber-300 text-xs font-black">
                     ขึ้นทะเบียนสภาวิชาชีพบัญชี & สภาทนายความแห่งประเทศไทย
                   </div>
-                  <div className="text-slate-200 text-xs mt-1 font-normal">
+                  <div className="text-slate-200 text-xs mt-1 font-bold">
                     มีสัญญารักษาความลับลูกค้า (Non-Disclosure Agreement) ทุกสัญญา
                   </div>
                 </div>
