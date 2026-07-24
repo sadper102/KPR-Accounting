@@ -2,16 +2,17 @@
 
 @layer base {
   :root {
-    --bg-main: #FFFFFF;
-    --bg-alt: #F1F5F9;
-    --navy-dark: #0A1628;
-    --navy-primary: #0F2A4A;
-    --gold-dark: #855B09;
-    --gold-primary: #94670A;
-    --gold-light: #F5C767;
-    --text-dark: #0A1628;
-    --text-body: #1E293B;
-    --border-main: #CBD5E1;
+    --bg-main: #F8FAFC;
+    --bg-card: #FFFFFF;
+    --navy-primary: #0D2240;
+    --navy-dark: #08162B;
+    --navy-light: #16325B;
+    --gold-primary: #C5A059;
+    --gold-dark: #9A7B39;
+    --gold-light: #D4AF37;
+    --text-primary: #0D2240;
+    --text-body: #334155;
+    --border-color: #E2E8F0;
   }
 
   html {
@@ -29,23 +30,21 @@
 
   h1, h2, h3, h4 {
     font-family: var(--font-prompt), 'Prompt', sans-serif;
-    color: var(--text-dark);
-    word-break: break-word;
-    overflow-wrap: break-word;
+    color: var(--navy-primary);
   }
 }
 
-/* High Contrast Solid Cards */
+/* Executive Clean Card System */
 .executive-card {
   background-color: #FFFFFF;
-  border: 1px solid #CBD5E1;
-  box-shadow: 0 4px 12px rgba(10, 22, 40, 0.05);
-  transition: all 0.2s ease-in-out;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 12px rgba(13, 34, 64, 0.04);
+  transition: all 0.25s ease-in-out;
 }
 
 .executive-card:hover {
-  border-color: #0A1628;
-  box-shadow: 0 10px 24px rgba(10, 22, 40, 0.1);
+  border-color: #C5A059;
+  box-shadow: 0 10px 24px rgba(13, 34, 64, 0.08);
   transform: translateY(-2px);
 }
 
@@ -60,15 +59,33 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 4px;
-  background: #0A1628;
+  height: 3px;
+  background: linear-gradient(90deg, #0D2240 0%, #C5A059 100%);
 }
 
 /* Executive Clean Header Nav */
 .executive-nav {
-  background-color: #FFFFFF;
-  border-bottom: 1px solid #CBD5E1;
-  box-shadow: 0 2px 8px rgba(10, 22, 40, 0.05);
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid #E2E8F0;
+}
+
+/* Color Tokens */
+.text-gold {
+  color: #C5A059;
+}
+
+.text-navy {
+  color: #0D2240;
+}
+
+.bg-navy {
+  background-color: #0D2240;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #D4AF37 0%, #C5A059 50%, #9A7B39 100%);
 }
 
 /* Custom Scrollbar */
@@ -76,12 +93,12 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #F1F5F9;
+  background: #F8FAFC;
 }
 ::-webkit-scrollbar-thumb {
-  background: #94A3B8;
+  background: #CBD5E1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #0A1628;
+  background: #0D2240;
 }
