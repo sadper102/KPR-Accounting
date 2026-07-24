@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Noto_Sans_Thai, Inter } from "next/font/google";
+import { Playfair_Display, Prompt, Inter } from "next/font/google";
 import "./globals.css";
 import { SITE_CONFIG } from "@/lib/constants";
 
@@ -9,10 +9,10 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-const notoThai = Noto_Sans_Thai({
+const prompt = Prompt({
   subsets: ["thai", "latin"],
-  variable: "--font-noto-thai",
-  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-prompt",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
   display: "swap",
 });
 
@@ -90,7 +90,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // JSON-LD Structured Data for LocalBusiness & LegalService
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": ["AccountingService", "LegalService"],
@@ -123,14 +122,14 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="th" className={`${playfair.variable} ${notoThai.variable} ${inter.variable}`}>
+    <html lang="th" className={`${playfair.variable} ${prompt.variable} ${inter.variable}`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="antialiased selection:bg-amber-500/30 selection:text-amber-200">
+      <body className="antialiased selection:bg-[#0D2240] selection:text-white">
         {children}
       </body>
     </html>

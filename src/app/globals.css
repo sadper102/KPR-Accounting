@@ -23,12 +23,12 @@
   body {
     background-color: var(--bg-main);
     color: var(--text-primary);
-    font-family: 'Noto Sans Thai', 'Inter', sans-serif;
+    font-family: var(--font-prompt), 'Prompt', 'Inter', sans-serif;
     overflow-x: hidden;
   }
 
   h1, h2, h3, h4, .font-serif {
-    font-family: 'Playfair Display', 'Noto Sans Thai', serif;
+    font-family: 'Playfair Display', var(--font-prompt), 'Prompt', serif;
   }
 }
 
