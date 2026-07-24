@@ -35,8 +35,8 @@ export default function WhyUs() {
             </ScrollReveal>
 
             <ScrollReveal direction="up" delay={0.1}>
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0D2240] mt-4 mb-6">
-                ทำไมองค์กรชั้นนำถึงเจาะจงเลือก <span className="text-[#C5A059] font-serif">KPR ACCOUNTING</span>
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0D2240] mt-4 mb-6">
+                ทำไมองค์กรชั้นนำถึงเจาะจงเลือก <span className="text-[#C5A059]">KPR ACCOUNTING</span>
               </h2>
             </ScrollReveal>
 
@@ -51,15 +51,15 @@ export default function WhyUs() {
                 const IconComponent = ICON_MAP[item.icon] || ShieldCheck;
                 return (
                   <ScrollReveal key={idx} direction="up" delay={0.1 * idx + 0.2}>
-                    <div className="executive-card p-5 rounded-2xl bg-white border border-[#E2E8F0] flex items-start gap-4">
+                    <div className="executive-card p-5 rounded-2xl bg-white border border-[#E2E8F0] flex items-start gap-4 shadow-xs">
                       <div className="w-10 h-10 rounded-xl bg-[#0D2240]/5 border border-[#0D2240]/10 flex items-center justify-center text-[#0D2240] shrink-0 mt-0.5">
                         <IconComponent className="w-5 h-5 text-[#C5A059]" />
                       </div>
                       <div>
-                        <h3 className="text-base font-bold text-[#0D2240] mb-1 font-serif">
+                        <h3 className="text-base font-bold text-[#0D2240] mb-1">
                           {item.title}
                         </h3>
-                        <p className="text-[#475569] text-xs sm:text-sm leading-relaxed">
+                        <p className="text-[#475569] text-xs sm:text-sm leading-relaxed font-normal">
                           {item.description}
                         </p>
                       </div>
@@ -75,7 +75,7 @@ export default function WhyUs() {
             <ScrollReveal direction="left" delay={0.3}>
               <div className="rounded-3xl p-8 bg-[#0D2240] text-white border border-[#C5A059]/30 shadow-xl relative overflow-hidden">
                 
-                <h3 className="text-2xl font-bold mb-6 font-serif border-b border-[#C5A059]/30 pb-4 text-white">
+                <h3 className="text-2xl font-extrabold mb-6 border-b border-[#C5A059]/30 pb-4 text-white">
                   คำมั่นสัญญาทางวิชาชีพจากเรา
                 </h3>
 

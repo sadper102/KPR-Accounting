@@ -39,8 +39,8 @@ export default function Services() {
           </ScrollReveal>
           
           <ScrollReveal direction="up" delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0D2240] mt-4 mb-6">
-              บริการด้านบัญชีและกฎหมาย <span className="text-[#C5A059] font-serif">ครอบคลุมทุกความต้องการธุรกิจ</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0D2240] mt-4 mb-6">
+              บริการด้านบัญชีและกฎหมาย <span className="text-[#C5A059]">ครอบคลุมทุกความต้องการธุรกิจ</span>
             </h2>
           </ScrollReveal>
 
@@ -67,10 +67,10 @@ export default function Services() {
                     </div>
 
                     {/* Title & Short Desc */}
-                    <h3 className="text-2xl font-bold text-[#0D2240] mb-3 font-serif">
+                    <h3 className="text-2xl font-bold text-[#0D2240] mb-3">
                       {srv.title}
                     </h3>
-                    <p className="text-[#475569] text-sm mb-6 leading-relaxed">
+                    <p className="text-[#475569] text-sm mb-6 leading-relaxed font-normal">
                       {srv.shortDesc}
                     </p>
 
@@ -106,7 +106,7 @@ export default function Services() {
         <ScrollReveal direction="up" delay={0.4}>
           <div className="mt-16 rounded-3xl p-8 sm:p-12 text-center bg-[#0D2240] text-white border border-[#C5A059]/30 shadow-xl relative overflow-hidden">
             <div className="max-w-2xl mx-auto relative z-10">
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4 font-serif text-white">
+              <h3 className="text-2xl sm:text-3xl font-extrabold mb-4 text-white">
                 ต้องการที่ปรึกษาเฉพาะทาง หรือ แพ็กเกจดูแลรายเดือน?
               </h3>
               <p className="text-[#E2E8F0] text-base sm:text-lg mb-8 font-normal leading-relaxed">

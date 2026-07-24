@@ -22,35 +22,35 @@ export default function Hero() {
             
             {/* Accreditation Badge */}
             <ScrollReveal direction="down" delay={0.1}>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-300 text-[#0A1628] text-xs sm:text-sm font-bold mb-6 shadow-sm">
-                <ShieldCheck className="w-4.5 h-4.5 text-[#94670A] shrink-0" />
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-300 text-[#0D2240] text-xs sm:text-sm font-bold mb-6 shadow-xs">
+                <ShieldCheck className="w-4.5 h-4.5 text-[#C5A059] shrink-0" />
                 <span>สำนักงานบัญชีและกฎหมายวิชาชีพ (CPA & Lawyer)</span>
               </div>
             </ScrollReveal>
 
-            {/* Main Headline (NO ARTIFICIAL BR TAGS - Smooth Natural Wrapping) */}
+            {/* Main Headline */}
             <ScrollReveal direction="up" delay={0.2}>
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-snug sm:leading-tight lg:leading-tight text-[#0A1628] mb-6">
-                ยึดมั่นความถูกต้อง <span className="text-[#94670A]">การบัญชีและกฎหมาย</span> เพื่อความมั่นคงของธุรกิจคุณ
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-snug sm:leading-tight lg:leading-tight text-[#0D2240] mb-6">
+                ยึดมั่นความถูกต้อง <span className="text-[#C5A059]">การบัญชีและกฎหมาย</span> เพื่อความมั่นคงของธุรกิจคุณ
               </h1>
             </ScrollReveal>
 
             {/* Subtitle */}
             <ScrollReveal direction="up" delay={0.3}>
-              <p className="text-[#1E293B] text-base sm:text-lg leading-relaxed mb-8 max-w-2xl font-medium">
+              <p className="text-[#334155] text-base sm:text-lg leading-relaxed mb-8 max-w-2xl font-normal">
                 {SITE_CONFIG.description} ป้องกันความเสี่ยงทางภาษีและคดีความธุรกิจอย่างตรงไปตรงมา
               </p>
             </ScrollReveal>
 
             {/* Credential Pills */}
             <ScrollReveal direction="up" delay={0.4}>
-              <div className="flex flex-wrap gap-3 mb-10 text-xs sm:text-sm text-[#0A1628] font-bold">
-                <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-lg border border-slate-300 shadow-sm">
-                  <CheckCircle2 className="w-4.5 h-4.5 text-[#94670A] shrink-0" />
+              <div className="flex flex-wrap gap-3 mb-10 text-xs sm:text-sm text-[#0D2240] font-bold">
+                <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-lg border border-slate-300 shadow-xs">
+                  <CheckCircle2 className="w-4.5 h-4.5 text-[#C5A059] shrink-0" />
                   <span>{SITE_CONFIG.cpaLicense}</span>
                 </div>
-                <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-lg border border-slate-300 shadow-sm">
-                  <CheckCircle2 className="w-4.5 h-4.5 text-[#94670A] shrink-0" />
+                <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-lg border border-slate-300 shadow-xs">
+                  <CheckCircle2 className="w-4.5 h-4.5 text-[#C5A059] shrink-0" />
                   <span>สภาทนายความแห่งประเทศไทย</span>
                 </div>
               </div>
@@ -84,22 +84,22 @@ export default function Hero() {
                       className="object-cover object-center"
                       priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A1628]/95 via-[#0A1628]/30 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0D2240]/90 via-[#0D2240]/20 to-transparent" />
 
                     {/* Badge inside image */}
-                    <div className="absolute bottom-5 left-5 right-5 bg-white rounded-xl p-4 border border-slate-300 shadow-2xl">
+                    <div className="absolute bottom-5 left-5 right-5 bg-white rounded-xl p-4 border border-slate-300 shadow-xl">
                       <div className="flex items-center gap-3.5">
-                        <div className="w-12 h-12 rounded-xl bg-[#0A1628] flex items-center justify-center text-[#C5A059] shrink-0 font-bold">
+                        <div className="w-12 h-12 rounded-xl bg-[#0D2240] flex items-center justify-center text-[#C5A059] shrink-0 font-bold">
                           <Scale className="w-6 h-6" />
                         </div>
                         <div>
-                          <div className="text-[#94670A] text-xs font-black uppercase tracking-wider">
+                          <div className="text-[#C5A059] text-xs font-bold uppercase tracking-wider">
                             KPR ACCOUNTING
                           </div>
-                          <div className="text-[#0A1628] text-sm sm:text-base font-extrabold">
+                          <div className="text-[#0D2240] text-sm sm:text-base font-extrabold">
                             เคพีอาร์ แอคเคาท์ติ้ง
                           </div>
-                          <div className="text-[#1E293B] text-xs mt-0.5 font-bold">
+                          <div className="text-[#475569] text-xs mt-0.5 font-medium">
                             ที่ปรึกษาบัญชีและกฎหมายครบวงจร
                           </div>
                         </div>
@@ -109,13 +109,13 @@ export default function Hero() {
                 </div>
 
                 {/* Floating Stat Badge */}
-                <div className="absolute -top-4 -left-4 bg-white rounded-xl p-4 border border-slate-300 shadow-2xl hidden sm:flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-amber-100 flex items-center justify-center text-[#94670A] shrink-0">
+                <div className="absolute -top-4 -left-4 bg-white rounded-xl p-4 border border-slate-300 shadow-xl hidden sm:flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center text-[#C5A059] shrink-0">
                     <Award className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-[#0A1628] font-extrabold text-sm">ประสบการณ์ 15+ ปี</div>
-                    <div className="text-[#1E293B] text-xs font-bold">ถูกต้องตามกฎหมาย 100%</div>
+                    <div className="text-[#0D2240] font-extrabold text-sm">ประสบการณ์ 15+ ปี</div>
+                    <div className="text-[#475569] text-xs font-medium">ถูกต้องตามกฎหมาย 100%</div>
                   </div>
                 </div>
 

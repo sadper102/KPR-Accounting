@@ -20,17 +20,21 @@
     color-scheme: light;
   }
 
+  /* Single Unified Font Family across the entire website */
+  body, h1, h2, h3, h4, h5, h6, input, textarea, select, button, p, span, a, li {
+    font-family: var(--font-prompt), 'Prompt', sans-serif !important;
+  }
+
   body {
     background-color: var(--bg-main);
     color: var(--text-body);
-    font-family: var(--font-prompt), 'Prompt', 'Inter', sans-serif;
     overflow-x: hidden;
     line-height: 1.6;
   }
 
   h1, h2, h3, h4 {
-    font-family: var(--font-prompt), 'Prompt', sans-serif;
     color: var(--navy-primary);
+    letter-spacing: -0.01em;
   }
 }
 
