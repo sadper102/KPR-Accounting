@@ -45,7 +45,7 @@ export default function Services() {
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={0.2}>
-            <p className="text-[#1E293B] text-base sm:text-lg font-medium">
+            <p className="text-[#0A1628] text-base sm:text-lg font-bold">
               เราให้บริการที่ปรับให้เหมาะกับประเภทและขนาดธุรกิจของคุณ ตั้งแต่เริ่มต้นประกอบการจนถึงบริษัทเติบโต
             </p>
           </ScrollReveal>
@@ -70,7 +70,7 @@ export default function Services() {
                     <h3 className="text-2xl font-extrabold text-[#0A1628] mb-3 font-serif">
                       {srv.title}
                     </h3>
-                    <p className="text-[#1E293B] text-sm mb-6 leading-relaxed font-medium">
+                    <p className="text-[#1E293B] text-sm mb-6 leading-relaxed font-bold">
                       {srv.shortDesc}
                     </p>
 
@@ -102,17 +102,17 @@ export default function Services() {
           })}
         </div>
 
-        {/* Bottom Banner */}
+        {/* Bottom Dark Banner (PURE WHITE HIGH CONTRAST TEXT) */}
         <ScrollReveal direction="up" delay={0.4}>
-          <div className="mt-16 executive-card rounded-3xl p-8 sm:p-12 text-center bg-[#0A1628] text-white border border-slate-800 shadow-2xl relative overflow-hidden">
+          <div className="mt-16 rounded-3xl p-8 sm:p-12 text-center bg-[#0A1628] text-white border-2 border-slate-700 shadow-2xl relative overflow-hidden">
             <div className="max-w-2xl mx-auto relative z-10">
-              <h3 className="text-2xl sm:text-3xl font-extrabold mb-4 font-serif text-white">
+              <h3 className="text-2xl sm:text-3xl font-black mb-4 font-serif text-white">
                 ต้องการที่ปรึกษาเฉพาะทาง หรือ แพ็กเกจดูแลรายเดือน?
               </h3>
-              <p className="text-slate-200 text-base mb-8 font-medium">
+              <p className="text-white text-base sm:text-lg mb-8 font-bold leading-relaxed">
                 เรามีแพ็กเกจยืดหยุ่นที่คุ้มค่า เหมาะสำหรับผู้เริ่มต้นประกอบการและบริษัทที่ต้องการดูแลอย่างต่อเนื่อง
               </p>
-              <Button href="#contact" variant="gold" size="lg" className="font-bold">
+              <Button href="#contact" variant="gold" size="lg" className="font-extrabold">
                 ขอใบเสนอราคาแพ็กเกจ
               </Button>
             </div>
