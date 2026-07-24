@@ -39,25 +39,25 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 relative bg-slate-50 border-t border-slate-200">
+    <section id="contact" className="py-24 relative bg-slate-100/70 border-t border-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <ScrollReveal direction="down">
-            <span className="text-[#0D2240] font-bold text-xs uppercase tracking-widest bg-slate-200/80 px-3.5 py-1.5 rounded-full border border-slate-300">
+            <span className="text-[#0D2240] font-extrabold text-xs uppercase tracking-widest bg-white px-4 py-1.5 rounded-full border border-slate-300 shadow-sm">
               CONTACT US — ติดต่อเรา
             </span>
           </ScrollReveal>
           
           <ScrollReveal direction="up" delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0D2240] mt-4 mb-6">
-              รับคำปรึกษาเบื้องต้น <span className="text-gold-gradient font-serif">ไม่มีค่าใช้จ่าย</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0D2240] mt-4 mb-6">
+              รับคำปรึกษาเบื้องต้น <span className="text-[#9A7B39] font-serif">ไม่มีค่าใช้จ่าย</span>
             </h2>
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={0.2}>
-            <p className="text-slate-600 text-base sm:text-lg">
+            <p className="text-slate-900 text-base sm:text-lg font-medium">
               ทีมงานผู้เชี่ยวชาญพร้อมตอบคำถามและให้คำแนะนำแก่ท่าน ติดต่อเราได้ทันที
             </p>
           </ScrollReveal>
@@ -69,24 +69,24 @@ export default function Contact() {
           <div className="lg:col-span-5 space-y-4">
             
             <ScrollReveal direction="right" delay={0.1}>
-              <div className="executive-card p-6 rounded-2xl bg-white border border-slate-200">
+              <div className="executive-card p-6 rounded-2xl bg-white border border-slate-300 shadow-md">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-[#0D2240] shrink-0 mt-0.5">
-                    <Phone className="w-5 h-5 text-[#C5A059]" />
+                  <div className="w-10 h-10 rounded-xl bg-slate-100 border border-slate-300 flex items-center justify-center text-[#0D2240] shrink-0 mt-0.5">
+                    <Phone className="w-5 h-5 text-[#9A7B39]" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">
+                    <div className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
                       เบอร์โทรศัพท์ติดต่อ
                     </div>
                     <a
                       href={`tel:${SITE_CONFIG.phone}`}
-                      className="text-base font-bold text-[#0D2240] hover:text-[#C5A059] transition-colors block"
+                      className="text-base font-extrabold text-[#0D2240] hover:text-[#9A7B39] transition-colors block"
                     >
                       {SITE_CONFIG.phone}
                     </a>
                     <a
                       href={`tel:${SITE_CONFIG.mobile}`}
-                      className="text-xs text-slate-600 hover:text-[#C5A059] transition-colors block mt-0.5"
+                      className="text-xs text-slate-900 font-semibold hover:text-[#9A7B39] transition-colors block mt-0.5"
                     >
                       {SITE_CONFIG.mobile} (สายด่วน)
                     </a>
@@ -96,23 +96,23 @@ export default function Contact() {
             </ScrollReveal>
 
             <ScrollReveal direction="right" delay={0.2}>
-              <div className="executive-card p-6 rounded-2xl bg-white border border-slate-200">
+              <div className="executive-card p-6 rounded-2xl bg-white border border-slate-300 shadow-md">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-[#0D2240] shrink-0 mt-0.5">
-                    <Mail className="w-5 h-5 text-[#C5A059]" />
+                  <div className="w-10 h-10 rounded-xl bg-slate-100 border border-slate-300 flex items-center justify-center text-[#0D2240] shrink-0 mt-0.5">
+                    <Mail className="w-5 h-5 text-[#9A7B39]" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">
+                    <div className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
                       อีเมล & Line Official
                     </div>
                     <a
                       href={`mailto:${SITE_CONFIG.email}`}
-                      className="text-base font-bold text-[#0D2240] hover:text-[#C5A059] transition-colors block"
+                      className="text-base font-extrabold text-[#0D2240] hover:text-[#9A7B39] transition-colors block"
                     >
                       {SITE_CONFIG.email}
                     </a>
-                    <div className="text-xs text-slate-600 mt-1 font-medium">
-                      Line ID: <span className="text-[#0D2240] font-bold">{SITE_CONFIG.line}</span>
+                    <div className="text-xs text-slate-900 mt-1 font-bold">
+                      Line ID: <span className="text-[#0D2240]">{SITE_CONFIG.line}</span>
                     </div>
                   </div>
                 </div>
@@ -120,16 +120,16 @@ export default function Contact() {
             </ScrollReveal>
 
             <ScrollReveal direction="right" delay={0.3}>
-              <div className="executive-card p-6 rounded-2xl bg-white border border-slate-200">
+              <div className="executive-card p-6 rounded-2xl bg-white border border-slate-300 shadow-md">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-[#0D2240] shrink-0 mt-0.5">
-                    <MapPin className="w-5 h-5 text-[#C5A059]" />
+                  <div className="w-10 h-10 rounded-xl bg-slate-100 border border-slate-300 flex items-center justify-center text-[#0D2240] shrink-0 mt-0.5">
+                    <MapPin className="w-5 h-5 text-[#9A7B39]" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">
+                    <div className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
                       ที่ตั้งสำนักงาน
                     </div>
-                    <p className="text-xs sm:text-sm text-slate-700 leading-relaxed font-medium">
+                    <p className="text-xs sm:text-sm text-slate-900 leading-relaxed font-bold">
                       {SITE_CONFIG.address}
                     </p>
                   </div>
@@ -138,19 +138,19 @@ export default function Contact() {
             </ScrollReveal>
 
             <ScrollReveal direction="right" delay={0.4}>
-              <div className="executive-card p-6 rounded-2xl bg-white border border-slate-200">
+              <div className="executive-card p-6 rounded-2xl bg-white border border-slate-300 shadow-md">
                 <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-[#0D2240] shrink-0 mt-0.5">
-                    <Clock className="w-5 h-5 text-[#C5A059]" />
+                  <div className="w-10 h-10 rounded-xl bg-slate-100 border border-slate-300 flex items-center justify-center text-[#0D2240] shrink-0 mt-0.5">
+                    <Clock className="w-5 h-5 text-[#9A7B39]" />
                   </div>
                   <div>
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">
+                    <div className="text-xs font-bold text-slate-700 uppercase tracking-wider mb-1">
                       เวลาทำการ
                     </div>
-                    <p className="text-xs sm:text-sm text-slate-700 font-medium">
+                    <p className="text-xs sm:text-sm text-slate-900 font-bold">
                       {SITE_CONFIG.workingHours}
                     </p>
-                    <p className="text-xs text-slate-500 mt-0.5">
+                    <p className="text-xs text-slate-700 font-medium mt-0.5">
                       (หยุดวันเสาร์ - อาทิตย์ และวันหยุดนักขัตฤกษ์)
                     </p>
                   </div>
@@ -160,25 +160,25 @@ export default function Contact() {
 
           </div>
 
-          {/* Right Side: Clean Executive Form */}
+          {/* Right Side: Clean High-Contrast Executive Form */}
           <div className="lg:col-span-7">
             <ScrollReveal direction="left" delay={0.2}>
-              <div className="executive-card p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 shadow-lg">
+              <div className="executive-card p-8 sm:p-10 rounded-3xl bg-white border border-slate-300 shadow-xl">
                 
-                <h3 className="text-2xl font-bold text-[#0D2240] mb-2 font-serif">
+                <h3 className="text-2xl font-extrabold text-[#0D2240] mb-2 font-serif">
                   ส่งข้อความถึงสำนักงาน
                 </h3>
-                <p className="text-slate-600 text-sm mb-8 font-normal">
+                <p className="text-slate-900 text-sm mb-8 font-medium">
                   กรอกรายละเอียดเบื้องต้น ทีมงานจะติดต่อกลับภายใน 24 ชั่วโมง
                 </p>
 
                 {submitted ? (
-                  <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-8 text-center">
-                    <CheckCircle2 className="w-12 h-12 text-emerald-600 mx-auto mb-4" />
-                    <h4 className="text-xl font-bold text-slate-800 mb-2 font-serif">
+                  <div className="bg-emerald-50 border border-emerald-300 rounded-2xl p-8 text-center">
+                    <CheckCircle2 className="w-12 h-12 text-emerald-700 mx-auto mb-4" />
+                    <h4 className="text-xl font-bold text-slate-900 mb-2 font-serif">
                       ได้รับข้อมูลเรียบร้อยแล้ว
                     </h4>
-                    <p className="text-slate-600 text-sm">
+                    <p className="text-slate-900 text-sm font-medium">
                       ขอบคุณที่ไว้วางใจ KPR ACCOUNTING เจ้าหนาที่จะติดต่อกลับโดยเร็วที่สุดครับ
                     </p>
                   </div>
@@ -186,7 +186,7 @@ export default function Contact() {
                   <form onSubmit={handleSubmit} className="space-y-5">
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div>
-                        <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                        <label className="block text-xs font-black text-slate-900 uppercase tracking-wider mb-2">
                           ชื่อ - นามสกุล / บริษัท *
                         </label>
                         <input
@@ -195,12 +195,12 @@ export default function Contact() {
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           placeholder="กรุณากรอกชื่อของคุณ"
-                          className="w-full bg-slate-50 border border-slate-300 focus:border-[#0D2240] rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-1 focus:ring-[#0D2240] transition-colors"
+                          className="w-full bg-white border border-slate-400 focus:border-[#0D2240] rounded-xl px-4 py-3 text-slate-900 font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-[#0D2240] transition-colors placeholder:text-slate-500 shadow-inner"
                         />
                       </div>
 
                       <div>
-                        <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                        <label className="block text-xs font-black text-slate-900 uppercase tracking-wider mb-2">
                           เบอร์โทรศัพท์ติดต่อ *
                         </label>
                         <input
@@ -209,14 +209,14 @@ export default function Contact() {
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           placeholder="08X-XXX-XXXX"
-                          className="w-full bg-slate-50 border border-slate-300 focus:border-[#0D2240] rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-1 focus:ring-[#0D2240] transition-colors"
+                          className="w-full bg-white border border-slate-400 focus:border-[#0D2240] rounded-xl px-4 py-3 text-slate-900 font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-[#0D2240] transition-colors placeholder:text-slate-500 shadow-inner"
                         />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div>
-                        <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                        <label className="block text-xs font-black text-slate-900 uppercase tracking-wider mb-2">
                           อีเมล
                         </label>
                         <input
@@ -224,18 +224,18 @@ export default function Contact() {
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           placeholder="name@company.com"
-                          className="w-full bg-slate-50 border border-slate-300 focus:border-[#0D2240] rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-1 focus:ring-[#0D2240] transition-colors"
+                          className="w-full bg-white border border-slate-400 focus:border-[#0D2240] rounded-xl px-4 py-3 text-slate-900 font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-[#0D2240] transition-colors placeholder:text-slate-500 shadow-inner"
                         />
                       </div>
 
                       <div>
-                        <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                        <label className="block text-xs font-black text-slate-900 uppercase tracking-wider mb-2">
                           บริการที่สนใจ
                         </label>
                         <select
                           value={formData.service}
                           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                          className="w-full bg-slate-50 border border-slate-300 focus:border-[#0D2240] rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-1 focus:ring-[#0D2240] transition-colors"
+                          className="w-full bg-white border border-slate-400 focus:border-[#0D2240] rounded-xl px-4 py-3 text-slate-900 font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-[#0D2240] transition-colors shadow-inner"
                         >
                           <option value="บริการด้านบัญชี">บริการด้านบัญชี</option>
                           <option value="บริการด้านภาษี">บริการด้านภาษี</option>
@@ -249,7 +249,7 @@ export default function Contact() {
                     </div>
 
                     <div>
-                      <label className="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">
+                      <label className="block text-xs font-black text-slate-900 uppercase tracking-wider mb-2">
                         รายละเอียดเพิ่มเติม
                       </label>
                       <textarea
@@ -257,11 +257,11 @@ export default function Contact() {
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         placeholder="รายละเอียดธุรกิจ หรือ คำถามที่ต้องการปรึกษา..."
-                        className="w-full bg-slate-50 border border-slate-300 focus:border-[#0D2240] rounded-xl px-4 py-3 text-slate-900 text-sm focus:outline-none focus:ring-1 focus:ring-[#0D2240] transition-colors resize-none"
+                        className="w-full bg-white border border-slate-400 focus:border-[#0D2240] rounded-xl px-4 py-3 text-slate-900 font-semibold text-sm focus:outline-none focus:ring-2 focus:ring-[#0D2240] transition-colors resize-none placeholder:text-slate-500 shadow-inner"
                       />
                     </div>
 
-                    <Button type="submit" variant="navy" size="lg" className="w-full">
+                    <Button type="submit" variant="navy" size="lg" className="w-full font-bold">
                       ส่งข้อความขอคำปรึกษา <Send className="w-4 h-4 ml-2 inline" />
                     </Button>
                   </form>

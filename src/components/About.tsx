@@ -32,26 +32,26 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-24 relative bg-slate-50 border-y border-slate-200">
+    <section id="about" className="py-24 relative bg-slate-100/70 border-y border-slate-300">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <ScrollReveal direction="down">
-            <span className="text-[#0D2240] font-bold text-xs uppercase tracking-widest bg-slate-200/80 px-3.5 py-1.5 rounded-full border border-slate-300">
+            <span className="text-[#0D2240] font-extrabold text-xs uppercase tracking-widest bg-white px-4 py-1.5 rounded-full border border-slate-300 shadow-sm">
               ABOUT US — เกี่ยวกับเรา
             </span>
           </ScrollReveal>
           
           <ScrollReveal direction="up" delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0D2240] mt-4 mb-6">
-              คู่คิดทางธุรกิจที่ <span className="text-gold-gradient font-serif">ไว้วางใจได้เสมอ</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0D2240] mt-4 mb-6">
+              คู่คิดทางธุรกิจที่ <span className="text-[#9A7B39] font-serif">ไว้วางใจได้เสมอ</span>
             </h2>
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={0.2}>
-            <p className="text-slate-600 text-base sm:text-lg leading-relaxed">
-              <strong>KPR ACCOUNTING (เคพีอาร์ แอคเคาท์ติ้ง)</strong> ให้บริการด้านการบัญชี ภาษี ตรวจสอบบัญชี และกฎหมายธุรกิจแบบครบวงจร เรามุ่งมั่นช่วยเหลือผู้ประกอบการ SMEs และนิติบุคคลทุกขนาดให้ดำเนินธุรกิจได้อย่างราบรื่นและมั่นคง
+            <p className="text-slate-900 text-base sm:text-lg leading-relaxed font-medium">
+              <strong className="text-[#0D2240]">KPR ACCOUNTING (เคพีอาร์ แอคเคาท์ติ้ง)</strong> ให้บริการด้านการบัญชี ภาษี ตรวจสอบบัญชี และกฎหมายธุรกิจแบบครบวงจร เรามุ่งมั่นช่วยเหลือผู้ประกอบการ SMEs และนิติบุคคลทุกขนาดให้ดำเนินธุรกิจได้อย่างราบรื่นและมั่นคง
             </p>
           </ScrollReveal>
         </div>
@@ -62,12 +62,12 @@ export default function About() {
             {STATS.map((stat, idx) => (
               <div
                 key={idx}
-                className="executive-card rounded-2xl p-6 text-center border border-slate-200 bg-white"
+                className="executive-card rounded-2xl p-6 text-center border border-slate-300 bg-white shadow-md"
               >
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0D2240] font-serif mb-2">
+                <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0D2240] font-serif mb-2">
                   <AnimatedCounter target={stat.value} suffix={stat.suffix} />
                 </div>
-                <div className="text-slate-600 text-xs sm:text-sm font-medium">
+                <div className="text-slate-900 text-xs sm:text-sm font-bold">
                   {stat.label}
                 </div>
               </div>
@@ -81,15 +81,15 @@ export default function About() {
             const IconComp = val.icon;
             return (
               <ScrollReveal key={idx} direction="up" delay={0.1 * idx + 0.2}>
-                <GlassCard className="h-full flex flex-col justify-between" accentTop>
+                <GlassCard className="h-full flex flex-col justify-between border-slate-300 bg-white shadow-md" accentTop>
                   <div>
-                    <div className="w-12 h-12 rounded-xl bg-slate-100 border border-slate-200 flex items-center justify-center text-[#0D2240] mb-5">
-                      <IconComp className="w-6 h-6 text-[#C5A059]" />
+                    <div className="w-12 h-12 rounded-xl bg-slate-100 border border-slate-300 flex items-center justify-center text-[#0D2240] mb-5">
+                      <IconComp className="w-6 h-6 text-[#9A7B39]" />
                     </div>
-                    <h3 className="text-xl font-bold text-[#0D2240] mb-2 font-serif">
+                    <h3 className="text-xl font-extrabold text-[#0D2240] mb-2 font-serif">
                       {val.title}
                     </h3>
-                    <p className="text-slate-600 text-sm leading-relaxed font-normal">
+                    <p className="text-slate-900 text-sm leading-relaxed font-normal">
                       {val.desc}
                     </p>
                   </div>

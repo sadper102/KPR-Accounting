@@ -5,14 +5,14 @@
     --bg-main: #F8FAFC;
     --bg-card: #FFFFFF;
     --navy-primary: #0D2240;
-    --navy-dark: #07152B;
+    --navy-dark: #050E1A;
     --navy-light: #16325B;
-    --gold-primary: #C5A059;
-    --gold-dark: #9A7B39;
-    --gold-light: #E5C378;
-    --text-primary: #0F172A;
-    --text-secondary: #475569;
-    --border-color: #E2E8F0;
+    --gold-primary: #9A7B39;
+    --gold-dark: #785E25;
+    --gold-light: #C5A059;
+    --text-primary: #091322;
+    --text-secondary: #1E293B;
+    --border-color: #CBD5E1;
   }
 
   html {
@@ -32,17 +32,17 @@
   }
 }
 
-/* Executive Clean Solid Card System (No AI Neon Blur Glow) */
+/* Executive Clean Solid Card System */
 .executive-card {
   background: #FFFFFF;
-  border: 1px solid #E2E8F0;
-  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.04), 0 2px 4px -2px rgba(15, 23, 42, 0.04);
+  border: 1px solid #CBD5E1;
+  box-shadow: 0 4px 12px rgba(13, 34, 64, 0.06);
   transition: all 0.25s ease-in-out;
 }
 
 .executive-card:hover {
-  border-color: #CBD5E1;
-  box-shadow: 0 10px 25px -5px rgba(13, 34, 64, 0.08), 0 8px 10px -6px rgba(13, 34, 64, 0.04);
+  border-color: #0D2240;
+  box-shadow: 0 12px 28px rgba(13, 34, 64, 0.12);
   transform: translateY(-3px);
 }
 
@@ -57,32 +57,31 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 4px;
   background: linear-gradient(90deg, #0D2240 0%, #C5A059 100%);
 }
 
 /* Executive Clean Header Nav */
 .executive-nav {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid #E2E8F0;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid #CBD5E1;
 }
 
-/* Crisp Text Gradients */
+/* High Contrast Text Gradients */
 .text-navy-gradient {
-  background: linear-gradient(135deg, #0D2240 0%, #16325B 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #0D2240;
 }
 
 .text-gold-gradient {
-  background: linear-gradient(135deg, #9A7B39 0%, #C5A059 50%, #9A7B39 100%);
+  color: #9A7B39;
+  background: linear-gradient(135deg, #785E25 0%, #9A7B39 50%, #B38B38 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* Buttons & Accents */
+/* Background Gradients */
 .bg-navy-gradient {
   background: linear-gradient(135deg, #0D2240 0%, #16325B 100%);
 }
@@ -99,7 +98,7 @@
   background: #F1F5F9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #CBD5E1;
+  background: #94A3B8;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
