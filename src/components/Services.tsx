@@ -31,7 +31,7 @@ export default function Services() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-4xl mx-auto mb-16">
           <ScrollReveal direction="down">
             <span className="text-[#0D2240] font-bold text-xs uppercase tracking-widest bg-[#F8FAFC] px-4 py-1.5 rounded-full border border-[#E2E8F0] shadow-xs inline-block">
               OUR SERVICES — บริการของเรา
@@ -39,13 +39,13 @@ export default function Services() {
           </ScrollReveal>
           
           <ScrollReveal direction="up" delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0D2240] mt-4 mb-6">
-              บริการด้านบัญชีและกฎหมาย <span className="text-[#C5A059]">ครอบคลุมทุกความต้องการธุรกิจ</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0D2240] mt-4 mb-6 leading-tight [text-wrap:balance]">
+              บริการด้านบัญชีและกฎหมาย <span className="text-[#C5A059] whitespace-nowrap">ครอบคลุมทุกความต้องการธุรกิจ</span>
             </h2>
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={0.2}>
-            <p className="text-[#334155] text-base sm:text-lg font-medium">
+            <p className="text-[#334155] text-base sm:text-lg font-medium max-w-2xl mx-auto [text-wrap:balance]">
               เราให้บริการที่ปรับให้เหมาะกับประเภทและขนาดธุรกิจของคุณ ตั้งแต่เริ่มต้นประกอบการจนถึงบริษัทเติบโต
             </p>
           </ScrollReveal>
@@ -105,11 +105,11 @@ export default function Services() {
         {/* Bottom Harmonized Dark Banner */}
         <ScrollReveal direction="up" delay={0.4}>
           <div className="mt-16 rounded-3xl p-8 sm:p-12 text-center bg-[#0D2240] text-white border border-[#C5A059]/30 shadow-xl relative overflow-hidden">
-            <div className="max-w-2xl mx-auto relative z-10">
-              <h3 className="text-2xl sm:text-3xl font-extrabold mb-4 text-white">
+            <div className="max-w-3xl mx-auto relative z-10">
+              <h3 className="text-2xl sm:text-3xl font-extrabold mb-4 text-white leading-tight [text-wrap:balance]">
                 ต้องการที่ปรึกษาเฉพาะทาง หรือ แพ็กเกจดูแลรายเดือน?
               </h3>
-              <p className="text-[#E2E8F0] text-base sm:text-lg mb-8 font-normal leading-relaxed">
+              <p className="text-[#E2E8F0] text-base sm:text-lg mb-8 font-normal leading-relaxed [text-wrap:balance]">
                 เรามีแพ็กเกจยืดหยุ่นที่คุ้มค่า เหมาะสำหรับผู้เริ่มต้นประกอบการและบริษัทที่ต้องการดูแลอย่างต่อเนื่อง
               </p>
               <Button href="#contact" variant="gold" size="lg" className="font-bold">

@@ -10,7 +10,7 @@ export default function Workflow() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-4xl mx-auto mb-16">
           <ScrollReveal direction="down">
             <span className="text-[#0D2240] font-bold text-xs uppercase tracking-widest bg-[#F8FAFC] px-4 py-1.5 rounded-full border border-[#E2E8F0] shadow-xs inline-block">
               WORKFLOW — ขั้นตอนการทำงาน
@@ -18,13 +18,13 @@ export default function Workflow() {
           </ScrollReveal>
           
           <ScrollReveal direction="up" delay={0.1}>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0D2240] mt-4 mb-6">
-              กระบวนการทำงานที่เป็นระบบ <span className="text-[#C5A059]">3 ขั้นตอน</span>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0D2240] mt-4 mb-6 leading-tight [text-wrap:balance]">
+              กระบวนการทำงานที่เป็นระบบ <span className="text-[#C5A059] whitespace-nowrap">3 ขั้นตอน</span>
             </h2>
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={0.2}>
-            <p className="text-[#334155] text-base sm:text-lg font-medium">
+            <p className="text-[#334155] text-base sm:text-lg font-medium max-w-2xl mx-auto [text-wrap:balance]">
               ชัดเจน โปร่งใส ตรวจสอบได้ในทุกขั้นตอน เพื่อให้ท่านมั่นใจในความถูกต้องทางการเงินและกฎหมาย
             </p>
           </ScrollReveal>
