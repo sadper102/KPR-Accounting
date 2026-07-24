@@ -5,7 +5,7 @@ interface ButtonProps {
   children: React.ReactNode;
   href?: string;
   onClick?: () => void;
-  variant?: "gold" | "outline" | "ghost";
+  variant?: "navy" | "gold" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
   className?: string;
   type?: "button" | "submit" | "reset";
@@ -15,25 +15,26 @@ export default function Button({
   children,
   href,
   onClick,
-  variant = "gold",
+  variant = "navy",
   size = "md",
   className = "",
   type = "button",
 }: ButtonProps) {
   const baseStyles =
-    "inline-flex items-center justify-center font-semibold transition-all duration-300 rounded-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-amber-400/50";
+    "inline-flex items-center justify-center font-medium transition-all duration-200 rounded-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-slate-400";
 
   const variants = {
-    gold: "bg-gold-gradient text-slate-950 font-bold shadow-lg shadow-amber-950/20 hover:bg-gold-gradient-hover hover:scale-[1.02] hover:shadow-amber-500/20 active:scale-[0.98]",
+    navy: "bg-[#0D2240] text-white hover:bg-[#16325B] shadow-md shadow-slate-900/10 hover:shadow-lg active:scale-[0.99]",
+    gold: "bg-gold-gradient text-slate-950 font-semibold hover:opacity-95 shadow-md shadow-amber-900/10 active:scale-[0.99]",
     outline:
-      "border border-[#C5A059]/50 text-[#C5A059] bg-slate-900/40 backdrop-blur-sm hover:bg-[#C5A059]/10 hover:border-[#C5A059] hover:text-amber-300 hover:scale-[1.02] active:scale-[0.98]",
-    ghost: "text-slate-300 hover:text-[#C5A059] hover:bg-slate-800/50",
+      "border border-slate-300 text-[#0D2240] bg-white hover:bg-slate-50 hover:border-[#0D2240] active:scale-[0.99]",
+    ghost: "text-slate-600 hover:text-[#0D2240] hover:bg-slate-100",
   };
 
   const sizes = {
-    sm: "px-4 py-2 text-sm",
-    md: "px-6 py-3 text-base",
-    lg: "px-8 py-4 text-lg font-bold",
+    sm: "px-4 py-2 text-xs sm:text-sm font-semibold",
+    md: "px-5 py-2.5 text-sm font-semibold",
+    lg: "px-7 py-3.5 text-base font-bold",
   };
 
   const combinedClasses = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
