@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-navy-dark: #0A1424;
+    --bg-navy-card: #112036;
+    --gold-primary: #C5A059;
+    --gold-accent: #E5C378;
+    --gold-dark: #9A7B39;
+    --text-primary: #F8FAFC;
+    --text-secondary: #94A3B8;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--bg-navy-dark);
+    color: var(--text-primary);
+    font-family: 'Noto Sans Thai', 'Inter', sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Playfair Display', 'Noto Sans Thai', serif;
+  }
+}
+
+/* Glassmorphism Classes */
+.glass-panel {
+  background: rgba(17, 32, 54, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 160, 89, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s ease-in-out;
+}
+
+.glass-panel-hover:hover {
+  background: rgba(22, 42, 70, 0.85);
+  border-color: rgba(197, 160, 89, 0.45);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px 0 rgba(197, 160, 89, 0.15);
+}
+
+.glass-nav {
+  background: rgba(10, 20, 36, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(197, 160, 89, 0.15);
+}
+
+/* Text Gradients */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF0CA 0%, #C5A059 50%, #9A7B39 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #D4AF37 0%, #C5A059 50%, #9A7B39 100%);
+}
+
+.bg-gold-gradient-hover {
+  background: linear-gradient(135deg, #E5C378 0%, #D4AF37 50%, #C5A059 100%);
+}
+
+/* Glow Effects */
+.gold-glow {
+  box-shadow: 0 0 25px rgba(197, 160, 89, 0.25);
+}
+
+.gold-border-glow {
+  position: relative;
+}
+
+.gold-border-glow::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(90deg, transparent, rgba(197, 160, 89, 0.5), transparent);
+  border-radius: inherit;
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A1424;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E3A5F;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A059;
+}
