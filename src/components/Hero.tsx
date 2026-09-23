@@ -42,28 +42,8 @@ export default function Hero() {
               </p>
             </ScrollReveal>
 
-            {/* Credential Pills */}
-            <ScrollReveal direction="up" delay={0.4}>
-              <div className="flex flex-wrap gap-3 mb-10 text-xs sm:text-sm text-[#0D2240] font-bold">
-                <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-lg border border-slate-300 shadow-xs">
-                  <CheckCircle2 className="w-4.5 h-4.5 text-[#C5A059] shrink-0" />
-                  <span>{SITE_CONFIG.cpaLicense}</span>
-                </div>
-                <a
-                  href="https://tfac.or.th/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-lg border border-slate-300 shadow-xs hover:border-[#C5A059] hover:text-[#C5A059] transition-colors cursor-pointer"
-                  title="ไปยังเว็บไซต์สภาวิชาชีพบัญชี ในพระบรมราชูปถัมภ์"
-                >
-                  <CheckCircle2 className="w-4.5 h-4.5 text-[#C5A059] shrink-0" />
-                  <span>{SITE_CONFIG.fapLicense}</span>
-                </a>
-              </div>
-            </ScrollReveal>
-
             {/* Action Buttons */}
-            <ScrollReveal direction="up" delay={0.5}>
+            <ScrollReveal direction="up" delay={0.4}>
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
                 <Button href="#contact" variant="navy" size="lg" className="font-bold">
                   ขอคำปรึกษาเบื้องต้นฟรี <ArrowRight className="w-5 h-5 ml-2 inline" />
@@ -120,7 +100,7 @@ export default function Hero() {
                     <Award className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-[#0D2240] font-extrabold text-sm">ประสบการณ์ 15+ ปี</div>
+                    <div className="text-[#0D2240] font-extrabold text-sm">ประสบการณ์ 20 ปี</div>
                     <div className="text-[#475569] text-xs font-medium">ถูกต้องตามกฎหมาย 100%</div>
                   </div>
                 </div>

@@ -156,7 +156,7 @@ export const WORKFLOW_STEPS = [
 ];
 
 export const STATS = [
-  { value: 15, suffix: "+", label: "ปีประสบการณ์วิชาชีพ" },
+  { value: 20, suffix: "+", label: "ปีประสบการณ์วิชาชีพ" },
   { value: 500, suffix: "+", label: "บริษัทไว้วางใจ" },
   { value: 99, suffix: "%", label: "ยื่นภาษีตรงเวลา 100%" },
   { value: 1200, suffix: "+", label: "เคสทางบัญชีและภาษี" },
