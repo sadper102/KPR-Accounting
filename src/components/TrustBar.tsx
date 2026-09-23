@@ -13,21 +13,10 @@ export default function TrustBar() {
       href: "https://tfac.or.th/",
     },
     {
-      title: "สภาทนายความ",
-      subtitle: "ใบอนุญาตทนายความตั๋วปี",
-      icon: ShieldCheck,
-      href: "https://www.lawyerscouncil.or.th/",
-    },
-    {
       title: "กรมพัฒนาธุรกิจการค้า",
       subtitle: "DBD Registered / Verified",
       icon: Building2,
       href: "https://www.dbd.go.th/",
-    },
-    {
-      title: "มาตรฐานความปลอดภัย",
-      subtitle: "สัญญารักษาความลับ ISO/NDA",
-      icon: Lock,
     },
   ];
 
@@ -46,7 +35,7 @@ export default function TrustBar() {
         
         {/* Accreditation Badges Bar */}
         <ScrollReveal direction="up">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 pb-8 border-b border-[#E2E8F0]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 max-w-4xl mx-auto pb-8 border-b border-[#E2E8F0]">
             {accreditations.map((acc, idx) => {
               const IconComp = acc.icon;
               const content = (
