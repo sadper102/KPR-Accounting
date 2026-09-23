@@ -5,7 +5,7 @@ interface LogoProps {
   className?: string;
   variant?: "full" | "icon-only" | "stacked";
   theme?: "dark" | "light";
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "xl";
 }
 
 export default function Logo({
@@ -17,9 +17,10 @@ export default function Logo({
   const logoSrc = isDark ? "/images/logo-white.png" : "/images/logo.png";
 
   const heightClasses = {
-    sm: "h-9 sm:h-10",
-    md: "h-11 sm:h-12 md:h-14",
-    lg: "h-14 md:h-18 lg:h-20",
+    sm: "h-10 sm:h-11",
+    md: "h-12 sm:h-14 lg:h-16",
+    lg: "h-14 sm:h-16 lg:h-20",
+    xl: "h-20 sm:h-24 lg:h-28",
   };
 
   return (
@@ -27,8 +28,8 @@ export default function Logo({
       <Image
         src={logoSrc}
         alt="บริษัท เคพีอาร์ แอคเคานต์ติ้ง จำกัด - KPR ACCOUNTING CO.,LTD."
-        width={1024}
-        height={431}
+        width={924}
+        height={194}
         className={`${heightClasses[size]} w-auto object-contain`}
         priority
       />

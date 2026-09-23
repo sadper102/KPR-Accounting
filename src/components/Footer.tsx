@@ -20,7 +20,7 @@ export default function Footer() {
           {/* Column 1: Logo & Description */}
           <div className="lg:col-span-4">
             <Link href="/" className="inline-block mb-4">
-              <Logo variant="full" theme="dark" size="md" />
+              <Logo variant="full" theme="dark" size="lg" />
             </Link>
             <p className="text-slate-300 text-sm leading-relaxed mb-4 font-normal max-w-sm">
               บริษัท เคพีอาร์ แอคเคานต์ติ้ง จำกัด ให้บริการทำบัญชี วางแผนภาษี ตรวจสอบบัญชี และจดทะเบียนบริษัท ด้วยมาตรฐานวิชาชีพสูงสุด
