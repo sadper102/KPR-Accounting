@@ -49,7 +49,7 @@ export default function Hero() {
                   ขอคำปรึกษาเบื้องต้นฟรี <ArrowRight className="w-5 h-5 ml-2 inline" />
                 </Button>
                 <Button href="#pricing" variant="outline" size="lg" className="font-bold">
-                  ดูอัตราค่าบริการ
+                  ดูค่าบริการ
                 </Button>
               </div>
             </ScrollReveal>

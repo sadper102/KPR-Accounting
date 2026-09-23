@@ -15,7 +15,7 @@ export default function Pricing() {
         <div className="text-center max-w-4xl mx-auto mb-16">
           <ScrollReveal direction="down">
             <span className="text-[#0D2240] font-bold text-xs uppercase tracking-widest bg-white px-4 py-1.5 rounded-full border border-[#E2E8F0] shadow-xs inline-block">
-              PRICING PACKAGES — อัตราค่าบริการ
+              PRICING PACKAGES — ค่าบริการ
             </span>
           </ScrollReveal>
           

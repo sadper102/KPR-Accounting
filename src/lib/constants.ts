@@ -21,7 +21,7 @@ export const NAV_LINKS = [
   { name: "หน้าแรก", href: "/" },
   { name: "เกี่ยวกับเรา", href: "/about" },
   { name: "บริการของเรา", href: "/services" },
-  { name: "อัตราค่าบริการ", href: "/pricing" },
+  { name: "ค่าบริการ", href: "/pricing" },
   { name: "ขั้นตอนการทำงาน", href: "/workflow" },
   { name: "ติดต่อเรา", href: "/contact" },
 ];
