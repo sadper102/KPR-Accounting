@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Playfair_Display, Prompt, Inter } from "next/font/google";
 import "./globals.css";
 import { SITE_CONFIG } from "@/lib/constants";
+import FloatingContact from "@/components/FloatingContact";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -30,16 +33,17 @@ export const metadata: Metadata = {
   description: SITE_CONFIG.description,
   keywords: [
     "KPR ACCOUNTING",
-    "เคพีอาร์ แอคเคาท์ติ้ง",
+    "เคพีอาร์ แอคเคานต์ติ้ง",
+    "บริษัท เคพีอาร์ แอคเคานต์ติ้ง จำกัด",
     "สำนักงานบัญชี",
-    "สำนักงานกฎหมาย",
     "รับทำบัญชี",
     "วางแผนภาษี",
     "จดทะเบียนบริษัท",
     "ตรวจสอบบัญชี",
-    "ที่ปรึกษากฎหมาย",
-    "ทนายความ",
-    "ทำบัญชี สาทร กรุงเทพ",
+    "ที่ปรึกษาภาษี",
+    "ยื่นภาษี",
+    "ทำบัญชี ศรีนครินทร์",
+    "ทำบัญชี สวนหลวง พัฒนาการ กรุงเทพ",
   ],
   authors: [{ name: SITE_CONFIG.name }],
   creator: SITE_CONFIG.name,
@@ -51,7 +55,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(SITE_CONFIG.url),
   openGraph: {
-    title: `${SITE_CONFIG.name} | สำนักงานบัญชีและกฎหมายครบวงจร`,
+    title: `${SITE_CONFIG.name} | สำนักงานบัญชีและภาษีครบวงจร`,
     description: SITE_CONFIG.description,
     url: SITE_CONFIG.url,
     siteName: SITE_CONFIG.name,
@@ -62,7 +66,7 @@ export const metadata: Metadata = {
         url: "/images/hero.png",
         width: 1200,
         height: 630,
-        alt: `${SITE_CONFIG.name} - สำนักงานบัญชีและกฎหมาย`,
+        alt: `${SITE_CONFIG.name} - สำนักงานบัญชีและภาษี`,
       },
     ],
   },
@@ -92,31 +96,31 @@ export default function RootLayout({
 }>) {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": ["AccountingService", "LegalService"],
+    "@type": ["AccountingService"],
     "name": SITE_CONFIG.name,
-    "alternateName": SITE_CONFIG.thaiName,
+    "alternateName": SITE_CONFIG.companyName,
     "description": SITE_CONFIG.description,
     "url": SITE_CONFIG.url,
     "telephone": SITE_CONFIG.phone,
     "email": SITE_CONFIG.email,
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "123/45 อาคารเคพีอาร์ ทาวเวอร์ ชั้น 12 ถนนสาทรใต้",
-      "addressLocality": "เขตสาทร",
+      "streetAddress": "735/1 อาคารA ห้องเลขที่ A147-148 ชั้น 1 ถนนศรีนครินทร์ แขวงพัฒนาการ",
+      "addressLocality": "เขตสวนหลวง",
       "addressRegion": "กรุงเทพมหานคร",
-      "postalCode": "10120",
+      "postalCode": "10250",
       "addressCountry": "TH"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 13.7214,
-      "longitude": 100.5332
+      "latitude": 13.7315,
+      "longitude": 100.6445
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      "opens": "08:30",
-      "closes": "17:30"
+      "opens": "09:00",
+      "closes": "18:00"
     },
     "priceRange": "$$"
   };
@@ -129,8 +133,13 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="antialiased selection:bg-[#0D2240] selection:text-white">
-        {children}
+      <body className="antialiased selection:bg-[#0D2240] selection:text-white bg-[#F8FAFC]">
+        <FloatingContact />
+        <Navbar />
+        <main className="min-h-screen">
+          {children}
+        </main>
+        <Footer />
       </body>
     </html>
   );

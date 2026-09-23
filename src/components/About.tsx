@@ -4,15 +4,13 @@ import React from "react";
 import { Shield, Award, Users, Lock } from "lucide-react";
 import GlassCard from "./ui/GlassCard";
 import ScrollReveal from "./ui/ScrollReveal";
-import AnimatedCounter from "./ui/AnimatedCounter";
-import { STATS, SITE_CONFIG } from "@/lib/constants";
 
 export default function About() {
   const values = [
     {
       icon: Shield,
       title: "ความน่าเชื่อถือวิชาชีพ",
-      desc: "บริหารงานโดยผู้สอบบัญชีรับอนุญาต (CPA) และทนายความตั๋วปีที่มีประสบการณ์ยาวนาน",
+      desc: "บริหารงานโดยผู้สอบบัญชีรับอนุญาต (CPA) และทีมนักบัญชีมืออาชีพที่มีประสบการณ์ยาวนาน",
     },
     {
       icon: Award,
@@ -22,7 +20,7 @@ export default function About() {
     {
       icon: Users,
       title: "ที่ปรึกษาเฉพาะราย",
-      desc: "ทีมงานดูแลอย่างใกล้ชิด ตอบคำถามรวดเร็วเสมือนเป็นแผนกบัญชีและกฎหมายประจำองค์กรท่าน",
+      desc: "ทีมงานดูแลอย่างใกล้ชิด ตอบคำถามรวดเร็วเสมือนเป็นแผนกบัญชีและภาษีประจำองค์กรท่าน",
     },
     {
       icon: Lock,
@@ -51,29 +49,10 @@ export default function About() {
 
           <ScrollReveal direction="up" delay={0.2}>
             <p className="text-[#334155] text-base sm:text-lg leading-relaxed font-medium max-w-2xl mx-auto [text-wrap:balance]">
-              <strong className="text-[#0D2240] font-bold">KPR ACCOUNTING (เคพีอาร์ แอคเคาท์ติ้ง)</strong> ให้บริการด้านการบัญชี ภาษี ตรวจสอบบัญชี และกฎหมายธุรกิจแบบครบวงจร เรามุ่งมั่นช่วยเหลือผู้ประกอบการ SMEs และนิติบุคคลทุกขนาดให้ดำเนินธุรกิจได้อย่างราบรื่นและมั่นคง
+              <strong className="text-[#0D2240] font-bold">บริษัท เคพีอาร์ แอคเคานต์ติ้ง จำกัด (KPR ACCOUNTING)</strong> ให้บริการด้านการบัญชี ภาษี ตรวจสอบบัญชี และจดทะเบียนธุรกิจแบบครบวงจร เรามุ่งมั่นช่วยเหลือผู้ประกอบการ SMEs และนิติบุคคลทุกขนาดให้ดำเนินธุรกิจได้อย่างราบรื่นและมั่นคง
             </p>
           </ScrollReveal>
         </div>
-
-        {/* Animated Counter Stats Bar */}
-        <ScrollReveal direction="up" delay={0.3}>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-            {STATS.map((stat, idx) => (
-              <div
-                key={idx}
-                className="executive-card rounded-2xl p-6 text-center border border-[#E2E8F0] bg-white shadow-xs"
-              >
-                <div className="text-3xl sm:text-4xl lg:text-5xl font-black text-[#0D2240] mb-2">
-                  <AnimatedCounter target={stat.value} suffix={stat.suffix} />
-                </div>
-                <div className="text-[#475569] text-xs sm:text-sm font-bold">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </ScrollReveal>
 
         {/* Core Values Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

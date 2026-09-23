@@ -25,7 +25,7 @@ export default function Workflow() {
 
           <ScrollReveal direction="up" delay={0.2}>
             <p className="text-[#334155] text-base sm:text-lg font-medium max-w-2xl mx-auto [text-wrap:balance]">
-              ชัดเจน โปร่งใส ตรวจสอบได้ในทุกขั้นตอน เพื่อให้ท่านมั่นใจในความถูกต้องทางการเงินและกฎหมาย
+              ชัดเจน โปร่งใส ตรวจสอบได้ในทุกขั้นตอน เพื่อให้ท่านมั่นใจในความถูกต้องทางการเงินและภาษีอากร
             </p>
           </ScrollReveal>
         </div>

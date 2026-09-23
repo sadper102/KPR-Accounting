@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ShieldCheck, Award, Lock, Building2, CheckCircle2 } from "lucide-react";
+import { ShieldCheck, Award, Lock, Building2, ExternalLink, CheckCircle2 } from "lucide-react";
 import ScrollReveal from "./ui/ScrollReveal";
 
 export default function TrustBar() {
@@ -10,16 +10,19 @@ export default function TrustBar() {
       title: "สภาวิชาชีพบัญชี",
       subtitle: "ขึ้นทะเบียนผู้ทำบัญชี & CPA",
       icon: Award,
+      href: "https://tfac.or.th/",
     },
     {
       title: "สภาทนายความ",
       subtitle: "ใบอนุญาตทนายความตั๋วปี",
       icon: ShieldCheck,
+      href: "https://www.lawyerscouncil.or.th/",
     },
     {
       title: "กรมพัฒนาธุรกิจการค้า",
       subtitle: "DBD Registered / Verified",
       icon: Building2,
+      href: "https://www.dbd.go.th/",
     },
     {
       title: "มาตรฐานความปลอดภัย",
@@ -47,22 +50,48 @@ export default function TrustBar() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 pb-8 border-b border-[#E2E8F0]">
             {accreditations.map((acc, idx) => {
               const IconComp = acc.icon;
-              return (
-                <div
-                  key={idx}
-                  className="flex items-center gap-3.5 p-4 rounded-2xl bg-white border border-[#E2E8F0] shadow-sm hover:border-[#C5A059] transition-all duration-200"
-                >
-                  <div className="w-11 h-11 rounded-xl bg-[#0D2240] text-[#C5A059] flex items-center justify-center shrink-0 shadow-inner">
+              const content = (
+                <>
+                  <div className="w-11 h-11 rounded-xl bg-[#0D2240] text-[#C5A059] flex items-center justify-center shrink-0 shadow-inner group-hover:bg-[#C5A059] group-hover:text-[#0D2240] transition-colors duration-200">
                     <IconComp className="w-5.5 h-5.5" />
                   </div>
                   <div className="min-w-0">
-                    <div className="text-[#0D2240] font-bold text-sm sm:text-base leading-tight truncate">
-                      {acc.title}
+                    <div className="flex items-center gap-1.5">
+                      <div className="text-[#0D2240] font-bold text-sm sm:text-base leading-tight truncate group-hover:text-[#C5A059] transition-colors">
+                        {acc.title}
+                      </div>
+                      {acc.href && (
+                        <ExternalLink className="w-3.5 h-3.5 text-slate-400 group-hover:text-[#C5A059] shrink-0 transition-colors" />
+                      )}
                     </div>
                     <div className="text-[#475569] font-medium text-xs mt-0.5 truncate">
                       {acc.subtitle}
                     </div>
                   </div>
+                </>
+              );
+
+              const cardClasses =
+                "flex items-center gap-3.5 p-4 rounded-2xl bg-white border border-[#E2E8F0] shadow-sm hover:border-[#C5A059] hover:shadow-md transition-all duration-200 group";
+
+              if (acc.href) {
+                return (
+                  <a
+                    key={idx}
+                    href={acc.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${cardClasses} cursor-pointer`}
+                    title={`ไปยังเว็บไซต์ทางการ ${acc.title}`}
+                  >
+                    {content}
+                  </a>
+                );
+              }
+
+              return (
+                <div key={idx} className={cardClasses}>
+                  {content}
                 </div>
               );
             })}

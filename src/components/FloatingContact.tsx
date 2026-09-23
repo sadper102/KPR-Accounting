@@ -15,7 +15,7 @@ export default function FloatingContact() {
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1.5 font-bold text-amber-300">
               <Phone className="w-3.5 h-3.5" />
-              <span>สายด่วนปรึกษาบัญชี-กฎหมาย: {SITE_CONFIG.mobile}</span>
+              <span>สายด่วนปรึกษาบัญชี-ภาษี: {SITE_CONFIG.mobile}</span>
             </span>
             <span className="hidden md:inline-block text-slate-400">|</span>
             <span className="hidden md:flex items-center gap-1.5 text-slate-300">

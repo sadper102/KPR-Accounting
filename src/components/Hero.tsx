@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { ArrowRight, ShieldCheck, Scale, CheckCircle2, Award } from "lucide-react";
+import { ArrowRight, ShieldCheck, CheckCircle2, Award } from "lucide-react";
 import Button from "./ui/Button";
 import ScrollReveal from "./ui/ScrollReveal";
 import { SITE_CONFIG } from "@/lib/constants";
@@ -24,21 +24,21 @@ export default function Hero() {
             <ScrollReveal direction="down" delay={0.1}>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-300 text-[#0D2240] text-xs sm:text-sm font-bold mb-6 shadow-xs">
                 <ShieldCheck className="w-4.5 h-4.5 text-[#C5A059] shrink-0" />
-                <span>สำนักงานบัญชีและกฎหมายวิชาชีพ (CPA & Lawyer)</span>
+                <span>สำนักงานบัญชีและภาษีคุณภาพวิชาชีพ (CPA)</span>
               </div>
             </ScrollReveal>
 
             {/* Main Headline */}
             <ScrollReveal direction="up" delay={0.2}>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-snug sm:leading-tight lg:leading-tight text-[#0D2240] mb-6">
-                ยึดมั่นความถูกต้อง <span className="text-[#C5A059]">การบัญชีและกฎหมาย</span> เพื่อความมั่นคงของธุรกิจคุณ
+                ยึดมั่นความถูกต้อง <span className="text-[#C5A059]">การบัญชีและภาษี</span> เพื่อความมั่นคงของธุรกิจคุณ
               </h1>
             </ScrollReveal>
 
             {/* Subtitle */}
             <ScrollReveal direction="up" delay={0.3}>
               <p className="text-[#334155] text-base sm:text-lg leading-relaxed mb-8 max-w-2xl font-normal">
-                {SITE_CONFIG.description} ป้องกันความเสี่ยงทางภาษีและคดีความธุรกิจอย่างตรงไปตรงมา
+                {SITE_CONFIG.description} ป้องกันความเสี่ยงทางภาษีและบริหารจัดการอย่างถูกต้องแม่นยำ
               </p>
             </ScrollReveal>
 
@@ -49,10 +49,16 @@ export default function Hero() {
                   <CheckCircle2 className="w-4.5 h-4.5 text-[#C5A059] shrink-0" />
                   <span>{SITE_CONFIG.cpaLicense}</span>
                 </div>
-                <div className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-lg border border-slate-300 shadow-xs">
+                <a
+                  href="https://tfac.or.th/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 bg-white px-4 py-2.5 rounded-lg border border-slate-300 shadow-xs hover:border-[#C5A059] hover:text-[#C5A059] transition-colors cursor-pointer"
+                  title="ไปยังเว็บไซต์สภาวิชาชีพบัญชี ในพระบรมราชูปถัมภ์"
+                >
                   <CheckCircle2 className="w-4.5 h-4.5 text-[#C5A059] shrink-0" />
-                  <span>สภาทนายความแห่งประเทศไทย</span>
-                </div>
+                  <span>{SITE_CONFIG.fapLicense}</span>
+                </a>
               </div>
             </ScrollReveal>
 
@@ -90,17 +96,17 @@ export default function Hero() {
                     <div className="absolute bottom-5 left-5 right-5 bg-white rounded-xl p-4 border border-slate-300 shadow-xl">
                       <div className="flex items-center gap-3.5">
                         <div className="w-12 h-12 rounded-xl bg-[#0D2240] flex items-center justify-center text-[#C5A059] shrink-0 font-bold">
-                          <Scale className="w-6 h-6" />
+                          <Award className="w-6 h-6" />
                         </div>
                         <div>
                           <div className="text-[#C5A059] text-xs font-bold uppercase tracking-wider">
                             KPR ACCOUNTING
                           </div>
                           <div className="text-[#0D2240] text-sm sm:text-base font-extrabold">
-                            เคพีอาร์ แอคเคาท์ติ้ง
+                            เคพีอาร์ แอคเคานต์ติ้ง
                           </div>
                           <div className="text-[#475569] text-xs mt-0.5 font-medium">
-                            ที่ปรึกษาบัญชีและกฎหมายครบวงจร
+                            ที่ปรึกษาบัญชีและภาษีครบวงจร
                           </div>
                         </div>
                       </div>

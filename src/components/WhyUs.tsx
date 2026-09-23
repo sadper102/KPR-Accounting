@@ -42,7 +42,7 @@ export default function WhyUs() {
 
             <ScrollReveal direction="up" delay={0.2}>
               <p className="text-[#334155] text-base sm:text-lg mb-10 font-medium">
-                เราเข้าใจถึงความสำคัญของความถูกต้องทางการเงินและความคุ้มครองทางกฎหมายในทุกก้าวของธุรกิจคุณ
+                เราเข้าใจถึงความสำคัญของความถูกต้องทางการเงินและความมั่นคงทางภาษีในทุกก้าวของธุรกิจคุณ
               </p>
             </ScrollReveal>
 
@@ -111,7 +111,7 @@ export default function WhyUs() {
                     <div>
                       <h4 className="text-white font-bold text-base mb-1">พร้อมเคียงข้างเมื่อโดนตรวจสอบ</h4>
                       <p className="text-[#E2E8F0] text-xs sm:text-sm leading-relaxed font-normal">
-                        ทีมงาน CPA และทนายความพร้อมเข้าพบเจ้าหน้าที่สรรพากรแทนท่าน
+                        ทีมงาน CPA และผู้เชี่ยวชาญภาษีพร้อมเข้าพบเจ้าหน้าที่สรรพากรแทนท่าน
                       </p>
                     </div>
                   </div>
@@ -120,7 +120,7 @@ export default function WhyUs() {
                 {/* License details */}
                 <div className="mt-8 pt-6 border-t border-[#C5A059]/30">
                   <div className="text-[#C5A059] text-xs sm:text-sm font-bold mb-1">
-                    ขึ้นทะเบียนสภาวิชาชีพบัญชี & สภาทนายความแห่งประเทศไทย
+                    ขึ้นทะเบียนสภาวิชาชีพบัญชี ในพระบรมราชูปถัมภ์
                   </div>
                   <div className="text-slate-300 text-xs font-normal">
                     มีสัญญารักษาความลับลูกค้า (Non-Disclosure Agreement) ทุกสัญญา

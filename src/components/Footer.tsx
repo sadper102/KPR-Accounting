@@ -19,21 +19,38 @@ export default function Footer() {
           
           {/* Column 1: Logo & Description */}
           <div className="lg:col-span-4">
-            <Link href="#hero" className="inline-block mb-4">
+            <Link href="/" className="inline-block mb-4">
               <Logo variant="full" theme="dark" size="md" />
             </Link>
-            <p className="text-slate-300 text-sm leading-relaxed mb-6 font-normal max-w-sm">
-              สำนักงานบัญชีและกฎหมาย KPR ACCOUNTING ให้บริการทำบัญชี วางแผนภาษี ตรวจสอบบัญชี จดทะเบียนบริษัท และที่ปรึกษากฎหมายธุรกิจ ด้วยมาตรฐานวิชาชีพสูงสุด
+            <p className="text-slate-300 text-sm leading-relaxed mb-4 font-normal max-w-sm">
+              บริษัท เคพีอาร์ แอคเคานต์ติ้ง จำกัด ให้บริการทำบัญชี วางแผนภาษี ตรวจสอบบัญชี และจดทะเบียนบริษัท ด้วยมาตรฐานวิชาชีพสูงสุด
             </p>
-            <div className="text-xs text-[#C5A059] font-bold bg-slate-800 px-3.5 py-2 rounded-lg border border-slate-700 inline-block">
-              สภาวิชาชีพบัญชี & สภาทนายความแห่งประเทศไทย
+            <div className="space-y-2">
+              <a
+                href="https://www.dbd.go.th/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-[#C5A059] hover:underline font-bold bg-slate-800 px-3.5 py-1.5 rounded-lg border border-slate-700 inline-block transition-colors"
+                title="ไปยังเว็บไซต์กรมพัฒนาธุรกิจการค้า"
+              >
+                เลขทะเบียนนิติบุคคล: {SITE_CONFIG.taxId} ↗
+              </a>
+              <a
+                href="https://tfac.or.th/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs text-slate-300 hover:text-[#C5A059] font-medium block transition-colors"
+                title="ไปยังเว็บไซต์สภาวิชาชีพบัญชี ในพระบรมราชูปถัมภ์"
+              >
+                ขึ้นทะเบียนสภาวิชาชีพบัญชี ในพระบรมราชูปถัมภ์ ↗
+              </a>
             </div>
           </div>
 
           {/* Column 2: Quick Links */}
           <div className="lg:col-span-2">
             <h4 className="text-white font-bold text-base mb-4 border-b border-slate-700 pb-2">
-              ลิงก์ด่วน
+              ลิงก์ที่เกี่ยวข้อง
             </h4>
             <ul className="space-y-2 text-sm font-medium text-slate-300">
               {NAV_LINKS.map((link) => (
@@ -57,13 +74,13 @@ export default function Footer() {
             <ul className="space-y-2 text-sm font-medium text-slate-300">
               {SERVICES.map((srv) => (
                 <li key={srv.id}>
-                  <a
-                    href="#services"
+                  <Link
+                    href={`/services#${srv.id}`}
                     className="hover:text-[#C5A059] transition-colors flex items-center gap-1.5"
                   >
                     <span>•</span>
                     <span>{srv.title}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -99,7 +116,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-slate-300">
           <div>
-            © {new Date().getFullYear()} KPR ACCOUNTING (เคพีอาร์ แอคเคาท์ติ้ง). All rights reserved.
+            © {new Date().getFullYear()} {SITE_CONFIG.companyName} ({SITE_CONFIG.name})
           </div>
 
           <button

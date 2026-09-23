@@ -8,6 +8,8 @@ import {
   Clock,
   Send,
   CheckCircle2,
+  Building2,
+  ExternalLink,
 } from "lucide-react";
 import ScrollReveal from "./ui/ScrollReveal";
 import Button from "./ui/Button";
@@ -80,15 +82,40 @@ export default function Contact() {
                     </div>
                     <a
                       href={`tel:${SITE_CONFIG.phone}`}
-                      className="text-base font-bold text-[#0D2240] hover:text-[#C5A059] transition-colors block"
+                      className="text-lg font-extrabold text-[#0D2240] hover:text-[#C5A059] transition-colors block"
                     >
                       {SITE_CONFIG.phone}
                     </a>
+                    <span className="text-xs text-[#64748B] font-medium block mt-0.5">
+                      พร้อมให้คำปรึกษาเบื้องต้นฟรี
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="right" delay={0.15}>
+              <div className="executive-card p-6 rounded-2xl bg-white border border-[#E2E8F0] shadow-xs">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-[#F8FAFC] border border-[#E2E8F0] flex items-center justify-center text-[#0D2240] shrink-0 mt-0.5">
+                    <Building2 className="w-5 h-5 text-[#C5A059]" />
+                  </div>
+                  <div>
+                    <div className="text-xs font-bold text-[#475569] uppercase tracking-wider mb-1">
+                      ข้อมูลนิติบุคคล
+                    </div>
+                    <div className="text-sm font-bold text-[#0D2240]">
+                      {SITE_CONFIG.companyName}
+                    </div>
                     <a
-                      href={`tel:${SITE_CONFIG.mobile}`}
-                      className="text-xs text-[#334155] font-medium hover:text-[#C5A059] transition-colors block mt-0.5"
+                      href="https://www.dbd.go.th/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-xs text-[#C5A059] hover:underline font-bold mt-1 inline-flex items-center gap-1 transition-colors"
+                      title="ตรวจสอบสถานะนิติบุคคล ณ กรมพัฒนาธุรกิจการค้า"
                     >
-                      {SITE_CONFIG.mobile} (สายด่วน)
+                      <span>เลขทะเบียนนิติบุคคล: {SITE_CONFIG.taxId}</span>
+                      <ExternalLink className="w-3 h-3" />
                     </a>
                   </div>
                 </div>
@@ -239,7 +266,6 @@ export default function Contact() {
                         >
                           <option value="บริการด้านบัญชี">บริการด้านบัญชี</option>
                           <option value="บริการด้านภาษี">บริการด้านภาษี</option>
-                          <option value="บริการด้านกฎหมาย">บริการด้านกฎหมาย</option>
                           <option value="จดทะเบียนบริษัท">จดทะเบียนบริษัท</option>
                           <option value="ตรวจสอบบัญชี">ตรวจสอบบัญชี</option>
                           <option value="ประกันสังคม">ประกันสังคม</option>

@@ -58,7 +58,12 @@ export default function Pricing() {
                   </p>
 
                   {/* Price */}
-                  <div className="mb-6 pb-6 border-b border-[#E2E8F0]">
+                  <div className="mb-6 pb-6 border-b border-[#E2E8F0] flex items-baseline flex-wrap gap-y-1">
+                    {"prefix" in pkg && pkg.prefix && (
+                      <span className="text-[#475569] text-sm font-semibold mr-1.5">
+                        {pkg.prefix}
+                      </span>
+                    )}
                     <span className="text-4xl font-extrabold text-[#0D2240]">
                       {pkg.price}
                     </span>
