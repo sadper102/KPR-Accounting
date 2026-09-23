@@ -1,55 +1,16 @@
 "use client";
 
 import React, { useState } from "react";
-import { Phone, MessageCircle, Clock, X, ShieldAlert } from "lucide-react";
+import { Phone, MessageCircle, X } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/constants";
 import { useLanguage } from "@/context/LanguageContext";
-import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function FloatingContact() {
   const [isOpen, setIsOpen] = useState(false);
-  const { t, lang } = useLanguage();
+  const { lang } = useLanguage();
 
   return (
     <>
-      {/* Top Hotline Announcement Bar */}
-      <div className="bg-[#0D2240] text-white text-xs py-2 px-4 border-b border-slate-700/80 font-medium">
-        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
-          <div className="flex items-center gap-2 sm:gap-4">
-            <a
-              href={`tel:${SITE_CONFIG.mobile}`}
-              className="flex items-center gap-1.5 font-bold text-amber-300 hover:text-amber-200 transition-colors"
-            >
-              <Phone className="w-3.5 h-3.5" />
-              <span className="hidden sm:inline">{t.floating.hotline}: </span>
-              <span>{SITE_CONFIG.mobile}</span>
-            </a>
-            <span className="hidden md:inline-block text-slate-400">|</span>
-            <span className="hidden md:flex items-center gap-1.5 text-slate-300">
-              <Clock className="w-3.5 h-3.5 text-amber-300" />
-              <span>{t.floating.hours}</span>
-            </span>
-          </div>
-
-          <div className="flex items-center gap-2 sm:gap-3 text-slate-300 text-[11px] font-semibold">
-            <span className="hidden sm:inline-block bg-amber-500/20 text-amber-300 px-2.5 py-0.5 rounded border border-amber-500/30">
-              {t.floating.consultNow}
-            </span>
-            <a
-              href={`https://line.me/ti/p/${SITE_CONFIG.line}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-emerald-400 hover:underline font-bold flex items-center gap-1"
-            >
-              <MessageCircle className="w-3.5 h-3.5" />
-              <span>Line: {SITE_CONFIG.line}</span>
-            </a>
-            <span className="text-slate-600 hidden sm:inline-block">|</span>
-            <LanguageSwitcher variant="topbar" />
-          </div>
-        </div>
-      </div>
-
       {/* Floating Quick Action Widget (Bottom Right) */}
       <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
         {/* Expanded Options */}

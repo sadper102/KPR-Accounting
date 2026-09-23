@@ -12,7 +12,7 @@ export default function Hero() {
   const { t } = useLanguage();
 
   return (
-    <section id="hero" className="relative min-h-[85vh] pt-36 pb-20 flex items-center bg-[#F8FAFC] overflow-hidden">
+    <section id="hero" className="relative min-h-[85vh] pt-36 sm:pt-40 lg:pt-44 pb-20 flex items-center bg-[#F8FAFC] overflow-hidden">
       
       {/* Subtle Grid Background */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#cbd5e1_1px,transparent_1px),linear-gradient(to_bottom,#cbd5e1_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-40 pointer-events-none" />

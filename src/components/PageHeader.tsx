@@ -30,7 +30,7 @@ export default function PageHeader({
   const { t } = useLanguage();
 
   return (
-    <section className="relative pt-36 pb-16 lg:pb-20 bg-[#0D2240] text-white overflow-hidden border-b-2 border-[#C5A059]">
+    <section className="relative pt-36 sm:pt-40 lg:pt-44 pb-16 lg:pb-20 bg-[#0D2240] text-white overflow-hidden border-b-2 border-[#C5A059]">
       {/* Decorative Grid & Glow */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#1e293b_1px,transparent_1px),linear-gradient(to_bottom,#1e293b_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20 pointer-events-none" />
       <div className="absolute -top-24 -right-24 w-96 h-96 bg-[#C5A059]/10 rounded-full blur-3xl pointer-events-none" />
