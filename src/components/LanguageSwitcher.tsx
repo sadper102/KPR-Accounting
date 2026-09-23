@@ -6,7 +6,7 @@ import { Globe } from "lucide-react";
 
 interface LanguageSwitcherProps {
   className?: string;
-  variant?: "pill" | "compact";
+  variant?: "pill" | "compact" | "topbar";
 }
 
 export default function LanguageSwitcher({
@@ -14,6 +14,41 @@ export default function LanguageSwitcher({
   variant = "pill",
 }: LanguageSwitcherProps) {
   const { lang, setLang } = useLanguage();
+
+  if (variant === "topbar") {
+    return (
+      <div
+        className={`inline-flex items-center rounded-full border border-[#C5A059]/40 bg-black/30 backdrop-blur-sm p-0.5 text-xs font-semibold shadow-inner ${className}`}
+      >
+        <button
+          type="button"
+          onClick={() => setLang("th")}
+          className={`flex items-center gap-1.5 px-2.5 py-0.5 rounded-full transition-all duration-200 ${
+            lang === "th"
+              ? "bg-[#C5A059] text-[#0D2240] shadow-sm font-extrabold ring-1 ring-[#C5A059]"
+              : "text-slate-300 hover:text-white hover:bg-white/10"
+          }`}
+          aria-label="เปลี่ยนเป็นภาษาไทย"
+        >
+          <span>🇹🇭</span>
+          <span className="tracking-wide">TH</span>
+        </button>
+        <button
+          type="button"
+          onClick={() => setLang("en")}
+          className={`flex items-center gap-1.5 px-2.5 py-0.5 rounded-full transition-all duration-200 ${
+            lang === "en"
+              ? "bg-[#C5A059] text-[#0D2240] shadow-sm font-extrabold ring-1 ring-[#C5A059]"
+              : "text-slate-300 hover:text-white hover:bg-white/10"
+          }`}
+          aria-label="Switch to English"
+        >
+          <span>🇬🇧</span>
+          <span className="tracking-wide">EN</span>
+        </button>
+      </div>
+    );
+  }
 
   if (variant === "compact") {
     return (

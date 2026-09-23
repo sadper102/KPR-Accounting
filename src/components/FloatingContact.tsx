@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { Phone, MessageCircle, Clock, X, ShieldAlert } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/constants";
 import { useLanguage } from "@/context/LanguageContext";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function FloatingContact() {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,12 +14,16 @@ export default function FloatingContact() {
     <>
       {/* Top Hotline Announcement Bar */}
       <div className="bg-[#0D2240] text-white text-xs py-2 px-4 border-b border-slate-700/80 font-medium">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-2">
-          <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1.5 font-bold text-amber-300">
+        <div className="max-w-7xl mx-auto flex items-center justify-between gap-2">
+          <div className="flex items-center gap-2 sm:gap-4">
+            <a
+              href={`tel:${SITE_CONFIG.mobile}`}
+              className="flex items-center gap-1.5 font-bold text-amber-300 hover:text-amber-200 transition-colors"
+            >
               <Phone className="w-3.5 h-3.5" />
-              <span>{t.floating.hotline}: {SITE_CONFIG.mobile}</span>
-            </span>
+              <span className="hidden sm:inline">{t.floating.hotline}: </span>
+              <span>{SITE_CONFIG.mobile}</span>
+            </a>
             <span className="hidden md:inline-block text-slate-400">|</span>
             <span className="hidden md:flex items-center gap-1.5 text-slate-300">
               <Clock className="w-3.5 h-3.5 text-amber-300" />
@@ -26,8 +31,8 @@ export default function FloatingContact() {
             </span>
           </div>
 
-          <div className="flex items-center gap-3 text-slate-300 text-[11px] font-semibold">
-            <span className="bg-amber-500/20 text-amber-300 px-2.5 py-0.5 rounded border border-amber-500/30">
+          <div className="flex items-center gap-2 sm:gap-3 text-slate-300 text-[11px] font-semibold">
+            <span className="hidden sm:inline-block bg-amber-500/20 text-amber-300 px-2.5 py-0.5 rounded border border-amber-500/30">
               {t.floating.consultNow}
             </span>
             <a
@@ -39,6 +44,8 @@ export default function FloatingContact() {
               <MessageCircle className="w-3.5 h-3.5" />
               <span>Line: {SITE_CONFIG.line}</span>
             </a>
+            <span className="text-slate-600 hidden sm:inline-block">|</span>
+            <LanguageSwitcher variant="topbar" />
           </div>
         </div>
       </div>
