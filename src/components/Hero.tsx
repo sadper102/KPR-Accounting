@@ -6,8 +6,11 @@ import { ArrowRight, ShieldCheck, CheckCircle2, Award } from "lucide-react";
 import Button from "./ui/Button";
 import ScrollReveal from "./ui/ScrollReveal";
 import { SITE_CONFIG } from "@/lib/constants";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Hero() {
+  const { t } = useLanguage();
+
   return (
     <section id="hero" className="relative min-h-[85vh] pt-36 pb-20 flex items-center bg-[#F8FAFC] overflow-hidden">
       
@@ -24,21 +27,21 @@ export default function Hero() {
             <ScrollReveal direction="down" delay={0.1}>
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white border border-slate-300 text-[#0D2240] text-xs sm:text-sm font-bold mb-6 shadow-xs">
                 <ShieldCheck className="w-4.5 h-4.5 text-[#C5A059] shrink-0" />
-                <span>สำนักงานบัญชีและภาษีคุณภาพวิชาชีพ (CPA)</span>
+                <span>{t.hero.badge}</span>
               </div>
             </ScrollReveal>
 
             {/* Main Headline */}
             <ScrollReveal direction="up" delay={0.2}>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-snug sm:leading-tight lg:leading-tight text-[#0D2240] mb-6">
-                ยึดมั่นความถูกต้อง <span className="text-[#C5A059]">การบัญชีและภาษี</span> เพื่อความมั่นคงของธุรกิจคุณ
+                {t.hero.title} <span className="text-[#C5A059]">{t.hero.titleHighlight}</span> {t.hero.titleEnd}
               </h1>
             </ScrollReveal>
 
             {/* Subtitle */}
             <ScrollReveal direction="up" delay={0.3}>
               <p className="text-[#334155] text-base sm:text-lg leading-relaxed mb-8 max-w-2xl font-normal">
-                {SITE_CONFIG.description} ป้องกันความเสี่ยงทางภาษีและบริหารจัดการอย่างถูกต้องแม่นยำ
+                {t.hero.subtitle}
               </p>
             </ScrollReveal>
 
@@ -46,10 +49,10 @@ export default function Hero() {
             <ScrollReveal direction="up" delay={0.4}>
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
                 <Button href="#contact" variant="navy" size="lg" className="font-bold">
-                  ขอคำปรึกษาเบื้องต้นฟรี <ArrowRight className="w-5 h-5 ml-2 inline" />
+                  {t.hero.ctaConsult} <ArrowRight className="w-5 h-5 ml-2 inline" />
                 </Button>
                 <Button href="#pricing" variant="outline" size="lg" className="font-bold">
-                  ดูค่าบริการ
+                  {t.hero.ctaPricing}
                 </Button>
               </div>
             </ScrollReveal>
@@ -80,13 +83,13 @@ export default function Hero() {
                         </div>
                         <div>
                           <div className="text-[#C5A059] text-xs font-bold uppercase tracking-wider">
-                            KPR ACCOUNTING
+                            {t.hero.badgeTitle}
                           </div>
                           <div className="text-[#0D2240] text-sm sm:text-base font-extrabold">
-                            เคพีอาร์ แอคเคานต์ติ้ง
+                            {t.hero.badgeThaiTitle}
                           </div>
                           <div className="text-[#475569] text-xs mt-0.5 font-medium">
-                            ที่ปรึกษาบัญชีและภาษีครบวงจร
+                            {t.hero.badgeSub}
                           </div>
                         </div>
                       </div>
@@ -100,8 +103,8 @@ export default function Hero() {
                     <Award className="w-5 h-5" />
                   </div>
                   <div>
-                    <div className="text-[#0D2240] font-extrabold text-sm">ประสบการณ์ 20 ปี</div>
-                    <div className="text-[#475569] text-xs font-medium">ถูกต้องตามกฎหมาย 100%</div>
+                    <div className="text-[#0D2240] font-extrabold text-sm">{t.hero.statExp}</div>
+                    <div className="text-[#475569] text-xs font-medium">{t.hero.statLegal}</div>
                   </div>
                 </div>
 

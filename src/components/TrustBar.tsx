@@ -1,32 +1,29 @@
 "use client";
 
 import React from "react";
-import { ShieldCheck, Award, Lock, Building2, ExternalLink, CheckCircle2 } from "lucide-react";
+import { Award, Building2, ExternalLink, CheckCircle2 } from "lucide-react";
 import ScrollReveal from "./ui/ScrollReveal";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function TrustBar() {
+  const { t } = useLanguage();
+
   const accreditations = [
     {
-      title: "สภาวิชาชีพบัญชี",
-      subtitle: "ขึ้นทะเบียนผู้ทำบัญชี & CPA",
+      title: t.trustBar.accreditations[0].title,
+      subtitle: t.trustBar.accreditations[0].subtitle,
       icon: Award,
       href: "https://tfac.or.th/",
     },
     {
-      title: "กรมพัฒนาธุรกิจการค้า",
-      subtitle: "DBD Registered / Verified",
+      title: t.trustBar.accreditations[1].title,
+      subtitle: t.trustBar.accreditations[1].subtitle,
       icon: Building2,
       href: "https://www.dbd.go.th/",
     },
   ];
 
-  const clientSectors = [
-    "ธุรกิจโลจิสติกส์ & ขนส่ง",
-    "ธุรกิจนำเข้า - ส่งออก",
-    "ธุรกิจก่อสร้าง",
-    "ธุรกิจค้าปลีก & อีคอมเมิร์ซ",
-    "ธุรกิจบริการ & การแพทย์",
-  ];
+  const clientSectors = t.trustBar.sectors;
 
   return (
     <section className="py-10 bg-[#F8FAFC] border-y border-[#E2E8F0] relative overflow-hidden">
@@ -91,7 +88,7 @@ export default function TrustBar() {
           <div className="pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2 text-xs sm:text-sm font-bold text-[#0D2240] uppercase tracking-wider shrink-0">
               <span className="w-2.5 h-2.5 rounded-full bg-[#C5A059]" />
-              <span>ประเภทธุรกิจที่ไว้วางใจ KPR ACCOUNTING:</span>
+              <span>{t.trustBar.sectorsTitle}</span>
             </div>
             
             <div className="flex flex-wrap justify-center md:justify-end gap-2 text-xs font-medium text-[#334155]">

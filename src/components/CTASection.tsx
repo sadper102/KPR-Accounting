@@ -6,6 +6,7 @@ import { Phone, ArrowUpRight, ShieldCheck, MessageCircle } from "lucide-react";
 import ScrollReveal from "./ui/ScrollReveal";
 import Button from "./ui/Button";
 import { SITE_CONFIG } from "@/lib/constants";
+import { useLanguage } from "@/context/LanguageContext";
 
 interface CTASectionProps {
   title?: string;
@@ -13,9 +14,14 @@ interface CTASectionProps {
 }
 
 export default function CTASection({
-  title = "พร้อมเริ่มต้นวางระบบบัญชีและภาษีอย่างมั่นใจ?",
-  subtitle = "ปรึกษาผู้สอบบัญชีรับอนุญาต (CPA) และทีมนักบัญชีมืออาชีพ ฟรีไม่มีค่าใช้จ่ายเบื้องต้น",
+  title,
+  subtitle,
 }: CTASectionProps) {
+  const { t } = useLanguage();
+
+  const displayTitle = title || t.cta.title;
+  const displaySubtitle = subtitle || t.cta.subtitle;
+
   return (
     <section className="py-16 sm:py-20 bg-gradient-to-br from-[#0D2240] via-[#0A1A30] to-[#071322] text-white relative overflow-hidden">
       {/* Decorative glows */}
@@ -26,19 +32,19 @@ export default function CTASection({
         <ScrollReveal direction="down">
           <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-white/10 border border-white/20 text-[#C5A059] text-xs font-bold uppercase tracking-wider mb-4">
             <ShieldCheck className="w-4 h-4" />
-            <span>มาตรฐานวิชาชีพ CPA • ถูกต้องตามกฎหมาย 100%</span>
+            <span>{t.cta.badge}</span>
           </div>
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={0.1}>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white mb-4 leading-tight max-w-3xl mx-auto">
-            {title}
+            {displayTitle}
           </h2>
         </ScrollReveal>
 
         <ScrollReveal direction="up" delay={0.2}>
           <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-8 font-normal leading-relaxed">
-            {subtitle}
+            {displaySubtitle}
           </p>
         </ScrollReveal>
 
@@ -50,14 +56,14 @@ export default function CTASection({
               size="lg"
               className="font-bold shadow-lg"
             >
-              ปรึกษาฟรี / ขอใบเสนอราคา <ArrowUpRight className="w-4 h-4 ml-1 inline" />
+              {t.cta.consultBtn} <ArrowUpRight className="w-4 h-4 ml-1 inline" />
             </Button>
             <a
               href={`tel:${SITE_CONFIG.phone}`}
               className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white font-bold text-sm sm:text-base border border-white/20 transition-colors shadow-xs"
             >
               <Phone className="w-4 h-4 text-[#C5A059]" />
-              <span>โทร {SITE_CONFIG.phone}</span>
+              <span>{t.cta.callBtn} {SITE_CONFIG.phone}</span>
             </a>
           </div>
         </ScrollReveal>

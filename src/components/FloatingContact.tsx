@@ -3,9 +3,11 @@
 import React, { useState } from "react";
 import { Phone, MessageCircle, Clock, X, ShieldAlert } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/constants";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function FloatingContact() {
   const [isOpen, setIsOpen] = useState(false);
+  const { t, lang } = useLanguage();
 
   return (
     <>
@@ -15,18 +17,18 @@ export default function FloatingContact() {
           <div className="flex items-center gap-4">
             <span className="flex items-center gap-1.5 font-bold text-amber-300">
               <Phone className="w-3.5 h-3.5" />
-              <span>สายด่วนปรึกษาบัญชี-ภาษี: {SITE_CONFIG.mobile}</span>
+              <span>{t.floating.hotline}: {SITE_CONFIG.mobile}</span>
             </span>
             <span className="hidden md:inline-block text-slate-400">|</span>
             <span className="hidden md:flex items-center gap-1.5 text-slate-300">
               <Clock className="w-3.5 h-3.5 text-amber-300" />
-              <span>เวลาทำการ: {SITE_CONFIG.workingHours}</span>
+              <span>{t.floating.hours}</span>
             </span>
           </div>
 
           <div className="flex items-center gap-3 text-slate-300 text-[11px] font-semibold">
             <span className="bg-amber-500/20 text-amber-300 px-2.5 py-0.5 rounded border border-amber-500/30">
-              ปรึกษาฟรีไม่มีค่าใช้จ่าย
+              {t.floating.consultNow}
             </span>
             <a
               href={`https://line.me/ti/p/${SITE_CONFIG.line}`}
@@ -47,7 +49,7 @@ export default function FloatingContact() {
         {isOpen && (
           <div className="executive-card p-4 rounded-2xl bg-white border border-slate-300 shadow-2xl space-y-3 animate-fadeIn w-64">
             <div className="text-xs font-black text-[#0D2240] border-b border-slate-200 pb-2 flex items-center justify-between">
-              <span>ติดต่อสำนักงานด่วน</span>
+              <span>{lang === "th" ? "ติดต่อสำนักงานด่วน" : "Quick Contact"}</span>
               <button
                 onClick={() => setIsOpen(false)}
                 className="text-slate-400 hover:text-slate-700"
@@ -66,7 +68,7 @@ export default function FloatingContact() {
                 <MessageCircle className="w-4 h-4" />
               </div>
               <div>
-                <div>แชตปรึกษาผ่าน Line</div>
+                <div>{lang === "th" ? "แชตปรึกษาผ่าน Line" : "Chat on LINE Official"}</div>
                 <div className="text-[10px] text-emerald-700 font-normal">ID: {SITE_CONFIG.line}</div>
               </div>
             </a>
@@ -79,7 +81,7 @@ export default function FloatingContact() {
                 <Phone className="w-4 h-4" />
               </div>
               <div>
-                <div>โทรศัพท์สายตรง</div>
+                <div>{lang === "th" ? "โทรศัพท์สายตรง" : "Direct Phone Line"}</div>
                 <div className="text-[10px] text-slate-700 font-normal">{SITE_CONFIG.phone}</div>
               </div>
             </a>
@@ -96,7 +98,7 @@ export default function FloatingContact() {
             <MessageCircle className="w-6 h-6 text-[#C5A059]" />
             <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-500 rounded-full animate-ping" />
           </div>
-          <span className="hidden sm:inline font-bold">ปรึกษาด่วน</span>
+          <span className="hidden sm:inline font-bold">{lang === "th" ? "ปรึกษาด่วน" : "Quick Help"}</span>
         </button>
       </div>
     </>

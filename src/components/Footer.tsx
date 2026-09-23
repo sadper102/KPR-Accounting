@@ -4,12 +4,25 @@ import React from "react";
 import Link from "next/link";
 import { ArrowUp, Phone, Mail, MapPin } from "lucide-react";
 import Logo from "./Logo";
-import { NAV_LINKS, SERVICES, SITE_CONFIG } from "@/lib/constants";
+import LanguageSwitcher from "./LanguageSwitcher";
+import { SITE_CONFIG } from "@/lib/constants";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Footer() {
+  const { t, lang } = useLanguage();
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+
+  const navLinks = [
+    { name: t.nav.home, href: "/" },
+    { name: t.nav.about, href: "/about" },
+    { name: t.nav.services, href: "/services" },
+    { name: t.nav.pricing, href: "/pricing" },
+    { name: t.nav.workflow, href: "/workflow" },
+    { name: t.nav.contact, href: "/contact" },
+  ];
 
   return (
     <footer className="relative bg-[#0D2240] text-white pt-16 pb-12 overflow-hidden border-t-2 border-[#C5A059]">
@@ -23,7 +36,7 @@ export default function Footer() {
               <Logo variant="full" theme="dark" size="lg" />
             </Link>
             <p className="text-slate-300 text-sm leading-relaxed mb-4 font-normal max-w-sm">
-              บริษัท เคพีอาร์ แอคเคานต์ติ้ง จำกัด ให้บริการทำบัญชี วางแผนภาษี ตรวจสอบบัญชี และจดทะเบียนบริษัท ด้วยมาตรฐานวิชาชีพสูงสุด
+              {t.footer.desc}
             </p>
             <div className="space-y-2">
               <a
@@ -33,7 +46,7 @@ export default function Footer() {
                 className="text-xs text-[#C5A059] hover:underline font-bold bg-slate-800 px-3.5 py-1.5 rounded-lg border border-slate-700 inline-block transition-colors"
                 title="ไปยังเว็บไซต์กรมพัฒนาธุรกิจการค้า"
               >
-                เลขทะเบียนนิติบุคคล: {SITE_CONFIG.taxId} ↗
+                {t.footer.taxId} {SITE_CONFIG.taxId} ↗
               </a>
               <a
                 href="https://tfac.or.th/"
@@ -42,7 +55,7 @@ export default function Footer() {
                 className="text-xs text-slate-300 hover:text-[#C5A059] font-medium block transition-colors"
                 title="ไปยังเว็บไซต์สภาวิชาชีพบัญชี ในพระบรมราชูปถัมภ์"
               >
-                ขึ้นทะเบียนสภาวิชาชีพบัญชี ในพระบรมราชูปถัมภ์ ↗
+                {t.footer.tfacMember}
               </a>
             </div>
           </div>
@@ -50,11 +63,11 @@ export default function Footer() {
           {/* Column 2: Quick Links */}
           <div className="lg:col-span-2">
             <h4 className="text-white font-bold text-base mb-4 border-b border-slate-700 pb-2">
-              ลิงก์ที่เกี่ยวข้อง
+              {t.footer.quickLinks}
             </h4>
             <ul className="space-y-2 text-sm font-medium text-slate-300">
-              {NAV_LINKS.map((link) => (
-                <li key={link.name}>
+              {navLinks.map((link) => (
+                <li key={link.href}>
                   <Link
                     href={link.href}
                     className="hover:text-[#C5A059] transition-colors"
@@ -69,10 +82,10 @@ export default function Footer() {
           {/* Column 3: Services */}
           <div className="lg:col-span-3">
             <h4 className="text-white font-bold text-base mb-4 border-b border-slate-700 pb-2">
-              บริการหลัก
+              {t.footer.mainServices}
             </h4>
             <ul className="space-y-2 text-sm font-medium text-slate-300">
-              {SERVICES.map((srv) => (
+              {t.services.list.map((srv) => (
                 <li key={srv.id}>
                   <Link
                     href={`/services#${srv.id}`}
@@ -89,12 +102,12 @@ export default function Footer() {
           {/* Column 4: Contact Info */}
           <div className="lg:col-span-3">
             <h4 className="text-white font-bold text-base mb-4 border-b border-slate-700 pb-2">
-              ข้อมูลติดต่อ
+              {t.footer.contactInfo}
             </h4>
             <ul className="space-y-3 text-xs sm:text-sm font-medium text-slate-300">
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-[#C5A059] shrink-0 mt-0.5" />
-                <span>{SITE_CONFIG.address}</span>
+                <span>{lang === "th" ? SITE_CONFIG.address : "735/1 Building A, Room A147-148, 1st Fl., Srinakarin Rd., Phatthanakan, Suan Luang, Bangkok 10250"}</span>
               </li>
               <li className="flex items-center gap-2.5">
                 <Phone className="w-4 h-4 text-[#C5A059] shrink-0" />
@@ -119,13 +132,16 @@ export default function Footer() {
             © {new Date().getFullYear()} {SITE_CONFIG.companyName} ({SITE_CONFIG.name})
           </div>
 
-          <button
-            onClick={scrollToTop}
-            className="flex items-center gap-2 text-white hover:text-[#C5A059] bg-slate-800 px-3.5 py-2 rounded-lg border border-slate-700 transition-colors cursor-pointer"
-          >
-            <span>กลับสู่ด้านบน</span>
-            <ArrowUp className="w-4 h-4" />
-          </button>
+          <div className="flex items-center gap-4">
+            <LanguageSwitcher variant="compact" />
+            <button
+              onClick={scrollToTop}
+              className="flex items-center gap-2 text-white hover:text-[#C5A059] bg-slate-800 px-3.5 py-2 rounded-lg border border-slate-700 transition-colors cursor-pointer"
+            >
+              <span>{t.footer.backToTop}</span>
+              <ArrowUp className="w-4 h-4" />
+            </button>
+          </div>
         </div>
 
       </div>

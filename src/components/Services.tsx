@@ -13,17 +13,19 @@ import {
 import GlassCard from "./ui/GlassCard";
 import ScrollReveal from "./ui/ScrollReveal";
 import Button from "./ui/Button";
-import { SERVICES } from "@/lib/constants";
+import { useLanguage } from "@/context/LanguageContext";
 
 const ICON_MAP: Record<string, React.ElementType> = {
-  Calculator,
-  Receipt,
-  Building2,
-  FileCheck,
-  Users,
+  accounting: Calculator,
+  taxation: Receipt,
+  registration: Building2,
+  audit: FileCheck,
+  advisory: Users,
 };
 
 export default function Services() {
+  const { t } = useLanguage();
+
   return (
     <section id="services" className="py-24 relative bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -32,27 +34,27 @@ export default function Services() {
         <div className="text-center max-w-4xl mx-auto mb-16">
           <ScrollReveal direction="down">
             <span className="text-[#0D2240] font-bold text-xs uppercase tracking-widest bg-[#F8FAFC] px-4 py-1.5 rounded-full border border-[#E2E8F0] shadow-xs inline-block">
-              OUR SERVICES — บริการของเรา
+              {t.services.badge}
             </span>
           </ScrollReveal>
           
           <ScrollReveal direction="up" delay={0.1}>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0D2240] mt-4 mb-6 leading-tight [text-wrap:balance]">
-              บริการด้านบัญชีและภาษี <span className="text-[#C5A059] whitespace-nowrap">ครอบคลุมทุกความต้องการธุรกิจ</span>
+              {t.services.title} <span className="text-[#C5A059] whitespace-nowrap">{t.services.titleHighlight}</span>
             </h2>
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={0.2}>
             <p className="text-[#334155] text-base sm:text-lg font-medium max-w-2xl mx-auto [text-wrap:balance]">
-              เราให้บริการที่ปรับให้เหมาะกับประเภทและขนาดธุรกิจของคุณ ตั้งแต่เริ่มต้นประกอบการจนถึงบริษัทเติบโต
+              {t.services.subtitle}
             </p>
           </ScrollReveal>
         </div>
 
         {/* Structured Solid Services Grid */}
         <div className="flex flex-wrap justify-center -mx-4">
-          {SERVICES.map((srv, idx) => {
-            const IconComponent = ICON_MAP[srv.icon] || Calculator;
+          {t.services.list.map((srv, idx) => {
+            const IconComponent = ICON_MAP[srv.id] || Calculator;
 
             return (
               <div key={srv.id} className="w-full md:w-1/2 lg:w-1/3 p-4 flex">
@@ -90,7 +92,7 @@ export default function Services() {
                         href="#contact"
                         className="inline-flex items-center text-sm font-bold text-[#0D2240] hover:text-[#C5A059] transition-colors group-hover:translate-x-1 duration-200"
                       >
-                        <span>ขอเสนอราคา / ปรึกษาบริการนี้</span>
+                        <span>{t.services.quoteBtn}</span>
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </a>
                     </div>
@@ -107,13 +109,13 @@ export default function Services() {
           <div className="mt-16 rounded-3xl p-8 sm:p-12 text-center bg-[#0D2240] text-white border border-[#C5A059]/30 shadow-xl relative overflow-hidden">
             <div className="max-w-3xl mx-auto relative z-10">
               <h3 className="text-2xl sm:text-3xl font-extrabold mb-4 text-white leading-tight [text-wrap:balance]">
-                ต้องการที่ปรึกษาเฉพาะทาง หรือ แพ็กเกจดูแลรายเดือน?
+                {t.services.ctaTitle}
               </h3>
               <p className="text-[#E2E8F0] text-base sm:text-lg mb-8 font-normal leading-relaxed [text-wrap:balance]">
-                เรามีแพ็กเกจยืดหยุ่นที่คุ้มค่า เหมาะสำหรับผู้เริ่มต้นประกอบการและบริษัทที่ต้องการดูแลอย่างต่อเนื่อง
+                {t.services.ctaSubtitle}
               </p>
               <Button href="#contact" variant="gold" size="lg" className="font-bold">
-                ขอใบเสนอราคาแพ็กเกจ
+                {t.services.quoteBtn}
               </Button>
             </div>
           </div>

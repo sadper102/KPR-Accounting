@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Prompt, Inter } from "next/font/google";
 import "./globals.css";
 import { SITE_CONFIG } from "@/lib/constants";
+import { LanguageProvider } from "@/context/LanguageContext";
 import FloatingContact from "@/components/FloatingContact";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -134,12 +135,14 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased selection:bg-[#0D2240] selection:text-white bg-[#F8FAFC]">
-        <FloatingContact />
-        <Navbar />
-        <main className="min-h-screen">
-          {children}
-        </main>
-        <Footer />
+        <LanguageProvider>
+          <FloatingContact />
+          <Navbar />
+          <main className="min-h-screen">
+            {children}
+          </main>
+          <Footer />
+        </LanguageProvider>
       </body>
     </html>
   );

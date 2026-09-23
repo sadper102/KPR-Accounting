@@ -14,14 +14,16 @@ import {
 import ScrollReveal from "./ui/ScrollReveal";
 import Button from "./ui/Button";
 import { SITE_CONFIG } from "@/lib/constants";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Contact() {
+  const { t, lang } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
     email: "",
-    service: "บริการด้านบัญชี",
+    service: "accounting",
     message: "",
   });
 
@@ -34,7 +36,7 @@ export default function Contact() {
         name: "",
         phone: "",
         email: "",
-        service: "บริการด้านบัญชี",
+        service: "accounting",
         message: "",
       });
     }, 4000);
@@ -48,19 +50,19 @@ export default function Contact() {
         <div className="text-center max-w-4xl mx-auto mb-16">
           <ScrollReveal direction="down">
             <span className="text-[#0D2240] font-bold text-xs uppercase tracking-widest bg-white px-4 py-1.5 rounded-full border border-[#E2E8F0] shadow-xs inline-block">
-              CONTACT US — ติดต่อเรา
+              {t.contact.badge}
             </span>
           </ScrollReveal>
           
           <ScrollReveal direction="up" delay={0.1}>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0D2240] mt-4 mb-6 leading-tight [text-wrap:balance]">
-              รับคำปรึกษาเบื้องต้น <span className="text-[#C5A059] whitespace-nowrap">ไม่มีค่าใช้จ่าย</span>
+              {t.contact.title} <span className="text-[#C5A059] whitespace-nowrap">{t.contact.titleHighlight}</span>
             </h2>
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={0.2}>
             <p className="text-[#334155] text-base sm:text-lg font-medium max-w-2xl mx-auto [text-wrap:balance]">
-              ทีมงานผู้เชี่ยวชาญพร้อมตอบคำถามและให้คำแนะนำแก่ท่าน ติดต่อเราได้ทันที
+              {t.contact.subtitle}
             </p>
           </ScrollReveal>
         </div>
@@ -78,7 +80,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-xs font-bold text-[#475569] uppercase tracking-wider mb-1">
-                      เบอร์โทรศัพท์ติดต่อ
+                      {t.contact.phoneDirect}
                     </div>
                     <a
                       href={`tel:${SITE_CONFIG.phone}`}
@@ -87,7 +89,7 @@ export default function Contact() {
                       {SITE_CONFIG.phone}
                     </a>
                     <span className="text-xs text-[#64748B] font-medium block mt-0.5">
-                      พร้อมให้คำปรึกษาเบื้องต้นฟรี
+                      {lang === "th" ? "พร้อมให้คำปรึกษาเบื้องต้นฟรี" : "Free initial consultation available"}
                     </span>
                   </div>
                 </div>
@@ -102,10 +104,10 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-xs font-bold text-[#475569] uppercase tracking-wider mb-1">
-                      ข้อมูลนิติบุคคล
+                      {t.contact.companyInfoTitle}
                     </div>
                     <div className="text-sm font-bold text-[#0D2240]">
-                      {SITE_CONFIG.companyName}
+                      {lang === "th" ? SITE_CONFIG.companyName : "KPR Accounting Co., Ltd."}
                     </div>
                     <a
                       href="https://www.dbd.go.th/"
@@ -114,7 +116,7 @@ export default function Contact() {
                       className="text-xs text-[#C5A059] hover:underline font-bold mt-1 inline-flex items-center gap-1 transition-colors"
                       title="ตรวจสอบสถานะนิติบุคคล ณ กรมพัฒนาธุรกิจการค้า"
                     >
-                      <span>เลขทะเบียนนิติบุคคล: {SITE_CONFIG.taxId}</span>
+                      <span>{t.contact.taxId} {SITE_CONFIG.taxId}</span>
                       <ExternalLink className="w-3 h-3" />
                     </a>
                   </div>
@@ -130,7 +132,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-xs font-bold text-[#475569] uppercase tracking-wider mb-1">
-                      อีเมล & Line Official
+                      {t.contact.emailAddress} & LINE
                     </div>
                     <a
                       href={`mailto:${SITE_CONFIG.email}`}
@@ -154,10 +156,10 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-xs font-bold text-[#475569] uppercase tracking-wider mb-1">
-                      ที่ตั้งสำนักงาน
+                      {t.contact.registeredAddress}
                     </div>
                     <p className="text-xs sm:text-sm text-[#334155] leading-relaxed font-medium">
-                      {SITE_CONFIG.address}
+                      {lang === "th" ? SITE_CONFIG.address : "735/1 Building A, Room A147-148, 1st Fl., Srinakarin Rd., Phatthanakan, Suan Luang, Bangkok 10250"}
                     </p>
                   </div>
                 </div>
@@ -172,13 +174,13 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-xs font-bold text-[#475569] uppercase tracking-wider mb-1">
-                      เวลาทำการ
+                      {t.contact.officeHours}
                     </div>
                     <p className="text-xs sm:text-sm text-[#0D2240] font-bold">
-                      {SITE_CONFIG.workingHours}
+                      {t.contact.workingDays}
                     </p>
                     <p className="text-xs text-[#475569] font-medium mt-0.5">
-                      (หยุดวันเสาร์ - อาทิตย์ และวันหยุดนักขัตฤกษ์)
+                      {t.contact.holidayNotice}
                     </p>
                   </div>
                 </div>
@@ -193,20 +195,20 @@ export default function Contact() {
               <div className="executive-card p-8 sm:p-10 rounded-3xl bg-white border border-[#E2E8F0] shadow-md">
                 
                 <h3 className="text-2xl font-bold text-[#0D2240] mb-2">
-                  ส่งข้อความถึงสำนักงาน
+                  {t.contact.formTitle}
                 </h3>
                 <p className="text-[#475569] text-sm mb-8 font-normal">
-                  กรอกรายละเอียดเบื้องต้น ทีมงานจะติดต่อกลับภายใน 24 ชั่วโมง
+                  {lang === "th" ? "กรอกรายละเอียดเบื้องต้น ทีมงานจะติดต่อกลับภายใน 24 ชั่วโมง" : "Fill out your details below and our CPA team will respond within 24 hours."}
                 </p>
 
                 {submitted ? (
                   <div className="bg-emerald-50 border border-emerald-300 rounded-2xl p-8 text-center">
                     <CheckCircle2 className="w-12 h-12 text-emerald-700 mx-auto mb-4" />
                     <h4 className="text-xl font-bold text-[#0D2240] mb-2">
-                      ได้รับข้อมูลเรียบร้อยแล้ว
+                      {t.contact.successTitle}
                     </h4>
                     <p className="text-[#334155] text-sm font-medium">
-                      ขอบคุณที่ไว้วางใจ KPR ACCOUNTING เจ้าหนาที่จะติดต่อกลับโดยเร็วที่สุดครับ
+                      {t.contact.successDesc}
                     </p>
                   </div>
                 ) : (
@@ -214,28 +216,28 @@ export default function Contact() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div>
                         <label className="block text-xs font-bold text-[#0D2240] uppercase tracking-wider mb-2">
-                          ชื่อ - นามสกุล / บริษัท *
+                          {t.contact.nameLabel}
                         </label>
                         <input
                           type="text"
                           required
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          placeholder="กรุณากรอกชื่อของคุณ"
+                          placeholder={t.contact.namePlaceholder}
                           className="w-full bg-[#F8FAFC] border border-[#E2E8F0] focus:border-[#0D2240] rounded-xl px-4 py-3 text-[#0D2240] font-medium text-sm focus:outline-none focus:ring-1 focus:ring-[#0D2240] transition-colors placeholder:text-slate-400"
                         />
                       </div>
 
                       <div>
                         <label className="block text-xs font-bold text-[#0D2240] uppercase tracking-wider mb-2">
-                          เบอร์โทรศัพท์ติดต่อ *
+                          {t.contact.phoneLabel}
                         </label>
                         <input
                           type="tel"
                           required
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          placeholder="08X-XXX-XXXX"
+                          placeholder={t.contact.phonePlaceholder}
                           className="w-full bg-[#F8FAFC] border border-[#E2E8F0] focus:border-[#0D2240] rounded-xl px-4 py-3 text-[#0D2240] font-medium text-sm focus:outline-none focus:ring-1 focus:ring-[#0D2240] transition-colors placeholder:text-slate-400"
                         />
                       </div>
@@ -244,51 +246,51 @@ export default function Contact() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div>
                         <label className="block text-xs font-bold text-[#0D2240] uppercase tracking-wider mb-2">
-                          อีเมล
+                          {t.contact.emailLabel}
                         </label>
                         <input
                           type="email"
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          placeholder="name@company.com"
+                          placeholder={t.contact.emailPlaceholder}
                           className="w-full bg-[#F8FAFC] border border-[#E2E8F0] focus:border-[#0D2240] rounded-xl px-4 py-3 text-[#0D2240] font-medium text-sm focus:outline-none focus:ring-1 focus:ring-[#0D2240] transition-colors placeholder:text-slate-400"
                         />
                       </div>
 
                       <div>
                         <label className="block text-xs font-bold text-[#0D2240] uppercase tracking-wider mb-2">
-                          บริการที่สนใจ
+                          {t.contact.serviceLabel}
                         </label>
                         <select
                           value={formData.service}
                           onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                           className="w-full bg-[#F8FAFC] border border-[#E2E8F0] focus:border-[#0D2240] rounded-xl px-4 py-3 text-[#0D2240] font-medium text-sm focus:outline-none focus:ring-1 focus:ring-[#0D2240] transition-colors"
                         >
-                          <option value="บริการด้านบัญชี">บริการด้านบัญชี</option>
-                          <option value="บริการด้านภาษี">บริการด้านภาษี</option>
-                          <option value="จดทะเบียนบริษัท">จดทะเบียนบริษัท</option>
-                          <option value="ตรวจสอบบัญชี">ตรวจสอบบัญชี</option>
-                          <option value="ประกันสังคม">ประกันสังคม</option>
-                          <option value="อื่นๆ">ปรึกษาเรื่องอื่นๆ</option>
+                          <option value="accounting">{lang === "th" ? "บริการด้านบัญชี" : "Accounting Services"}</option>
+                          <option value="taxation">{lang === "th" ? "บริการด้านภาษี" : "Tax Advisory & Filing"}</option>
+                          <option value="registration">{lang === "th" ? "จดทะเบียนบริษัท" : "Company Registration"}</option>
+                          <option value="audit">{lang === "th" ? "ตรวจสอบบัญชี" : "Financial Audit (CPA)"}</option>
+                          <option value="payroll">{lang === "th" ? "ประกันสังคม & เงินเดือน" : "Social Security & Payroll"}</option>
+                          <option value="other">{lang === "th" ? "ปรึกษาเรื่องอื่นๆ" : "Other Services"}</option>
                         </select>
                       </div>
                     </div>
 
                     <div>
                       <label className="block text-xs font-bold text-[#0D2240] uppercase tracking-wider mb-2">
-                        รายละเอียดเพิ่มเติม
+                        {t.contact.messageLabel}
                       </label>
                       <textarea
                         rows={4}
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        placeholder="รายละเอียดธุรกิจ หรือ คำถามที่ต้องการปรึกษา..."
+                        placeholder={t.contact.messagePlaceholder}
                         className="w-full bg-[#F8FAFC] border border-[#E2E8F0] focus:border-[#0D2240] rounded-xl px-4 py-3 text-[#0D2240] font-medium text-sm focus:outline-none focus:ring-1 focus:ring-[#0D2240] transition-colors resize-none placeholder:text-slate-400"
                       />
                     </div>
 
                     <Button type="submit" variant="navy" size="lg" className="w-full font-bold">
-                      ส่งข้อความขอคำปรึกษา <Send className="w-4 h-4 ml-2 inline" />
+                      {t.contact.submitBtn} <Send className="w-4 h-4 ml-2 inline" />
                     </Button>
                   </form>
                 )}

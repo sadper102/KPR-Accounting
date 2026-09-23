@@ -4,9 +4,11 @@ import React from "react";
 import { Check, ArrowRight } from "lucide-react";
 import ScrollReveal from "./ui/ScrollReveal";
 import Button from "./ui/Button";
-import { PRICING_PACKAGES } from "@/lib/constants";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Pricing() {
+  const { t } = useLanguage();
+
   return (
     <section id="pricing" className="py-24 relative bg-[#F8FAFC] border-t border-[#E2E8F0]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -15,26 +17,26 @@ export default function Pricing() {
         <div className="text-center max-w-4xl mx-auto mb-16">
           <ScrollReveal direction="down">
             <span className="text-[#0D2240] font-bold text-xs uppercase tracking-widest bg-white px-4 py-1.5 rounded-full border border-[#E2E8F0] shadow-xs inline-block">
-              PRICING PACKAGES — ค่าบริการ
+              {t.pricing.badge}
             </span>
           </ScrollReveal>
           
           <ScrollReveal direction="up" delay={0.1}>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#0D2240] mt-4 mb-6 leading-tight [text-wrap:balance]">
-              แพ็กเกจราคาโปร่งใส <span className="text-[#C5A059] whitespace-nowrap">ไม่มีค่าใช้จ่ายแอบแฝง</span>
+              {t.pricing.title} <span className="text-[#C5A059] whitespace-nowrap">{t.pricing.titleHighlight}</span>
             </h2>
           </ScrollReveal>
 
           <ScrollReveal direction="up" delay={0.2}>
             <p className="text-[#334155] text-base sm:text-lg font-medium max-w-2xl mx-auto [text-wrap:balance]">
-              เลือกแพ็กเกจที่เหมาะสมกับขนาดและขอบเขตธุรกิจของคุณ ตกลงค่างานชัดเจนล่วงหน้าก่อนเริ่มงาน
+              {t.pricing.subtitle}
             </p>
           </ScrollReveal>
         </div>
 
         {/* Pricing Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
-          {PRICING_PACKAGES.map((pkg, idx) => (
+          {t.pricing.packages.map((pkg, idx) => (
             <ScrollReveal key={idx} direction="up" delay={0.1 * idx}>
               <div
                 className={`executive-card rounded-2xl p-8 flex flex-col justify-between h-full relative ${
@@ -45,7 +47,7 @@ export default function Pricing() {
               >
                 {pkg.popular && (
                   <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-[#0D2240] text-white text-xs font-bold uppercase tracking-wider px-4 py-1.5 rounded-full shadow-md whitespace-nowrap">
-                    แพ็กเกจยอดนิยม
+                    {t.pricing.popularBadge}
                   </div>
                 )}
 
@@ -91,7 +93,7 @@ export default function Pricing() {
                   size="md"
                   className="w-full font-bold"
                 >
-                  {pkg.ctaText} <ArrowRight className="w-4 h-4 ml-1.5" />
+                  {t.pricing.chooseBtn} <ArrowRight className="w-4 h-4 ml-1.5" />
                 </Button>
 
               </div>

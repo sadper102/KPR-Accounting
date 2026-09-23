@@ -5,6 +5,8 @@ import Link from "next/link";
 import { ChevronRight, Home } from "lucide-react";
 import ScrollReveal from "./ui/ScrollReveal";
 
+import { useLanguage } from "@/context/LanguageContext";
+
 interface BreadcrumbItem {
   label: string;
   href?: string;
@@ -25,6 +27,8 @@ export default function PageHeader({
   description,
   breadcrumbs,
 }: PageHeaderProps) {
+  const { t } = useLanguage();
+
   return (
     <section className="relative pt-36 pb-16 lg:pb-20 bg-[#0D2240] text-white overflow-hidden border-b-2 border-[#C5A059]">
       {/* Decorative Grid & Glow */}
@@ -42,7 +46,7 @@ export default function PageHeader({
                 className="flex items-center gap-1.5 hover:text-[#C5A059] transition-colors"
               >
                 <Home className="w-3.5 h-3.5" />
-                <span>หน้าแรก</span>
+                <span>{t.nav.home}</span>
               </Link>
             </li>
             {breadcrumbs.map((crumb, idx) => (
