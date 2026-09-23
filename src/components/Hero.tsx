@@ -82,15 +82,15 @@ export default function Hero() {
                 
                 {/* Executive Frame */}
                 <div className="relative executive-card rounded-2xl overflow-hidden p-3 border border-slate-300 bg-white shadow-xl">
-                  <div className="relative h-[360px] sm:h-[420px] w-full rounded-xl overflow-hidden">
+                  <div className="relative h-[380px] sm:h-[460px] lg:h-[480px] w-full rounded-xl overflow-hidden">
                     <Image
                       src="/images/hero.png"
-                      alt="KPR Accounting Office"
+                      alt="KPR Accounting & Legal Advisors"
                       fill
                       className="object-cover object-center"
                       priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0D2240]/90 via-[#0D2240]/20 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0D2240]/80 via-black/10 to-transparent pointer-events-none" />
 
                     {/* Badge inside image */}
                     <div className="absolute bottom-5 left-5 right-5 bg-white rounded-xl p-4 border border-slate-300 shadow-xl">
