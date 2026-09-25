@@ -29,7 +29,7 @@ export const TRANSLATIONS = {
       badgeTitle: "KPR ACCOUNTING",
       badgeThaiTitle: "เคพีอาร์ แอคเคาน์ติ้ง",
       badgeSub: "ที่ปรึกษาบัญชีและภาษีครบวงจร",
-      statExp: "ประสบการณ์ 20 ปี+",
+      statExp: "ประสบการณ์ 20+ ปี",
       statLegal: "",
     },
     trustBar: {
