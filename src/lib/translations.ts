@@ -95,7 +95,7 @@ export const TRANSLATIONS = {
         "เป็นที่ปรึกษาที่เข้าถึงง่าย ตอบคำถามรวดเร็ว และร่วมแก้ปัญหาเคียงข้างผู้บริหาร",
         "รักษาความลับและข้อมูลทางการค้าของลูกค้าด้วยสัญญารักษาความลับ (NDA) และระบบความปลอดภัยระดับสูง",
       ],
-      corePillarsTitle: "4 เสาหลักแห่งมาตรฐานวิชาชีพ",
+      corePillarsTitle: "3 เสาหลักแห่งมาตรฐานวิชาชีพ",
       corePillarsDesc: "หลักการทำงานที่เรายึดมั่นอย่างเคร่งครัด เพื่อสร้างความเชื่อมั่นสูงสุดแก่ลูกค้าทุกท่าน",
     },
     services: {
@@ -527,7 +527,7 @@ export const TRANSLATIONS = {
         "Provide accessible, responsive advisory that helps executive management solve complex financial hurdles.",
         "Preserve complete trade secrecy and client data protection backed by strict NDAs and cloud encryption.",
       ],
-      corePillarsTitle: "4 Pillars of Professional Standard",
+      corePillarsTitle: "3 Pillars of Professional Standard",
       corePillarsDesc: "Core operating principles we uphold rigorously to ensure total confidence for every client.",
     },
     services: {
