@@ -9,7 +9,6 @@ import {
   Send,
   CheckCircle2,
   Building2,
-  ExternalLink,
 } from "lucide-react";
 import ScrollReveal from "./ui/ScrollReveal";
 import Button from "./ui/Button";
@@ -109,16 +108,6 @@ export default function Contact() {
                     <div className="text-sm font-bold text-[#0D2240]">
                       {lang === "th" ? SITE_CONFIG.companyName : "KPR Accounting Co., Ltd."}
                     </div>
-                    <a
-                      href="https://www.dbd.go.th/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-xs text-[#C5A059] hover:underline font-bold mt-1 inline-flex items-center gap-1 transition-colors"
-                      title="ตรวจสอบสถานะนิติบุคคล ณ กรมพัฒนาธุรกิจการค้า"
-                    >
-                      <span>{t.contact.taxId} {SITE_CONFIG.taxId}</span>
-                      <ExternalLink className="w-3 h-3" />
-                    </a>
                   </div>
                 </div>
               </div>

@@ -2,7 +2,7 @@ export const SITE_CONFIG = {
   name: "KPR ACCOUNTING",
   companyName: "บริษัท เคพีอาร์ แอคเคาน์ติ้ง จำกัด",
   thaiName: "เคพีอาร์ แอคเคาน์ติ้ง",
-  taxId: "0105569174914",
+  taxId: "",
   tagline: "สำนักงานบัญชีและภาษี ที่คุณวางใจได้",
   description: "บริการทำบัญชี วางแผนภาษี ตรวจสอบบัญชี และจดทะเบียนบริษัทครบวงจร โดยทีมงานผู้สอบบัญชีรับอนุญาต (CPA) และนักบัญชีมืออาชีพ",
   url: "https://www.kpraccounting.com",
