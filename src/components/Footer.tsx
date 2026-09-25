@@ -40,15 +40,6 @@ export default function Footer() {
             </p>
             <div className="space-y-2">
               <a
-                href="https://www.dbd.go.th/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-xs text-[#C5A059] hover:underline font-bold bg-slate-800 px-3.5 py-1.5 rounded-lg border border-slate-700 inline-block transition-colors"
-                title="ไปยังเว็บไซต์กรมพัฒนาธุรกิจการค้า"
-              >
-                {t.footer.taxId} {SITE_CONFIG.taxId} ↗
-              </a>
-              <a
                 href="https://tfac.or.th/"
                 target="_blank"
                 rel="noopener noreferrer"
