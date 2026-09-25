@@ -124,6 +124,7 @@ export default function Footer() {
             {lang === "th"
               ? `${SITE_CONFIG.companyName} (${SITE_CONFIG.name})`
               : `${SITE_CONFIG.companyNameEn} (${SITE_CONFIG.name})`}
+            . All rights reserved.
           </div>
 
           <div className="flex items-center gap-4">
