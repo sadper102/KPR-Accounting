@@ -51,33 +51,31 @@ export default function LanguageSwitcher({
   if (variant === "compact") {
     return (
       <div
-        className={`inline-flex items-center rounded-lg border border-slate-300 bg-slate-100 p-0.5 text-xs font-semibold ${className}`}
+        className={`inline-flex items-center rounded-full border border-slate-200 bg-white p-0.5 text-xs font-semibold shadow-sm hover:border-[#C5A059]/60 transition-all ${className}`}
       >
         <button
           type="button"
           onClick={() => setLang("th")}
-          className={`flex items-center gap-1 px-2 py-1 rounded-md transition-all ${
+          className={`px-2.5 py-1 rounded-full text-xs font-bold transition-all duration-200 ${
             lang === "th"
-              ? "bg-[#0D2240] text-white shadow-sm font-bold"
-              : "text-slate-600 hover:text-slate-900"
+              ? "bg-[#0D2240] text-white shadow-sm ring-1 ring-[#0D2240]"
+              : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
           }`}
           aria-label="เปลี่ยนเป็นภาษาไทย"
         >
-          <span>🇹🇭</span>
-          <span>TH</span>
+          TH
         </button>
         <button
           type="button"
           onClick={() => setLang("en")}
-          className={`flex items-center gap-1 px-2 py-1 rounded-md transition-all ${
+          className={`px-2.5 py-1 rounded-full text-xs font-bold transition-all duration-200 ${
             lang === "en"
-              ? "bg-[#0D2240] text-white shadow-sm font-bold"
-              : "text-slate-600 hover:text-slate-900"
+              ? "bg-[#0D2240] text-white shadow-sm ring-1 ring-[#0D2240]"
+              : "text-slate-600 hover:text-slate-900 hover:bg-slate-100"
           }`}
           aria-label="Switch to English"
         >
-          <span>🇬🇧</span>
-          <span>EN</span>
+          EN
         </button>
       </div>
     );
