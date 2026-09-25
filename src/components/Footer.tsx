@@ -121,9 +121,7 @@ export default function Footer() {
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-slate-300">
           <div>
             © {new Date().getFullYear()}{" "}
-            {lang === "th"
-              ? `${SITE_CONFIG.companyName} (${SITE_CONFIG.name})`
-              : `${SITE_CONFIG.companyNameEn} (${SITE_CONFIG.name})`}
+            {lang === "th" ? SITE_CONFIG.companyName : SITE_CONFIG.companyNameEn}
             . All rights reserved.
           </div>
 
