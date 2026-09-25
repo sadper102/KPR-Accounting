@@ -64,10 +64,6 @@ export const TRANSLATIONS = {
           desc: "บริหารงานโดยผู้สอบบัญชีรับอนุญาต (CPA) และทีมนักบัญชีมืออาชีพที่มีประสบการณ์ยาวนาน",
         },
         {
-          title: "ถูกต้องตามกฎหมาย",
-          desc: "ยึดมั่นในมาตรฐานการบัญชีและข้อกฎหมายอย่างถูกต้อง แม่นยำ ปราศจากความเสี่ยง",
-        },
-        {
           title: "ที่ปรึกษาเฉพาะราย",
           desc: "ทีมงานดูแลอย่างใกล้ชิด ตอบคำถามรวดเร็วเสมือนเป็นแผนกบัญชีและภาษีประจำองค์กรท่าน",
         },
@@ -498,10 +494,6 @@ export const TRANSLATIONS = {
         {
           title: "Professional Credibility",
           desc: "Led and supervised by Certified Public Accountants (CPA) and veteran accountants with extensive field experience.",
-        },
-        {
-          title: "Legally Compliant",
-          desc: "Strict adherence to Thai Financial Reporting Standards (TFRS) and the Revenue Code, mitigating all tax risks.",
         },
         {
           title: "Dedicated Advisors",

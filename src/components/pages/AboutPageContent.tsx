@@ -2,7 +2,6 @@
 
 import React from "react";
 import {
-  Shield,
   Award,
   Users,
   Lock,
@@ -21,9 +20,9 @@ import { useLanguage } from "@/context/LanguageContext";
 export default function AboutPageContent() {
   const { t, lang } = useLanguage();
 
-  const valueIcons = [Shield, Award, Users, Lock];
+  const valueIcons = [Award, Users, Lock];
   const values = t.about.values.map((v, i) => ({
-    icon: valueIcons[i] || Shield,
+    icon: valueIcons[i] || Award,
     title: v.title,
     desc: v.desc,
   }));
@@ -179,7 +178,7 @@ export default function AboutPageContent() {
             </ScrollReveal>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {values.map((val, idx) => {
               const IconComp = val.icon;
               return (

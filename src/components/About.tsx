@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Shield, Award, Users, Lock } from "lucide-react";
+import { Award, Users, Lock } from "lucide-react";
 import GlassCard from "./ui/GlassCard";
 import ScrollReveal from "./ui/ScrollReveal";
 import { useLanguage } from "@/context/LanguageContext";
@@ -9,9 +9,9 @@ import { useLanguage } from "@/context/LanguageContext";
 export default function About() {
   const { t } = useLanguage();
 
-  const valueIcons = [Shield, Award, Users, Lock];
+  const valueIcons = [Award, Users, Lock];
   const values = t.about.values.map((v, i) => ({
-    icon: valueIcons[i] || Shield,
+    icon: valueIcons[i] || Award,
     title: v.title,
     desc: v.desc,
   }));
@@ -42,7 +42,7 @@ export default function About() {
         </div>
 
         {/* Core Values Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {values.map((val, idx) => {
             const IconComp = val.icon;
             return (
