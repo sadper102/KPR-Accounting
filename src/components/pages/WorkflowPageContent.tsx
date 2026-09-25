@@ -1,10 +1,8 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import {
   Calendar,
-  Lock,
   ClipboardList,
   CheckCircle2,
 } from "lucide-react";
@@ -95,9 +93,11 @@ export default function WorkflowPageContent() {
             <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0D2240] mb-3">
               {t.workflow.timelineTitle}
             </h2>
-            <p className="text-[#334155] text-sm sm:text-base">
-              {t.workflow.timelineSub}
-            </p>
+            {t.workflow.timelineSub && (
+              <p className="text-[#334155] text-sm sm:text-base">
+                {t.workflow.timelineSub}
+              </p>
+            )}
           </div>
 
           <div className="bg-white rounded-3xl border border-[#E2E8F0] shadow-sm divide-y divide-[#E2E8F0] overflow-hidden">
@@ -131,20 +131,6 @@ export default function WorkflowPageContent() {
         </div>
       </section>
 
-      {/* Security & Confidentiality */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="w-16 h-16 rounded-2xl bg-[#0D2240] text-[#C5A059] flex items-center justify-center mx-auto mb-6 shadow-md">
-            <Lock className="w-8 h-8" />
-          </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0D2240] mb-4">
-            {t.workflow.securityTitle}
-          </h2>
-          <p className="text-[#334155] text-base leading-relaxed mb-6 font-normal">
-            {t.workflow.securityDesc}
-          </p>
-        </div>
-      </section>
 
       {/* CTA */}
       <CTASection

@@ -27,10 +27,10 @@ export const TRANSLATIONS = {
       ctaConsult: "ขอคำปรึกษาเบื้องต้นฟรี",
       ctaPricing: "ดูค่าบริการ",
       badgeTitle: "KPR ACCOUNTING",
-      badgeThaiTitle: "เคพีอาร์ แอคเคานต์ติ้ง",
+      badgeThaiTitle: "เคพีอาร์ แอคเคาน์ติ้ง",
       badgeSub: "ที่ปรึกษาบัญชีและภาษีครบวงจร",
-      statExp: "ประสบการณ์ 20 ปี",
-      statLegal: "ถูกต้องตามกฎหมาย 100%",
+      statExp: "ประสบการณ์ 20 ปี+",
+      statLegal: "",
     },
     trustBar: {
       accreditations: [
@@ -57,14 +57,14 @@ export const TRANSLATIONS = {
       title: "คู่คิดทางธุรกิจที่",
       titleHighlight: "ไว้วางใจได้เสมอ",
       subtitle:
-        "บริษัท เคพีอาร์ แอคเคานต์ติ้ง จำกัด (KPR ACCOUNTING) ให้บริการด้านการบัญชี ภาษี ตรวจสอบบัญชี และจดทะเบียนธุรกิจแบบครบวงจร เรามุ่งมั่นช่วยเหลือผู้ประกอบการ SMEs และนิติบุคคลทุกขนาดให้ดำเนินธุรกิจได้อย่างราบรื่นและมั่นคง",
+        "บริษัท เคพีอาร์ แอคเคาน์ติ้ง จำกัด (KPR ACCOUNTING) ให้บริการด้านการบัญชี ภาษี ตรวจสอบบัญชี และจดทะเบียนธุรกิจแบบครบวงจร เรามุ่งมั่นช่วยเหลือผู้ประกอบการ SMEs และนิติบุคคลทุกขนาดให้ดำเนินธุรกิจได้อย่างราบรื่นและมั่นคง",
       values: [
         {
           title: "ความน่าเชื่อถือวิชาชีพ",
           desc: "บริหารงานโดยผู้สอบบัญชีรับอนุญาต (CPA) และทีมนักบัญชีมืออาชีพที่มีประสบการณ์ยาวนาน",
         },
         {
-          title: "ถูกต้องตามกฎหมาย 100%",
+          title: "ถูกต้องตามกฎหมาย",
           desc: "ยึดมั่นในมาตรฐานการบัญชีและข้อกฎหมายอย่างถูกต้อง แม่นยำ ปราศจากความเสี่ยง",
         },
         {
@@ -79,7 +79,7 @@ export const TRANSLATIONS = {
       profileBadge: "COMPANY PROFILE — ข้อมูลองค์กร",
       profileTitle: "พันธมิตรที่พร้อมเติบโตเคียงข้าง ทุกก้าวของธุรกิจคุณ",
       profileP1:
-        "บริษัท เคพีอาร์ แอคเคานต์ติ้ง จำกัด ก่อตั้งขึ้นด้วยเจตนารมณ์อันแน่วแน่ในการยกระดับมาตรฐานงานบัญชีและภาษีของภาคธุรกิจไทย โดยมุ่งเน้นการให้บริการที่มีคุณภาพ แม่นยำ และโปร่งใส",
+        "บริษัท เคพีอาร์ แอคเคาน์ติ้ง จำกัด ก่อตั้งขึ้นด้วยเจตนารมณ์อันแน่วแน่ในการยกระดับมาตรฐานงานบัญชีและภาษีของภาคธุรกิจไทย โดยมุ่งเน้นการให้บริการที่มีคุณภาพ แม่นยำ และโปร่งใส",
       profileP2:
         "เราเชื่อว่าระบบบัญชีที่ดีไม่ได้มีไว้เพียงเพื่อยื่นภาษีตามหน้าที่เท่านั้น แต่คือเครื่องมือเชิงกลยุทธ์ที่สำคัญที่สุดในการบริหารงาน และการสร้างความน่าเชื่อถือให้กับสถาบันการเงินและคู่ค้า",
       profileP3:
@@ -94,7 +94,7 @@ export const TRANSLATIONS = {
         "มุ่งสู่การเป็นสำนักงานบัญชีและภาษีระดับแถวหน้าที่ผู้ประกอบการไว้วางใจสูงสุด ส่งมอบงานด้วยความถูกต้อง แม่นยำ รวดเร็ว และสร้างมูลค่าเพิ่มให้แก่ธุรกิจของลูกค้าอย่างยั่งยืน",
       missionTitle: "พันธกิจ (Mission)",
       missionPoints: [
-        "จัดทำบัญชีตามมาตรฐานการรายงานทางการเงิน (TFRS) อย่างถูกต้องตามกฎหมาย 100%",
+        "จัดทำบัญชีตามมาตรฐานการรายงานทางการเงิน (TFRS) อย่างถูกต้องตามกฎหมาย",
         "วางแผนภาษีอย่างรัดกุม ให้ธุรกิจได้รับสิทธิประโยชน์ทางภาษีสูงสุดโดยไร้ความเสี่ยง",
         "เป็นที่ปรึกษาที่เข้าถึงง่าย ตอบคำถามรวดเร็ว และร่วมแก้ปัญหาเคียงข้างผู้บริหาร",
         "รักษาความลับและข้อมูลทางการค้าของลูกค้าด้วยสัญญารักษาความลับ (NDA) และระบบความปลอดภัยระดับสูง",
@@ -119,7 +119,7 @@ export const TRANSLATIONS = {
         {
           id: "accounting",
           title: "บริการด้านบัญชี (Accounting Services)",
-          highlight: "ถูกต้องตามกฎหมาย 100%",
+          highlight: "",
           shortDesc: "รับทำบัญชีครบวงจร ปิดงบการเงิน ยื่นแบบภาษีประจำเดือนและประจำปี ถูกต้องตามกฎหมาย",
           features: [
             "บันทึกรายการบัญชีตามมาตรฐานการบัญชีไทย (TFRS)",
@@ -131,7 +131,7 @@ export const TRANSLATIONS = {
             "จัดทำและบันทึกบัญชีตามมาตรฐานการรายงานทางการเงิน (TFRS)",
             "จัดทำสมุดรายวันขั้นต้น สมุดบัญชีแยกประเภท และงบทดลองประจำเดือน",
             "จัดทำทะเบียนทรัพย์สินและคำนวณค่าเสื่อมราคา",
-            "จัดทำงบการเงินประจำปี ประกอบด้วย งบแสดงฐานะการเงิน และ งบกำไรขาดทุน",
+            "จัดทำงบการเงินประจำปี ประกอบด้วย งบแสดงฐานะทางการเงิน และ งบกำไรขาดทุน",
             "ขึ้นทะเบียนเป็นผู้ทำบัญชีตามพระราชบัญญัติการบัญชี พ.ศ. 2543 อย่างถูกต้องตามกฎหมาย",
             "ให้คำปรึกษาการจัดเก็บเอกสารและวางระบบเอกสารทางการค้าที่ถูกต้อง",
           ],
@@ -140,13 +140,12 @@ export const TRANSLATIONS = {
         {
           id: "taxation",
           title: "บริการด้านภาษี (Tax Services)",
-          highlight: "ลดความเสี่ยง ไร้เบี้ยปรับ",
-          shortDesc: "วางแผนภาษีอย่างถูกต้องตามกฎหมาย ยื่นแบบภาษีทุกประเภท ให้คำปรึกษาและเข้าพบสรรพากรแทนลูกค้า",
+          highlight: "",
+          shortDesc: "วางแผนภาษีอย่างถูกต้องตามกฎหมาย ยื่นแบบภาษีทุกประเภท พร้อมให้คำปรึกษาปัญหาภาษีอากร",
           features: [
             "จัดทำและยื่นแบบ ภ.พ.30, ภ.ง.ด.1, 3, 53 ประจำเดือน",
             "จัดทำและยื่นแบบ ภ.ง.ด.50, 51 (ภาษีเงินได้นิติบุคคล)",
             "วางแผนภาษีเพื่อสิทธิประโยชน์สูงสุดตามกฎหมาย",
-            "เป็นตัวแทนชี้แจงและเข้าพบเจ้าหน้าที่สรรพากร",
           ],
           details: [
             "จัดทำและยื่นแบบภาษีเงินได้หัก ณ ที่จ่ายประจำเดือน: ภ.ง.ด.1 (เงินเดือน), ภ.ง.ด.3 (บุคคลธรรมดา), ภ.ง.ด.53 (นิติบุคคล)",
@@ -154,7 +153,6 @@ export const TRANSLATIONS = {
             "จัดทำและยื่นแบบภาษีเงินได้นิติบุคคลครึ่งปี (ภ.ง.ด.51) พร้อมประมาณการกำไรสุทธิ",
             "จัดทำและยื่นแบบภาษีเงินได้นิติบุคคลประจำปี (ภ.ง.ด.50)",
             "วางแผนภาษีเชิงรุกเพื่อลดหย่อนและใช้สิทธิประโยชน์ทางภาษีอย่างถูกต้องตามประมวลรัษฎากร",
-            "เป็นตัวแทนชี้แจงและประสานงานเข้าพบเจ้าหน้าที่กรมสรรพากรแทนลูกค้า",
           ],
           deliverables: "ใบเสร็จและแบบแสดงรายการยื่นภาษีทุกเดือน, รายงานภาษีซื้อ-ภาษีขาย, สรุปภาษีประจำปี",
         },
@@ -260,7 +258,7 @@ export const TRANSLATIONS = {
             "ยื่นแบบภาษีทุกประเภทประจำเดือน/ครึ่งปี/ปี",
             "จัดทำรายงานงบทดลองเสนอผู้บริหาร",
             "วางแผนภาษีประจำปีเพื่อประหยัดสูงสุด",
-            "ตัวแทนเข้าพบสรรพากรเมื่อโดนตรวจสอบ",
+            "ให้คำปรึกษาและเตรียมเอกสารกรณีถูกตรวจสอบภาษี",
           ],
           popular: true,
         },
@@ -268,7 +266,7 @@ export const TRANSLATIONS = {
           name: "จดทะเบียนบริษัทครบชุด",
           prefix: "เริ่มต้น",
           price: "9,900",
-          period: "บาท (ครั้งเดียวจบ)",
+          period: "บาท",
           description: "รับจดทะเบียนจัดตั้งบริษัทจำกัด พร้อมตรายางและเอกสารครบชุดพร้อมเปิดกิจการ",
           features: [
             "จองชื่อบริษัท & จัดทำหนังสือบริคณห์สนธิ",
@@ -318,10 +316,10 @@ export const TRANSLATIONS = {
       activitiesTitle: "กิจกรรมที่ดำเนินการในขั้นตอนนี้:",
       timelineBadge: "TAX TIMELINE — ปฏิทินภาษี",
       timelineTitle: "กำหนดเวลายื่นภาษีที่เรารักษาไว้อย่างเคร่งครัด",
-      timelineSub: "มั่นใจได้ 100% ว่าธุรกิจของท่านจะไม่โดนเบี้ยปรับหรือเงินเพิ่มจากการยื่นภาษีล่าช้า",
+      timelineSub: "",
       securityTitle: "ความลับทางการค้าของคุณคือหัวใจสำคัญสูงสุดของเรา",
       securityDesc:
-        "KPR ACCOUNTING ทำสัญญารักษาความลับ (Non-Disclosure Agreement) เป็นลายลักษณ์อักษรกับลูกค้าทุกราย และจัดเก็บข้อมูลบนระบบเซิร์ฟเวอร์คลาวด์ที่มีการเข้ารหัสความปลอดภัยระดับธนาคาร เพื่อป้องกันการรั่วไหลของข้อมูลทางการเงิน 100%",
+        "KPR ACCOUNTING ทำสัญญารักษาความลับ (Non-Disclosure Agreement) เป็นลายลักษณ์อักษรกับลูกค้าทุกราย และจัดเก็บข้อมูลบนระบบเซิร์ฟเวอร์คลาวด์ที่มีการเข้ารหัสความปลอดภัยระดับธนาคาร เพื่อป้องกันการรั่วไหลของข้อมูลทางการเงิน",
       ctaTitle: "เริ่มต้นร่วมงานกับ KPR ACCOUNTING วันนี้",
       ctaSubtitle: "รับคำปรึกษาและวางระบบการรับ-ส่งเอกสารที่สะดวกรวดเร็ว เหมาะกับรูปแบบธุรกิจของคุณ",
       steps: [
@@ -354,7 +352,7 @@ export const TRANSLATIONS = {
           points: [
             "รับเอกสารทางบัญชีประจำเดือน (เอกสารตัวจริง หรือ Scan/Digital File)",
             "ตรวจสอบความถูกต้องของใบกำกับภาษีและใบเสร็จรับเงินตามประมวลรัษฎากร",
-            "จัดทำและยื่นแบบภาษีประจำเดือน (ภ.พ.30, ภ.ง.ด.1, 3, 53) ทางระบบอินเทอร์เน็ตตรงตามกำหนด 100%",
+            "จัดทำและยื่นแบบภาษีประจำเดือน (ภ.พ.30, ภ.ง.ด.1, 3, 53) ทางระบบอินเทอร์เน็ตตรงตามกำหนด",
             "ส่งมอบใบเสร็จรับเงินของกรมสรรพากรและสรุปตัวเลขผลประกอบการประจำเดือนให้แก่ผู้บริหาร",
           ],
         },
@@ -423,7 +421,7 @@ export const TRANSLATIONS = {
       checkDBD: "ตรวจสอบสถานะนิติบุคคลผ่านกรมพัฒนาธุรกิจการค้า (DBD) ↗",
     },
     footer: {
-      desc: "บริษัท เคพีอาร์ แอคเคานต์ติ้ง จำกัด ให้บริการทำบัญชี วางแผนภาษี ตรวจสอบบัญชี และจดทะเบียนบริษัท ด้วยมาตรฐานวิชาชีพสูงสุด",
+      desc: "บริษัท เคพีอาร์ แอคเคาน์ติ้ง จำกัด ให้บริการทำบัญชี วางแผนภาษี ตรวจสอบบัญชี และจดทะเบียนบริษัท ด้วยมาตรฐานวิชาชีพสูงสุด",
       taxId: "เลขทะเบียนนิติบุคคล:",
       tfacMember: "ขึ้นทะเบียนสภาวิชาชีพบัญชี ในพระบรมราชูปถัมภ์ ↗",
       quickLinks: "ลิงก์ที่เกี่ยวข้อง",
@@ -432,7 +430,7 @@ export const TRANSLATIONS = {
       backToTop: "กลับสู่ด้านบน",
     },
     cta: {
-      badge: "มาตรฐานวิชาชีพ CPA • ถูกต้องตามกฎหมาย 100%",
+      badge: "มาตรฐานวิชาชีพ CPA",
       title: "พร้อมเริ่มต้นวางระบบบัญชีและภาษีอย่างมั่นใจ?",
       subtitle: "ปรึกษาผู้สอบบัญชีรับอนุญาต (CPA) และทีมนักบัญชีมืออาชีพ ฟรีไม่มีค่าใช้จ่ายเบื้องต้น",
       consultBtn: "ปรึกษาฟรี / ขอใบเสนอราคา",
@@ -467,8 +465,8 @@ export const TRANSLATIONS = {
       badgeTitle: "KPR ACCOUNTING",
       badgeThaiTitle: "KPR Accounting Co., Ltd.",
       badgeSub: "Full-Service Accounting & Tax Advisory",
-      statExp: "20 Years Experience",
-      statLegal: "100% Legally Compliant",
+      statExp: "20+ Years Experience",
+      statLegal: "",
     },
     trustBar: {
       accreditations: [
@@ -502,7 +500,7 @@ export const TRANSLATIONS = {
           desc: "Led and supervised by Certified Public Accountants (CPA) and veteran accountants with extensive field experience.",
         },
         {
-          title: "100% Legally Compliant",
+          title: "Legally Compliant",
           desc: "Strict adherence to Thai Financial Reporting Standards (TFRS) and the Revenue Code, mitigating all tax risks.",
         },
         {
@@ -532,7 +530,7 @@ export const TRANSLATIONS = {
         "To stand as Thailand's foremost trusted accounting and tax consulting firm, delivering unparalleled accuracy, speed, and strategic business value for our corporate clients.",
       missionTitle: "Our Mission",
       missionPoints: [
-        "Prepare accounting and financial statements under TFRS with 100% legal compliance.",
+        "Prepare accounting and financial statements under TFRS in compliance with statutory law.",
         "Implement sound tax planning to maximize legitimate tax incentives without legal exposure.",
         "Provide accessible, responsive advisory that helps executive management solve complex financial hurdles.",
         "Preserve complete trade secrecy and client data protection backed by strict NDAs and cloud encryption.",
@@ -558,7 +556,7 @@ export const TRANSLATIONS = {
         {
           id: "accounting",
           title: "Accounting Services",
-          highlight: "100% Legally Compliant",
+          highlight: "",
           shortDesc: "End-to-end bookkeeping, financial statement closing, and monthly/annual tax filings compliant with Thai law.",
           features: [
             "Bookkeeping under Thai Financial Reporting Standards (TFRS)",
@@ -579,13 +577,12 @@ export const TRANSLATIONS = {
         {
           id: "taxation",
           title: "Tax Advisory & Compliance",
-          highlight: "Risk Mitigation & Zero Penalties",
-          shortDesc: "Legitimate tax optimization, all monthly/annual tax filings, and Revenue Department representation.",
+          highlight: "",
+          shortDesc: "Legitimate tax optimization, comprehensive monthly/annual tax filings, and expert tax consultation.",
           features: [
             "Monthly withholding tax (P.N.D.1, 3, 53) and VAT (P.P.30) filing",
             "Corporate Income Tax filings (P.N.D.50 annual, P.N.D.51 half-year)",
             "Strategic tax planning to maximize legitimate tax privileges",
-            "Authorized representation and direct audit liaison with Revenue officers",
           ],
           details: [
             "Monthly withholding tax preparation: P.N.D.1 (Payroll), P.N.D.3 (Individual), P.N.D.53 (Corporate)",
@@ -593,7 +590,6 @@ export const TRANSLATIONS = {
             "Bi-annual Corporate Income Tax return (P.N.D.51) with net profit estimations",
             "Annual Corporate Income Tax return (P.N.D.50) preparation and e-filing",
             "Proactive corporate tax planning aligned strictly with the Revenue Code",
-            "Authorized representation before the Revenue Department during audits and inquiries",
           ],
           deliverables: "Official Revenue Department Tax Receipts, Monthly VAT Reports, Annual Tax Summary",
         },
@@ -699,7 +695,7 @@ export const TRANSLATIONS = {
             "All monthly, bi-annual, and annual tax filings",
             "Executive management financial summary reports",
             "Annual tax planning to optimize legitimate incentives",
-            "Representation and liaison during Revenue inquiries",
+            "Advisory and documentation support during tax reviews",
           ],
           popular: true,
         },
@@ -757,7 +753,7 @@ export const TRANSLATIONS = {
       activitiesTitle: "Key Activities in This Stage:",
       timelineBadge: "TAX TIMELINE — STATUTORY DATES",
       timelineTitle: "Statutory Tax Deadlines We Strictly Uphold",
-      timelineSub: "100% confidence that your enterprise will never incur surcharges or penalties from late tax filing.",
+      timelineSub: "",
       securityTitle: "Trade Secrecy & Data Security Are Our Paramount Priority",
       securityDesc:
         "KPR Accounting executes written Non-Disclosure Agreements (NDA) with every client and maintains encrypted cloud storage with financial-grade security to ensure total data confidentiality.",
@@ -871,7 +867,7 @@ export const TRANSLATIONS = {
       backToTop: "Back to Top",
     },
     cta: {
-      badge: "CPA Professional Standard • 100% Legally Compliant",
+      badge: "CPA Professional Standard",
       title: "Ready to Establish a Secure Accounting & Tax Foundation?",
       subtitle: "Consult Certified Public Accountants (CPA) and professional advisors with zero initial cost.",
       consultBtn: "Free Consult / Request Quote",

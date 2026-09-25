@@ -104,7 +104,9 @@ export default function Hero() {
                   </div>
                   <div>
                     <div className="text-[#0D2240] font-extrabold text-sm">{t.hero.statExp}</div>
-                    <div className="text-[#475569] text-xs font-medium">{t.hero.statLegal}</div>
+                    {t.hero.statLegal && (
+                      <div className="text-[#475569] text-xs font-medium">{t.hero.statLegal}</div>
+                    )}
                   </div>
                 </div>
 

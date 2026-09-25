@@ -61,9 +61,11 @@ export default function ServicesPageContent() {
                         <div className="w-14 h-14 rounded-2xl bg-[#0D2240] text-[#C5A059] flex items-center justify-center shadow-xs">
                           <IconComp className="w-7 h-7" />
                         </div>
-                        <span className="text-xs font-bold px-3 py-1 rounded-full bg-amber-50 text-[#94670A] border border-amber-200 uppercase tracking-wider">
-                          {service.highlight}
-                        </span>
+                        {service.highlight && (
+                          <span className="text-xs font-bold px-3 py-1 rounded-full bg-amber-50 text-[#94670A] border border-amber-200 uppercase tracking-wider">
+                            {service.highlight}
+                          </span>
+                        )}
                       </div>
 
                       <h2 className="text-2xl sm:text-3xl font-extrabold text-[#0D2240] mb-4">

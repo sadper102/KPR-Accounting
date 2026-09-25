@@ -85,7 +85,7 @@ export default function WhyUs() {
                       1
                     </div>
                     <div>
-                      <h4 className="text-white font-bold text-base mb-1">ตรงเวลา 100% ปราศจากค่าปรับ</h4>
+                      <h4 className="text-white font-bold text-base mb-1">ตรงเวลา แม่นยำทุกขั้นตอน</h4>
                       <p className="text-[#E2E8F0] text-xs sm:text-sm leading-relaxed font-normal">
                         ยื่นภาษีและปิดงบการเงินตรงตามกำหนดเวลาทางราชการแน่นอน
                       </p>
@@ -109,9 +109,9 @@ export default function WhyUs() {
                       3
                     </div>
                     <div>
-                      <h4 className="text-white font-bold text-base mb-1">พร้อมเคียงข้างเมื่อโดนตรวจสอบ</h4>
+                      <h4 className="text-white font-bold text-base mb-1">พร้อมเคียงข้างเมื่อต้องการคำปรึกษา</h4>
                       <p className="text-[#E2E8F0] text-xs sm:text-sm leading-relaxed font-normal">
-                        ทีมงาน CPA และผู้เชี่ยวชาญภาษีพร้อมเข้าพบเจ้าหน้าที่สรรพากรแทนท่าน
+                        ทีมงาน CPA และผู้เชี่ยวชาญภาษีพร้อมให้คำแนะนำและเคียงข้างท่าน
                       </p>
                     </div>
                   </div>

@@ -1,18 +1,13 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import {
   Shield,
   Award,
   Users,
   Lock,
   Building2,
-  FileCheck,
   CheckCircle2,
-  ExternalLink,
-  MapPin,
-  Phone,
   Target,
   Compass,
 } from "lucide-react";
@@ -90,38 +85,6 @@ export default function AboutPageContent() {
                   </h3>
 
                   <div className="space-y-4 text-sm">
-                    <div>
-                      <span className="text-xs font-bold text-[#475569] uppercase tracking-wider block mb-1">
-                        {t.about.taxIdLabel}
-                      </span>
-                      <a
-                        href="https://www.dbd.go.th/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#0D2240] font-extrabold text-base hover:text-[#C5A059] inline-flex items-center gap-1.5 transition-colors"
-                        title="ตรวจสอบข้อมูลกับกรมพัฒนาธุรกิจการค้า"
-                      >
-                        <span>{SITE_CONFIG.taxId}</span>
-                        <ExternalLink className="w-4 h-4 text-slate-400" />
-                      </a>
-                    </div>
-
-                    <div>
-                      <span className="text-xs font-bold text-[#475569] uppercase tracking-wider block mb-1">
-                        {t.about.statusLabel}
-                      </span>
-                      <a
-                        href="https://tfac.or.th/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-[#0D2240] font-bold hover:text-[#C5A059] inline-flex items-center gap-1.5 transition-colors"
-                        title="สภาวิชาชีพบัญชี ในพระบรมราชูปถัมภ์"
-                      >
-                        <span>{t.about.statusVal}</span>
-                        <ExternalLink className="w-4 h-4 text-slate-400" />
-                      </a>
-                    </div>
-
                     <div>
                       <span className="text-xs font-bold text-[#475569] uppercase tracking-wider block mb-1">
                         {t.about.addressLabel}

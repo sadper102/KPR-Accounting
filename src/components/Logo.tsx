@@ -27,7 +27,7 @@ export default function Logo({
     <div className={`inline-flex items-center select-none ${className}`}>
       <Image
         src={logoSrc}
-        alt="บริษัท เคพีอาร์ แอคเคานต์ติ้ง จำกัด - KPR ACCOUNTING CO.,LTD."
+        alt="บริษัท เคพีอาร์ แอคเคาน์ติ้ง จำกัด - KPR ACCOUNTING CO.,LTD."
         width={924}
         height={194}
         className={`${heightClasses[size]} w-auto object-contain`}
