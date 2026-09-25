@@ -1,6 +1,7 @@
 export const SITE_CONFIG = {
   name: "KPR ACCOUNTING",
   companyName: "บริษัท เคพีอาร์ แอคเคาน์ติ้ง จำกัด",
+  companyNameEn: "KPR Accounting Co., Ltd.",
   thaiName: "เคพีอาร์ แอคเคาน์ติ้ง",
   taxId: "",
   tagline: "สำนักงานบัญชีและภาษี ที่คุณวางใจได้",

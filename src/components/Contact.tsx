@@ -106,7 +106,7 @@ export default function Contact() {
                       {t.contact.companyInfoTitle}
                     </div>
                     <div className="text-sm font-bold text-[#0D2240]">
-                      {lang === "th" ? SITE_CONFIG.companyName : "KPR Accounting Co., Ltd."}
+                      {lang === "th" ? SITE_CONFIG.companyName : SITE_CONFIG.companyNameEn}
                     </div>
                   </div>
                 </div>
