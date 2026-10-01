@@ -15,7 +15,7 @@ export const SITE_CONFIG = {
   lineQrCode: "/images/line-qr.png",
   address: "735/1 อาคารA ห้องเลขที่ A147-148 ชั้น 1 ถนนศรีนครินทร์ แขวงพัฒนาการ เขตสวนหลวง กรุงเทพมหานคร 10250",
   workingHours: "จันทร์ - ศุกร์: 09:00 - 18:00 น.",
-  facebook: "https://www.facebook.com/profile.php?id=61595178471497",
+  facebook: "https://www.facebook.com/kpraccounting",
   cpaLicense: "เลขทะเบียนผู้ทำบัญชี/ผู้สอบบัญชี CPA: 12345/67",
   fapLicense: "สมาชิกสภาวิชาชีพบัญชี ในพระบรมราชูปถัมภ์",
 };
