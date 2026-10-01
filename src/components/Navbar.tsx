@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, Phone, ArrowUpRight, Clock, MessageCircle } from "lucide-react";
+import { Menu, X, Phone, ArrowUpRight, Clock, MessageCircle, Facebook } from "lucide-react";
 import Logo from "./Logo";
 import Button from "./ui/Button";
 import LanguageSwitcher from "./LanguageSwitcher";
@@ -14,7 +14,7 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   const navLinks = [
     { name: t.nav.home, href: "/" },
@@ -78,13 +78,23 @@ export default function Navbar() {
               {t.floating.consultNow}
             </span>
             <a
-              href={`https://line.me/ti/p/${SITE_CONFIG.line}`}
+              href={SITE_CONFIG.lineUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:flex items-center gap-1 text-emerald-400 hover:underline font-bold"
+              className="hidden sm:flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 hover:underline font-bold"
             >
               <MessageCircle className="w-3.5 h-3.5" />
-              <span>Line: {SITE_CONFIG.line}</span>
+              <span>LINE Official</span>
+            </a>
+            <span className="text-slate-600 hidden sm:inline-block">•</span>
+            <a
+              href={SITE_CONFIG.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:flex items-center gap-1.5 text-blue-400 hover:text-blue-300 hover:underline font-bold"
+            >
+              <Facebook className="w-3.5 h-3.5" />
+              <span>Facebook</span>
             </a>
             <span className="text-slate-600 hidden sm:inline-block">|</span>
             <LanguageSwitcher variant="topbar" />
@@ -190,6 +200,24 @@ export default function Navbar() {
               >
                 <Phone className="w-4 h-4 text-[#94670A]" />
                 <span>{t.nav.callUs} {SITE_CONFIG.phone}</span>
+              </a>
+              <a
+                href={SITE_CONFIG.lineUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 text-sm font-bold text-white bg-[#06C755] hover:bg-[#05b34c] px-4 py-3 rounded-lg transition-colors shadow-xs"
+              >
+                <MessageCircle className="w-4 h-4 text-white" />
+                <span>LINE Official ({lang === "th" ? "แอดไลน์" : "Add Friend"})</span>
+              </a>
+              <a
+                href={SITE_CONFIG.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 text-sm font-bold text-white bg-[#1877F2] hover:bg-[#166fe5] px-4 py-3 rounded-lg transition-colors shadow-xs"
+              >
+                <Facebook className="w-4 h-4 text-white" />
+                <span>Facebook Page</span>
               </a>
               <Button
                 href="/contact"

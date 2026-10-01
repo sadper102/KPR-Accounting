@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { ArrowUp, Phone, Mail, MapPin } from "lucide-react";
+import { ArrowUp, Phone, Mail, MapPin, MessageCircle, Facebook } from "lucide-react";
 import Logo from "./Logo";
 import LanguageSwitcher from "./LanguageSwitcher";
 import { SITE_CONFIG } from "@/lib/constants";
@@ -110,6 +110,28 @@ export default function Footer() {
                 <Mail className="w-4 h-4 text-[#C5A059] shrink-0" />
                 <a href={`mailto:${SITE_CONFIG.email}`} className="hover:text-[#C5A059]">
                   {SITE_CONFIG.email}
+                </a>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <MessageCircle className="w-4 h-4 text-[#C5A059] shrink-0" />
+                <a
+                  href={SITE_CONFIG.lineUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#C5A059] transition-colors"
+                >
+                  {lang === "th" ? "LINE Official (แอดไลน์)" : "LINE Official"}
+                </a>
+              </li>
+              <li className="flex items-center gap-2.5">
+                <Facebook className="w-4 h-4 text-[#C5A059] shrink-0" />
+                <a
+                  href={SITE_CONFIG.facebook}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-[#C5A059] transition-colors"
+                >
+                  Facebook Page
                 </a>
               </li>
             </ul>

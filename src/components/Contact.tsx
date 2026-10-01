@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import {
   Phone,
   Mail,
@@ -9,6 +10,8 @@ import {
   Send,
   CheckCircle2,
   Building2,
+  MessageCircle,
+  Facebook,
 } from "lucide-react";
 import ScrollReveal from "./ui/ScrollReveal";
 import Button from "./ui/Button";
@@ -121,7 +124,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <div className="text-xs font-bold text-[#475569] uppercase tracking-wider mb-1">
-                      {t.contact.emailAddress} & LINE
+                      {t.contact.emailAddress}
                     </div>
                     <a
                       href={`mailto:${SITE_CONFIG.email}`}
@@ -129,9 +132,84 @@ export default function Contact() {
                     >
                       {SITE_CONFIG.email}
                     </a>
-                    <div className="text-xs text-[#334155] mt-1 font-medium">
-                      Line ID: <span className="text-[#0D2240] font-bold">{SITE_CONFIG.line}</span>
+                    <span className="text-xs text-[#64748B] font-medium block mt-0.5">
+                      {lang === "th" ? "ติดต่อสอบถามหรือส่งเอกสารทางอีเมล" : "Contact or send documents via email"}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="right" delay={0.25}>
+              <div className="executive-card p-6 rounded-2xl bg-white border border-[#E2E8F0] shadow-xs">
+                <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
+                  <div className="shrink-0 bg-white p-2 rounded-xl border border-slate-200 shadow-xs">
+                    <Image
+                      src={SITE_CONFIG.lineQrCode}
+                      alt="LINE Official QR Code"
+                      width={120}
+                      height={120}
+                      className="rounded-lg object-contain w-28 h-28"
+                    />
+                  </div>
+                  <div className="text-center sm:text-left flex-1">
+                    <div className="text-xs font-bold text-[#475569] uppercase tracking-wider mb-1">
+                      {t.contact.lineOA}
                     </div>
+                    <div className="text-base font-bold text-[#0D2240] mb-1">
+                      {lang === "th" ? "สแกน QR Code เพื่อแอด LINE" : "Scan QR Code to Add LINE"}
+                    </div>
+                    <p className="text-xs text-[#64748B] font-medium mb-3">
+                      {lang === "th"
+                        ? "ปรึกษาทีมงานผู้สอบบัญชีและภาษีได้สะดวกรวดเร็ว"
+                        : "Connect with our accounting and tax team directly"}
+                    </p>
+                    <a
+                      href={SITE_CONFIG.lineUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#06C755] hover:bg-[#05b34c] text-white text-xs font-bold transition-all shadow-xs"
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                      <span>{t.contact.addFriend}</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </ScrollReveal>
+
+            <ScrollReveal direction="right" delay={0.28}>
+              <div className="executive-card p-6 rounded-2xl bg-white border border-[#E2E8F0] shadow-xs">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-xl bg-blue-50 border border-blue-200 flex items-center justify-center text-[#1877F2] shrink-0 mt-0.5">
+                    <Facebook className="w-5 h-5 text-[#1877F2]" />
+                  </div>
+                  <div className="flex-1">
+                    <div className="text-xs font-bold text-[#475569] uppercase tracking-wider mb-1">
+                      {t.contact.facebookPage}
+                    </div>
+                    <a
+                      href={SITE_CONFIG.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-base font-bold text-[#0D2240] hover:text-[#1877F2] transition-colors block"
+                    >
+                      KPR Accounting
+                    </a>
+                    <span className="text-xs text-[#64748B] font-medium block mt-0.5 mb-3">
+                      {lang === "th"
+                        ? "ติดตามสาระความรู้บัญชีและภาษี หรือติดต่อปรึกษาผ่านข้อความเพจ"
+                        : "Follow tax & accounting insights or message us via Facebook"}
+                    </span>
+                    <a
+                      href={SITE_CONFIG.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-[#1877F2] hover:bg-[#166fe5] text-white text-xs font-bold transition-all shadow-xs"
+                    >
+                      <Facebook className="w-4 h-4" />
+                      <span>{t.contact.visitFacebook}</span>
+                    </a>
                   </div>
                 </div>
               </div>

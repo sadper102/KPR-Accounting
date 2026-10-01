@@ -1,7 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
-import { Phone, MessageCircle, X } from "lucide-react";
+import Image from "next/image";
+import { Phone, MessageCircle, X, Facebook } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/constants";
 import { useLanguage } from "@/context/LanguageContext";
 
@@ -15,7 +16,7 @@ export default function FloatingContact() {
       <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
         {/* Expanded Options */}
         {isOpen && (
-          <div className="executive-card p-4 rounded-2xl bg-white border border-slate-300 shadow-2xl space-y-3 animate-fadeIn w-64">
+          <div className="executive-card p-4 rounded-2xl bg-white border border-slate-300 shadow-2xl space-y-3 animate-fadeIn w-68">
             <div className="text-xs font-black text-[#0D2240] border-b border-slate-200 pb-2 flex items-center justify-between">
               <span>{lang === "th" ? "ติดต่อสำนักงานด่วน" : "Quick Contact"}</span>
               <button
@@ -26,18 +27,50 @@ export default function FloatingContact() {
               </button>
             </div>
 
+            <div className="p-3 rounded-xl bg-emerald-50/70 border border-emerald-300">
+              <a
+                href={SITE_CONFIG.lineUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2.5 text-emerald-950 font-bold text-xs hover:text-emerald-700 transition-colors"
+              >
+                <div className="w-8 h-8 rounded-lg bg-[#06C755] text-white flex items-center justify-center shrink-0">
+                  <MessageCircle className="w-4 h-4" />
+                </div>
+                <div className="flex-1">
+                  <div>{lang === "th" ? "แชตปรึกษาผ่าน LINE" : "Chat on LINE Official"}</div>
+                  <div className="text-[10px] text-emerald-700 font-normal">{lang === "th" ? "คลิกเพื่อเพิ่มเพื่อน" : "Click to connect"}</div>
+                </div>
+              </a>
+              <div className="mt-2.5 pt-2.5 border-t border-emerald-200 flex items-center gap-2.5">
+                <div className="w-16 h-16 bg-white p-1 rounded-lg border border-emerald-300 shadow-2xs shrink-0">
+                  <Image
+                    src={SITE_CONFIG.lineQrCode}
+                    alt="LINE QR Code"
+                    width={64}
+                    height={64}
+                    className="w-full h-full object-contain rounded"
+                  />
+                </div>
+                <div className="text-[11px] text-slate-700 leading-tight">
+                  <span className="font-bold text-[#0D2240] block mb-0.5">{lang === "th" ? "สแกน QR Code" : "Scan QR Code"}</span>
+                  {lang === "th" ? "เปิดกล้องมือถือเพื่อสแกน" : "Scan with phone camera"}
+                </div>
+              </div>
+            </div>
+
             <a
-              href={`https://line.me/ti/p/${SITE_CONFIG.line}`}
+              href={SITE_CONFIG.facebook}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 p-2.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-900 border border-emerald-300 transition-colors font-bold text-xs"
+              className="flex items-center gap-3 p-2.5 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-950 border border-blue-200 transition-colors font-bold text-xs"
             >
-              <div className="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center shrink-0">
-                <MessageCircle className="w-4 h-4" />
+              <div className="w-8 h-8 rounded-lg bg-[#1877F2] text-white flex items-center justify-center shrink-0">
+                <Facebook className="w-4 h-4" />
               </div>
               <div>
-                <div>{lang === "th" ? "แชตปรึกษาผ่าน Line" : "Chat on LINE Official"}</div>
-                <div className="text-[10px] text-emerald-700 font-normal">ID: {SITE_CONFIG.line}</div>
+                <div>{lang === "th" ? "Facebook เพจ" : "Facebook Page"}</div>
+                <div className="text-[10px] text-blue-700 font-normal">{lang === "th" ? "ทักแชต / ติดตามข่าวสาร" : "Follow & Message Us"}</div>
               </div>
             </a>
 
