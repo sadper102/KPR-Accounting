@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
+export const dynamic = "force-dynamic";
+export const maxDuration = 30;
+
 export async function POST(req: Request) {
   try {
     const body = await req.json();
@@ -31,7 +34,7 @@ export async function POST(req: Request) {
     if (!smtpPass) {
       console.error("SMTP_PASS is not configured in environment variables.");
       return NextResponse.json(
-        { error: "ยังไม่ได้ตั้งค่ารหัสผ่านอีเมลของระบบ (SMTP_PASS)" },
+        { error: "ยังไม่ได้ตั้งค่ารหัสผ่านอีเมลของระบบ (SMTP_PASS) ใน Vercel Environment Variables" },
         { status: 500 }
       );
     }
@@ -45,6 +48,9 @@ export async function POST(req: Request) {
         user: smtpUser,
         pass: smtpPass,
       },
+      connectionTimeout: 10000,
+      greetingTimeout: 10000,
+      socketTimeout: 15000,
     });
 
     const serviceLabels: Record<string, string> = {
@@ -136,7 +142,7 @@ export async function POST(req: Request) {
               }
             </div>
             <div class="footer">
-              อีเมลฉบับนี้ส่งอัตโนมัติจากเว็บไซต์ kpraccounting.com | ปลายทาง: ${receiverEmail}
+              อีเมลฉบับนี้ส่งอัตโนมัติจากเว็บไซต์ kpraccount.com | ปลายทาง: ${receiverEmail}
             </div>
           </div>
         </body>

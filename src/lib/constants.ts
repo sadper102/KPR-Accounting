@@ -6,7 +6,7 @@ export const SITE_CONFIG = {
   taxId: "",
   tagline: "สำนักงานบัญชีและภาษี ที่คุณวางใจได้",
   description: "บริการทำบัญชี วางแผนภาษี ตรวจสอบบัญชี และจดทะเบียนบริษัทครบวงจร โดยทีมงานผู้สอบบัญชีรับอนุญาต (CPA) และนักบัญชีมืออาชีพ",
-  url: "https://www.kpraccounting.com",
+  url: "https://kpraccount.com",
   phone: "081-915-5644",
   mobile: "081-915-5644",
   email: "info@kpraccount.com",
