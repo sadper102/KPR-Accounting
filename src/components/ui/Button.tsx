@@ -9,6 +9,7 @@ interface ButtonProps {
   size?: "sm" | "md" | "lg";
   className?: string;
   type?: "button" | "submit" | "reset";
+  disabled?: boolean;
 }
 
 export default function Button({
@@ -19,6 +20,7 @@ export default function Button({
   size = "md",
   className = "",
   type = "button",
+  disabled = false,
 }: ButtonProps) {
   const baseStyles =
     "inline-flex items-center justify-center font-medium transition-all duration-200 rounded-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-slate-400";
@@ -37,7 +39,7 @@ export default function Button({
     lg: "px-7 py-3.5 text-base font-bold",
   };
 
-  const combinedClasses = `${baseStyles} ${variants[variant]} ${sizes[size]} ${className}`;
+  const combinedClasses = `${baseStyles} ${variants[variant]} ${sizes[size]} ${disabled ? "opacity-60 cursor-not-allowed pointer-events-none" : ""} ${className}`;
 
   if (href) {
     return (
@@ -48,7 +50,7 @@ export default function Button({
   }
 
   return (
-    <button type={type} onClick={onClick} className={combinedClasses}>
+    <button type={type} onClick={onClick} disabled={disabled} className={combinedClasses}>
       {children}
     </button>
   );

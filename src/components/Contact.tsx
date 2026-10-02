@@ -12,6 +12,8 @@ import {
   Building2,
   MessageCircle,
   Facebook,
+  Loader2,
+  AlertCircle,
 } from "lucide-react";
 import ScrollReveal from "./ui/ScrollReveal";
 import Button from "./ui/Button";
@@ -21,6 +23,8 @@ import { useLanguage } from "@/context/LanguageContext";
 export default function Contact() {
   const { t, lang } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -29,11 +33,30 @@ export default function Contact() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
+    setIsSubmitting(true);
+    setErrorMessage(null);
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(
+          data.error ||
+            (lang === "th"
+              ? "เกิดข้อผิดพลาดในการส่งข้อความ กรุณาลองใหม่อีกครั้ง"
+              : "Failed to send message. Please try again.")
+        );
+      }
+
+      setSubmitted(true);
       setFormData({
         name: "",
         phone: "",
@@ -41,7 +64,19 @@ export default function Contact() {
         service: "accounting",
         message: "",
       });
-    }, 4000);
+      setTimeout(() => {
+        setSubmitted(false);
+      }, 7000);
+    } catch (err: any) {
+      setErrorMessage(
+        err?.message ||
+          (lang === "th"
+            ? "เกิดข้อผิดพลาดในการส่งข้อมูล กรุณาลองใหม่อีกครั้ง"
+            : "Failed to send message. Please try again.")
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -280,6 +315,16 @@ export default function Contact() {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-5">
+                    {errorMessage && (
+                      <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl text-sm flex items-start gap-3 animate-fade-in">
+                        <AlertCircle className="w-5 h-5 shrink-0 text-red-500 mt-0.5" />
+                        <div>
+                          <p className="font-semibold">{lang === "th" ? "ไม่สามารถส่งข้อความได้" : "Unable to send message"}</p>
+                          <p className="text-xs text-red-600 mt-0.5">{errorMessage}</p>
+                        </div>
+                      </div>
+                    )}
+
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                       <div>
                         <label className="block text-xs font-bold text-[#0D2240] uppercase tracking-wider mb-2">
@@ -356,8 +401,23 @@ export default function Contact() {
                       />
                     </div>
 
-                    <Button type="submit" variant="navy" size="lg" className="w-full font-bold">
-                      {t.contact.submitBtn} <Send className="w-4 h-4 ml-2 inline" />
+                    <Button
+                      type="submit"
+                      variant="navy"
+                      size="lg"
+                      disabled={isSubmitting}
+                      className="w-full font-bold"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="w-4 h-4 mr-2 animate-spin inline" />
+                          <span>{lang === "th" ? "กำลังส่งข้อความ..." : "Sending..."}</span>
+                        </>
+                      ) : (
+                        <>
+                          {t.contact.submitBtn} <Send className="w-4 h-4 ml-2 inline" />
+                        </>
+                      )}
                     </Button>
                   </form>
                 )}

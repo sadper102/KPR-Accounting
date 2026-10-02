@@ -9,7 +9,7 @@ export const SITE_CONFIG = {
   url: "https://www.kpraccounting.com",
   phone: "081-915-5644",
   mobile: "081-915-5644",
-  email: "kpr.acctax@gmail.com",
+  email: "info@kpraccount.com",
   line: "",
   lineUrl: "https://lin.ee/wxjYL5X",
   lineQrCode: "/images/line-qr.png",
