@@ -19,9 +19,11 @@ export const TRANSLATIONS = {
     },
     hero: {
       badge: "สำนักงานบัญชีและภาษีคุณภาพวิชาชีพ (CPA)",
-      title: "ยึดมั่นความถูกต้อง",
-      titleHighlight: "การบัญชีและภาษี",
-      titleEnd: "เพื่อความมั่นคงของธุรกิจคุณ",
+      title: "รับทำบัญชีและภาษี",
+      titleHighlight: "โดย CPA ที่ศรีนครินทร์",
+      titleEnd: "ดูแลธุรกิจ SMEs ครบวงจร",
+      slogan: "ยึดมั่นความถูกต้อง การบัญชีและภาษี เพื่อความมั่นคงของธุรกิจคุณ",
+      imageAlt: "สำนักงานบัญชีและภาษี KPR ACCOUNTING ศรีนครินทร์ สวนหลวง กรุงเทพ",
       subtitle:
         "บริการทำบัญชี วางแผนภาษี ตรวจสอบบัญชี และจดทะเบียนบริษัทครบวงจร โดยทีมงานผู้สอบบัญชีรับอนุญาต (CPA) และนักบัญชีมืออาชีพ ป้องกันความเสี่ยงทางภาษีและบริหารจัดการอย่างถูกต้องแม่นยำ",
       ctaConsult: "ขอคำปรึกษาเบื้องต้นฟรี",
@@ -453,9 +455,11 @@ export const TRANSLATIONS = {
     },
     hero: {
       badge: "Certified Public Accounting & Tax Excellence (CPA)",
-      title: "Upholding Integrity in",
-      titleHighlight: "Accounting & Tax",
-      titleEnd: "for Your Business Security",
+      title: "Accounting & Tax Services",
+      titleHighlight: "by CPAs in Bangkok (Si Nakarin)",
+      titleEnd: "",
+      slogan: "Committed to accurate accounting and tax services for your business security.",
+      imageAlt: "KPR ACCOUNTING accounting and tax firm, Si Nakarin, Bangkok",
       subtitle:
         "Comprehensive bookkeeping, tax planning, financial audit, and company registration by Certified Public Accountants (CPA). Eliminate tax risks and manage your finances with legal precision.",
       ctaConsult: "Get Free Consultation",

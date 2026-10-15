@@ -96,17 +96,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": ["AccountingService"],
-    "name": SITE_CONFIG.name,
-    "alternateName": SITE_CONFIG.companyName,
-    "description": SITE_CONFIG.description,
-    "url": SITE_CONFIG.url,
-    "telephone": SITE_CONFIG.phone,
-    "email": SITE_CONFIG.email,
+    "@context": "https://schema.org/",
+    "@type": "AccountingService",
+    "name": "KPR ACCOUNTING",
+    "alternateName": "บริษัท เคพีอาร์ แอคเคาน์ติ้ง จำกัด",
+    "description": "บริการทำบัญชี วางแผนภาษี ตรวจสอบบัญชี และจดทะเบียนบริษัทครบวงจร โดยทีมงานผู้สอบบัญชีรับอนุญาต (CPA) และนักบัญชีมืออาชีพ",
+    "url": "https://kpraccount.com/",
+    "logo": "https://kpraccount.com/images/logo.png",
+    "image": "https://kpraccount.com/images/hero.png",
+    "telephone": "+66-81-915-5644",
+    "email": "info@kpraccount.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "735/1 อาคารA ห้องเลขที่ A147-148 ชั้น 1 ถนนศรีนครินทร์ แขวงพัฒนาการ",
+      "streetAddress": "735/1 อาคารA ห้องเลขที่ A147-148 ชั้น 1 ถนนศรีนครินทร์ แขวงพัฒนาการ เขตสวนหลวง กรุงเทพมหานคร 10250",
       "addressLocality": "เขตสวนหลวง",
       "addressRegion": "กรุงเทพมหานคร",
       "postalCode": "10250",
@@ -114,15 +116,21 @@ export default function RootLayout({
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 13.7315,
-      "longitude": 100.6445
+      "latitude": 13.7260743,
+      "longitude": 100.6426147
     },
+    "hasMap": "https://share.google/gM74JePFpjtn2IG8z",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
       "opens": "09:00",
       "closes": "18:00"
     },
+    "areaServed": "กรุงเทพมหานคร",
+    "sameAs": [
+      "https://www.facebook.com/kpraccounting",
+      "https://lin.ee/wxjYL5X"
+    ],
     "priceRange": "$$"
   };
 

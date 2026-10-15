@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "เกี่ยวกับเรา | บริษัท เคพีอาร์ แอคเคาน์ติ้ง จำกัด",
   description:
     "ทำความรู้จัก บริษัท เคพีอาร์ แอคเคาน์ติ้ง จำกัด สำนักงานบัญชีและภาษีคุณภาพสูง บริหารงานโดยทีมผู้สอบบัญชีรับอนุญาต (CPA) ยึดมั่นความถูกต้องตามกฎหมาย",
+  alternates: { canonical: "/about" },
 };
 
 export default function AboutPage() {

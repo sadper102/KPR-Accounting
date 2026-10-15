@@ -36,6 +36,9 @@ export default function Hero() {
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-snug sm:leading-tight lg:leading-tight text-[#0D2240] mb-6">
                 {t.hero.title} <span className="text-[#C5A059]">{t.hero.titleHighlight}</span> {t.hero.titleEnd}
               </h1>
+              <p className="text-sm sm:text-base text-[#475569] -mt-3 mb-6">
+                {t.hero.slogan}
+              </p>
             </ScrollReveal>
 
             {/* Subtitle */}
@@ -68,7 +71,7 @@ export default function Hero() {
                   <div className="relative h-[380px] sm:h-[460px] lg:h-[480px] w-full rounded-xl overflow-hidden">
                     <Image
                       src="/images/hero.png"
-                      alt="KPR Accounting & Legal Advisors"
+                      alt={t.hero.imageAlt}
                       fill
                       className="object-cover object-center"
                       priority

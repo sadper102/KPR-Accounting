@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "ขั้นตอนการทำงาน | กระบวนการบริการบัญชีและภาษีที่เป็นระบบ",
   description:
     "ขั้นตอนการทำงานของ บริษัท เคพีอาร์ แอคเคาน์ติ้ง จำกัด 3 ขั้นตอนมาตรฐาน โปร่งใส พร้อมปฏิทินกำหนดยื่นภาษีประจำเดือนและสัญญา NDA รักษาความลับ",
+  alternates: { canonical: "/workflow" },
 };
 
 export default function WorkflowPage() {

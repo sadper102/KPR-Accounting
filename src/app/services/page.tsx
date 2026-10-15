@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "บริการของเรา | รับทำบัญชี วางแผนภาษี จดทะเบียน ตรวจสอบบัญชี",
   description:
     "บริการด้านบัญชี ภาษีอากร ตรวจสอบบัญชี จดทะเบียนบริษัทครบวงจร โดยผู้สอบบัญชีรับอนุญาต (CPA) บริษัท เคพีอาร์ แอคเคาน์ติ้ง จำกัด",
+  alternates: { canonical: "/services" },
 };
 
 export default function ServicesPage() {
